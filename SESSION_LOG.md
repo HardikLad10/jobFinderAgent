@@ -91,3 +91,24 @@ Do not delete old entries. If something changes direction, add a new entry expla
 - ATS platform (Greenhouse/Lever/Ashby/other) unconfirmed for all but the first 3 companies. First task for the ingestion script: attempt each known URL pattern per company, log misses for manual follow-up.
 - Klaviyo's Chicago-specific office/hiring presence unconfirmed.
 - Some companies on this list may use ATS platforms outside our supported set (Workday, iCIMS, etc.), those get flagged and excluded during ingestion, not manually pre-filtered.
+
+---
+
+## [2026-08-05] — GitHub repo created
+
+**Changed:**
+- Initialized local git repo on `main`.
+- Added `.gitignore` (secrets, venvs, runtime data, OS junk).
+- Created private GitHub repo `HardikLad10/jobFinderAgent` and pushed initial commit (`PROJECT_BRIEF.md`, `SESSION_LOG.md`, `.gitignore`).
+- Installed and authenticated GitHub CLI (`gh`) as HardikLad10.
+
+**Why:**
+- Project brief requires the agent to live on GitHub (scheduling via Actions + version history). Repo needed before scaffolding code.
+
+**Decisions made:**
+- Repo visibility: private (will hold profile/resume paths and eventually rely on GitHub Secrets for API keys).
+
+**Open questions carried forward:**
+- Runtime/language for the scaffold still open.
+- Email delivery mechanism still open.
+- Company ATS discovery still pending.
