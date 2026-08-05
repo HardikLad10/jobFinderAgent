@@ -318,3 +318,25 @@ Do not delete old entries. If something changes direction, add a new entry expla
 
 **Open questions carried forward:**
 - Optional later: recency filter (e.g. only jobs posted in last N days).
+
+---
+
+## [2026-08-05] — Illinois CSOD within-1-day reminder (not full ingestion)
+
+**Changed:**
+- Added `alerts/illinois_csod.py`: fetch anonymous JWT from career page → POST CSOD search with `postingsWithinDays=1` → read `totalCount`.
+- If count > 0 and `--send-email` / `--dry-run-email`, send a separate Reminder email: "X jobs found from this page" + board link + titles.
+- Wired into `run_pipeline.py` (failures logged; do not abort main G/L/A pipeline). `--skip-illinois` to disable.
+
+**Why:**
+- UIUC grad use case: Illinois board often yields campus FT roles (H-1B exempt / lower tax angle), but has no native email alerts. User wants a daily nudge to check the board, not Claude fit-matching on CSOD.
+- Verified live: count retrieval is easy today (`totalCount` available). Reminder-only keeps CSOD out of the matching schema.
+
+**Decisions made:**
+- CSOD is **reminder-only**, not a fourth matching ATS. Still not scraping Handshake-style; uses the same public career-page JWT the browser uses.
+- Risk accepted for one board: token/HTML fragility may break the alert; main pipeline unaffected.
+- Email only when X > 0; X = 0 → silent skip.
+
+**Open questions carried forward:**
+- Optional: include role links in the Illinois email (currently titles + board URL).
+- Recency filter for G/L/A boards still optional.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Full pipeline: ingest → filter → match → optional email.
 
-GitHub Actions scheduling is separate; this entrypoint supports local dry-runs.
+Also runs a separate Illinois CSOD within-1-day reminder (not fit-matching).
 """
 
 from __future__ import annotations
@@ -12,7 +12,8 @@ import logging
 import sys
 from pathlib import Path
 
-from delivery import deliver_matches
+from alerts import fetch_postings_within_one_day
+from delivery import deliver_illinois_reminder, deliver_matches
 from filtering import filter_postings, load_seen_urls, save_seen_urls
 from ingestion.runner import ingest_companies
 from matching import match_jobs
@@ -41,12 +42,17 @@ def main() -> int:
     parser.add_argument(
         "--dry-run-email",
         action="store_true",
-        help="Print the email body for strong/maybe matches; do not send",
+        help="Print email bodies; do not send",
     )
     parser.add_argument(
         "--send-email",
         action="store_true",
-        help="Send strong/maybe summary via Resend (requires RESEND_API_KEY)",
+        help="Send emails via Resend (requires RESEND_API_KEY)",
+    )
+    parser.add_argument(
+        "--skip-illinois",
+        action="store_true",
+        help="Skip the Illinois CSOD within-1-day reminder check",
     )
     args = parser.parse_args()
 
@@ -84,35 +90,64 @@ def main() -> int:
     )
     logging.info("filtered down to %d postings", len(filtered))
 
+    results = []
     if args.skip_match:
         print(f"\nSkipped matching. {len(filtered)} filtered posting(s) ready.")
-        _maybe_mark_seen(filtered, args.mark_seen)
-        return 0
+    else:
+        results = match_jobs(filtered, limit=args.match_limit)
+        out_path = DATA_DIR / "latest_matches.json"
+        out_path.write_text(
+            json.dumps([r.to_dict() for r in results], indent=2) + "\n",
+            encoding="utf-8",
+        )
 
-    results = match_jobs(filtered, limit=args.match_limit)
-    out_path = DATA_DIR / "latest_matches.json"
-    out_path.write_text(
-        json.dumps([r.to_dict() for r in results], indent=2) + "\n",
-        encoding="utf-8",
-    )
+        print("\n=== Match results ===")
+        for result in results:
+            print(f"[{result.fit.upper()}] {result.company} — {result.title}")
+            print(f"  Posted: {result.posted_date}")
+            print(f"  {result.location} | {result.url}")
+            print(f"  {result.reasoning}\n")
 
-    print("\n=== Match results ===")
-    for result in results:
-        print(f"[{result.fit.upper()}] {result.company} — {result.title}")
-        print(f"  {result.location} | {result.url}")
-        print(f"  {result.reasoning}\n")
+        print(f"Wrote {len(results)} match result(s) to {out_path}", file=sys.stderr)
 
-    print(f"Wrote {len(results)} match result(s) to {out_path}", file=sys.stderr)
+        if args.dry_run_email or args.send_email:
+            deliver_matches(
+                results,
+                dry_run=args.dry_run_email,
+                send=args.send_email,
+            )
 
-    if args.dry_run_email or args.send_email:
-        deliver_matches(
-            results,
+    if not args.skip_illinois:
+        # Always check/print; email only when --dry-run-email or --send-email.
+        _run_illinois_reminder(
             dry_run=args.dry_run_email,
             send=args.send_email,
         )
 
     _maybe_mark_seen(filtered, args.mark_seen)
     return 0
+
+
+def _run_illinois_reminder(*, dry_run: bool, send: bool) -> None:
+    try:
+        snapshot = fetch_postings_within_one_day()
+    except Exception as exc:  # noqa: BLE001 — reminder must not fail the main pipeline
+        logging.error("Illinois CSOD reminder failed: %s", exc)
+        print(f"Illinois CSOD reminder failed (main pipeline unaffected): {exc}")
+        return
+
+    print(f"\nIllinois CSOD within-1-day: {snapshot.count} job(s) found")
+    for title in snapshot.titles:
+        print(f"  - {title}")
+
+    if dry_run or send:
+        deliver_illinois_reminder(
+            count=snapshot.count,
+            titles=snapshot.titles,
+            board_url=snapshot.board_url,
+            dry_run=dry_run,
+            send=send,
+        )
 
 
 def _maybe_mark_seen(filtered: list, mark: bool) -> None:

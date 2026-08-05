@@ -188,6 +188,55 @@ def deliver_matches(
     return False
 
 
+def deliver_illinois_reminder(
+    *,
+    count: int,
+    titles: Sequence[str],
+    board_url: str,
+    dry_run: bool = False,
+    send: bool = False,
+) -> bool:
+    """If count > 0, remind the user to check the Illinois CSOD board."""
+    if dry_run and send:
+        raise ValueError("pass only one of dry_run or send")
+    if count <= 0:
+        logger.info("Illinois CSOD: 0 postings within 1 day — reminder skipped")
+        print("Illinois CSOD: 0 jobs today — reminder skipped.")
+        return False
+
+    subject = f"Illinois careers: {count} job(s) posted within 1 day"
+    title_lines = "\n".join(f"- {t}" for t in titles) or "- (titles unavailable)"
+    text = (
+        f"{count} jobs found from this page (posted within ~1 day).\n"
+        f"Open the board and review manually:\n{board_url}\n\n"
+        f"Titles returned by the board:\n{title_lines}\n"
+    )
+    html_titles = "".join(f"<li>{_escape(t)}</li>" for t in titles) or "<li>(titles unavailable)</li>"
+    html = (
+        f"<p><strong>{count} jobs found from this page</strong> "
+        f"(posted within ~1 day).</p>"
+        f'<p><a href="{board_url}">Open the Illinois career board</a></p>'
+        f"<p>Titles:</p><ul>{html_titles}</ul>"
+    )
+    to_addr = load_env_var("TO_EMAIL", default=DEFAULT_TO_EMAIL)
+
+    if dry_run:
+        print("=== DRY RUN ILLINOIS REMINDER ===")
+        print(f"To: {to_addr}")
+        print(f"Subject: {subject}")
+        print()
+        print(text)
+        print("=== END DRY RUN (not sent) ===")
+        return True
+
+    if send:
+        send_email(subject=subject, text=text, html=html, to_email=to_addr)
+        print(f"Illinois reminder sent to {to_addr}: {subject}")
+        return True
+
+    return False
+
+
 def _escape(value: str) -> str:
     return (
         value.replace("&", "&amp;")
