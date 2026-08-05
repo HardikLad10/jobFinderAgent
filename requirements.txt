@@ -1,0 +1,3 @@
+# Runtime deps are intentionally minimal.
+# Matching calls Anthropic over HTTPS via urllib (stdlib) — no SDK required yet.
+# Add packages here only when a dependency earns its keep.

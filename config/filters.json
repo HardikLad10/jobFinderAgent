@@ -1,0 +1,59 @@
+{
+  "title_include_any": [
+    "software engineer",
+    "software developer",
+    "swe",
+    "full stack",
+    "fullstack",
+    "full-stack",
+    "backend",
+    "back-end",
+    "back end",
+    "frontend",
+    "front-end",
+    "front end",
+    "new grad",
+    "new-grad",
+    "university grad",
+    "university graduate",
+    "entry level",
+    "entry-level",
+    "junior",
+    "associate software",
+    "early career",
+    "graduate software"
+  ],
+  "title_exclude_any": [
+    "senior",
+    "staff",
+    "principal",
+    "director",
+    "manager",
+    "lead ",
+    " vp",
+    "vice president",
+    "head of",
+    "architect"
+  ],
+  "location_include_any": [
+    "chicago",
+    "illinois",
+    ", il",
+    " il ",
+    "remote"
+  ],
+  "sponsorship_exclusion_phrases": [
+    "u.s. citizen",
+    "us citizen",
+    "citizens only",
+    "citizenship required",
+    "must be authorized to work",
+    "unable to sponsor",
+    "no visa sponsorship",
+    "does not sponsor",
+    "do not sponsor",
+    "security clearance",
+    "clearance required",
+    "itar"
+  ]
+}

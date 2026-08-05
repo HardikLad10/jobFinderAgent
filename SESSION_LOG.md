@@ -112,3 +112,129 @@ Do not delete old entries. If something changes direction, add a new entry expla
 - Runtime/language for the scaffold still open.
 - Email delivery mechanism still open.
 - Company ATS discovery still pending.
+
+---
+
+## [2026-08-05] — v0 ingestion proven on Sprout Social (Greenhouse)
+
+**Changed:**
+- Chose Python 3 as runtime; scaffolded `config/`, `ingestion/`, `requirements.txt`, `run_ingestion.py`.
+- Added company config for Sprout Social (`config/companies.json`).
+- Implemented Greenhouse fetch + normalize (`title`, `company`, `location`, `posted_date`, `url`).
+- Runner continues past per-company failures (HTTP/JSON/shape errors logged, other companies still run).
+- Live smoke test: `python3 run_ingestion.py` → 8 normalized postings from Sprout Social.
+
+**Why:**
+- Session scoped to proving ingestion on one real source before scaling to 50 companies or adding filter/match/email.
+- Stdlib only (`urllib` + `json`) for v0 — one GET does not justify a dependency yet. `requirements.txt` is a placeholder for later (Anthropic, etc.).
+
+**Decisions made:**
+- Runtime: Python 3.
+- Board token: use `sproutsocial`, not `sproutsocialcollege`. The college board endpoint returns HTTP 200 with an empty `jobs` list, so it cannot prove fetch+normalize. Main board currently returns 8 jobs.
+- `posted_date` mapped from Greenhouse `first_published`, falling back to `updated_at` (updated_at bumps on edits, so it is a weaker "posted" signal).
+- Location missing/malformed → `"Unknown"` rather than dropping the job; missing title/url/date → skip that row only.
+
+**Open questions carried forward:**
+- Email delivery mechanism still open.
+- ATS discovery for the remaining ~47 companies still pending.
+- Lever and Ashby clients not built yet.
+- Filtering, matching, email, scheduling still out of scope until ingestion is solid.
+
+---
+
+## [2026-08-05] — Expanded to 50 companies; Lever/Ashby clients; API key env
+
+**Changed:**
+- Wrote all 50 SESSION_LOG companies into `config/companies.json` with `status: resolved|unresolved`.
+- Added ATS discovery helper `scripts/discover_ats.py` (slug probes against Greenhouse/Lever/Ashby).
+- Implemented Lever + Ashby fetch/normalize clients; runner dispatches by `ats` and skips unresolved entries.
+- Live run: **22 resolved boards → ~753 normalized postings**; 28 unresolved skipped without aborting.
+- Added `.env` / `.env.example` for `ANTHROPIC_API_KEY` (not used yet — matching still unbuilt).
+- `run_ingestion.py` now prints a per-company summary and writes full JSON to `data/latest_ingestion.json`.
+
+**Why:**
+- Session goal was scale company config + prep the Claude key location. Matching still deferred.
+- Slug auto-discovery finds boards fast but produces false positives; each hit was spot-checked against company_name / career URL before marking resolved.
+
+**Decisions made:**
+- Resolved (22): Sprout Social, FourKites, Klaviyo, Kin (Ashby), tastytrade, Enova, HealthJoy, Artera (Lever), project44, G2 (Ashby), ActiveCampaign (Lever), OpenGov (Ashby), Centro→Basis (Lever), Civis Analytics, Lessen (Lever), Cameo, SpotHero, Tovala (Lever), Groupon, Upside (Ashby), Metropolis, Block.
+- Rejected false-positive slug matches: `lever/capital` ≠ Capital One; `greenhouse/village` ≠ VillageMD; `greenhouse/relativity` = Relativity Space ≠ Relativity eDiscovery; `greenhouse/echo` = Echo Neurotechnologies ≠ Echo Global; `greenhouse/cleo` = meetcleo fintech ≠ Chicago Cleo.
+- Vouch/Coro have Ashby HTML pages but public posting API 404 — left unresolved until a working API token is found.
+- ParkWhiz left unresolved (folded into SpotHero careers post-acquisition).
+- Claude key lives in local `.env` as `ANTHROPIC_API_KEY`; `.env` is gitignored. Matching code will read it later.
+
+**Open questions carried forward:**
+- Manual follow-up for 28 unresolved companies (many likely Workday/iCIMS/custom).
+- Email delivery mechanism still open.
+- Filtering + Claude fit-matching still next, not built.
+- Whether to add `python-dotenv` when matching lands, or read `.env` manually.
+
+---
+
+## [2026-08-05] — Spec update: sponsorship filter + resume profile rules
+
+**Changed:**
+- Expanded `PROJECT_BRIEF.md` Architecture step 3 (Filtering) with sponsorship exclusion phrase list and red-flag semantics (`exclusion_found` / `none_found`).
+- Documented resume input as stripped `config/resume_profile.md` under Tech Stack (Section 6).
+- Verified description dependency against live data/APIs before building the filter (see Decisions).
+
+**Why:**
+- Sponsorship signal is almost never a positive claim; exclusionary language is the reliable deterministic check. Needs body text, so ingestion schema must grow before filter code lands.
+- Resume PII must not rely on "private repo" alone because git history outlives visibility settings.
+
+**Decisions made:**
+- Current `data/latest_ingestion.json` has only `title/company/location/posted_date/url` — **no description**. Sponsorship filter blocked until ingestion captures body text.
+- Greenhouse list needs `?content=true` (verified: adds HTML `content` field). Lever list already includes `descriptionPlain`; Ashby list already includes `descriptionPlain`. No per-job detail fetch required for Lever/Ashby if we start capturing those fields.
+- Filter not implemented this entry — verify-then-build gate only.
+
+**Open questions carried forward:**
+- Build order: extend ingestion schema with `description` next, then deterministic filters (title/location/sponsorship/dedupe), then matching.
+- Resume file `config/resume_profile.md` not created yet (needs user PDF → strip → manual review).
+- Email delivery mechanism still open.
+
+---
+
+## [2026-08-05] — Stripped resume profile created
+
+**Changed:**
+- Added `config/resume_profile.md` from `Hardik_SWE_FullStack.pdf` with name/phone/email/profile links/project GitHub URLs removed.
+- Gitignored `*.pdf` so the original resume is not committed.
+
+**Why:**
+- Matching needs a durable profile text; PII should not rely on private-repo privacy alone.
+
+**Decisions made:**
+- Kept education, experience, projects (sans URLs), and skills. Project GitHub URLs dropped because they embed a username.
+- V1 remaining work after resume review: description ingestion → deterministic filters → matching → email → Actions cron (matching is not the final step).
+
+**Open questions carried forward:**
+- User should manually review `config/resume_profile.md` once before commit.
+- Email delivery mechanism still open.
+
+---
+
+## [2026-08-05] — Description ingestion + filters + Claude matching
+
+**Changed:**
+- Extended normalized schema with `description`. Greenhouse now fetches `?content=true` and strips HTML; Lever/Ashby capture plain-text description fields already on the list endpoints.
+- Added `config/filters.json` and `filtering/` module: title include/exclude → location → sponsorship red-flag → seen-URL dedupe.
+- Added `matching/` module: Claude Haiku 4.5 (`claude-haiku-4-5`) via Anthropic Messages API over stdlib `urllib`; reads key from `.env`; scores `strong|maybe|no` + reasoning against `config/resume_profile.md`.
+- Added `run_pipeline.py` (`--skip-match`, `--match-limit`, `--mark-seen`).
+- Live run: 764 ingested (762 with description) → 3 after filters → 3 matched (2 strong, 1 maybe).
+
+**Why:**
+- Sponsorship filter needs body text; verified earlier that GH needs `content=true` while Lever/Ashby already return descriptions.
+- Filters stay deterministic; Claude only runs on the survivors (cost control + philosophy).
+- No Anthropic SDK yet — one HTTPS POST does not need a dependency.
+
+**Decisions made:**
+- Title keywords live in editable `config/filters.json` (same scalability idea as companies.json).
+- Location include list covers Chicago/Illinois **and** `remote` — most target companies post Remote US; pure Chicago-only was dropping almost everything useful. Tunable in filters.json.
+- Sponsorship drops `exclusion_found` from the match queue; survivors tagged `sponsorship_flag: none_found` (not a positive confirmation).
+- Dedupe store: `data/seen_jobs.json`, updated only when `--mark-seen` is passed (avoid hiding jobs during iterative testing).
+- Email + GitHub Actions still not built.
+
+**Open questions carried forward:**
+- Email delivery mechanism (API vs SMTP) still open.
+- Whether title keywords / remote inclusion need tuning after a few real runs.
+- Wire GitHub Actions cron once email path is chosen.

@@ -1,6 +1,6 @@
 # Job Search Agent — Project Brief
 
-**Status:** Planning complete, no code written yet.
+**Status:** Core pipeline working (ingest → filter → match). Email delivery and GitHub Actions cron still open. Day-to-day progress in `SESSION_LOG.md`.
 **Type:** Warm-up build. Smaller and faster than the main portfolio project (OTC/FMCG agentic project, scoped separately). Purpose here is reps with the stack and real engineering judgment, not scale.
 
 This file is the stable reference. It should rarely change. Day-to-day progress, decisions made while building, and things that changed from this plan belong in `SESSION_LOG.md`, not here.
@@ -44,8 +44,30 @@ An agent means the fetching, filtering, and deduping are automated and unattende
 Deterministic pipeline with exactly one agentic step.
 
 1. **Company list (manual, deterministic).** Curated list of companies, Chicago-area or Chicago-office startups, posting on Greenhouse/Lever/Ashby. Lives in a config file, grows over time.
-2. **Ingestion (deterministic).** Poll each company's public ATS API on a schedule. Normalize into one schema: title, company, location, posted date, URL.
-3. **Filtering (deterministic, no LLM).** Keyword match on title, location filter for Chicago/Illinois, dedupe against a "seen jobs" store.
+2. **Ingestion (deterministic).** Poll each company's public ATS API on a schedule. Normalize into one schema: title, company, location, posted date, URL, description (full body text required by the sponsorship filter below).
+3. **Filtering (deterministic, no LLM).** Keyword match on title, location filter for Chicago/Illinois, sponsorship exclusion (below), dedupe against a "seen jobs" store.
+
+   **Sponsorship exclusion filter (deterministic, keyword-based):**
+
+   Purpose: companies rarely state they DO sponsor, but sometimes explicitly state they DON'T. Reverse-engineer the signal by flagging exclusionary language instead of searching for a positive signal that rarely exists.
+
+   This is a RED-FLAG filter, not a green-flag one. Absence of these phrases means "no exclusion found," not "confirmed sponsorship available." Tag output accordingly (e.g. `sponsorship_flag: "exclusion_found"` / `"none_found"`), never as a positive confirmation.
+
+   Match on phrases, not bare words — "citizen" alone false-positives on "global citizen," "corporate citizenship," etc.
+
+   Phrase list:
+   - "U.S. citizen" / "US citizen"
+   - "citizens only"
+   - "citizenship required"
+   - "must be authorized to work" (without sponsorship)
+   - "unable to sponsor"
+   - "no visa sponsorship"
+   - "does not sponsor" / "do not sponsor"
+   - "security clearance" / "clearance required"
+   - "ITAR" (strong signal in aerospace/defense postings specifically)
+
+   Dependency: requires full job description body text, not just title/location. Check `data/latest_ingestion.json` first — if description content isn't already captured, the ingestion step needs a `content=true` param (Greenhouse) or a per-job detail fetch before this filter can run. Verify before building.
+
 4. **Matching (the one agentic step).** For each new, filtered posting, one Claude call compares it against the resume/profile and returns a fit verdict plus short reasoning.
 5. **Delivery (deterministic).** Summary of matches sent to personal email at end of run.
 6. **Scheduling (deterministic, infrastructure).** GitHub Actions cron job triggers the full pipeline. No human intervention required. Code and run history live in the GitHub repo, satisfying the "should be on GitHub" requirement in the same step as scheduling.
@@ -56,7 +78,15 @@ Deterministic pipeline with exactly one agentic step.
 - **Fireworks AI ($500 credit):** not used in v1. Reserved for later, specifically as a cheap pre-filter layer if posting volume grows large enough that filtering everything through Claude becomes wasteful. Documented reasoning, not dead credits.
 - **Scheduling:** GitHub Actions (cron trigger, free tier).
 - **Email delivery:** simple email API or SMTP from within the scheduled script.
-- **Language/runtime:** to be decided during scaffolding in Cursor. Keep it simple, this doesn't need a heavy framework.
+- **Language/runtime:** Python 3. Chosen during v0 scaffolding; keep it simple, no heavy framework.
+- **Resume input:** `config/resume_profile.md`, stripped version, not the original PDF.
+
+  Strip: name, email, phone, home address, LinkedIn/GitHub URLs (if not meant to be public).
+  Keep: education, skills, work experience, project descriptions, everything relevant to judging fit.
+
+  Reasoning: private repo today doesn't guarantee private history forever — git retains old commits even after a file is deleted or the repo's visibility changes later. Strip by default rather than relying on repo privacy alone.
+
+  Process: paste resume PDF into Cursor, ask it to strip the above fields and output as `config/resume_profile.md`. Manually review the output once before committing — stripping tasks are exactly where a model might miss one line.
 
 ### Cost Reference (so this isn't re-derived later)
 
@@ -93,6 +123,6 @@ Recorded here so they're not lost, and so the code doesn't accidentally make the
 
 ## 10. Open Decisions
 
-- Company list not yet built. First concrete next step.
-- Runtime/language for the scaffold not yet chosen.
 - Exact email delivery method (API vs SMTP) not yet chosen.
+- ATS board tokens still unresolved for 28 of 50 companies (notes in `config/companies.json`).
+- Title/location keyword tuning in `config/filters.json` after more real runs.
