@@ -302,3 +302,19 @@ Do not delete old entries. If something changes direction, add a new entry expla
 **Open questions carried forward:**
 - Merge workflow to `main` so the daily cron actually arms.
 - Optional: add `TO_EMAIL` secret (defaults to Gmail if omitted).
+
+---
+
+## [2026-08-05] — Include posted_date in match emails
+
+**Changed:**
+- Email text/HTML now shows `Posted: <posted_date>` for each strong/maybe job so the recipient can judge urgency without opening the ATS page.
+
+**Why:**
+- Pipeline already captures `posted_date` at ingest; it was omitted from the email body. Recency is a key action signal even without a hard recency filter.
+
+**Decisions made:**
+- Display raw ISO timestamp from ATS (no timezone reformatting yet). Missing date → `unknown`.
+
+**Open questions carried forward:**
+- Optional later: recency filter (e.g. only jobs posted in last N days).

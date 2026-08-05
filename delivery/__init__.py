@@ -83,9 +83,11 @@ def build_email(matches: Sequence[Any]) -> tuple[str, str, str] | None:
         text_parts.append(f"== {label} ==")
         html_parts.append(f"<h3>{label}</h3><ul>")
         for m in items:
+            posted = getattr(m, "posted_date", "") or "unknown"
             text_parts.extend(
                 [
                     f"[{m.fit.upper()}] {m.company} — {m.title}",
+                    f"  Posted: {posted}",
                     f"  {m.location}",
                     f"  {m.url}",
                     f"  {m.reasoning}",
@@ -95,7 +97,8 @@ def build_email(matches: Sequence[Any]) -> tuple[str, str, str] | None:
             html_parts.append(
                 "<li>"
                 f"<p><strong>[{m.fit.upper()}] {m.company} — {m.title}</strong><br>"
-                f"{m.location}<br>"
+                f"Posted: {_escape(posted)}<br>"
+                f"{_escape(m.location)}<br>"
                 f'<a href="{m.url}">{m.url}</a></p>'
                 f"<p>{_escape(m.reasoning)}</p>"
                 "</li>"
