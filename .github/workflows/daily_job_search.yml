@@ -1,0 +1,45 @@
+# Daily unattended job search: ingest → filter → match → email.
+# Schedule: 8:00 AM America/Chicago during CDT (= 13:00 UTC).
+# In CST (winter) this same cron is 7:00 AM local — GitHub cron is UTC-only.
+name: Daily job search
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run pipeline and email matches
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          TO_EMAIL: ${{ secrets.TO_EMAIL || 'hardik.lad773@gmail.com' }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'Job Finder Agent <onboarding@resend.dev>' }}
+        run: python run_pipeline.py --send-email --mark-seen
+
+      - name: Persist seen jobs store
+        run: |
+          if git diff --quiet -- data/seen_jobs.json; then
+            echo "seen_jobs.json unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/seen_jobs.json
+          git commit -m "chore: update seen jobs after daily run"
+          git push
