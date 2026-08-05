@@ -3,6 +3,10 @@
 .env.*
 !.env.example
 
+# Original resume PDFs (PII) — use config/resume_profile.md instead
+*.pdf
+Hardik_SWE_FullStack.pdf
+
 # Python
 __pycache__/
 *.py[cod]

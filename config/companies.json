@@ -1,0 +1,333 @@
+[
+  {
+    "name": "Sprout Social",
+    "ats": "greenhouse",
+    "board_token": "sproutsocial",
+    "status": "resolved",
+    "notes": "College board sproutsocialcollege is empty; main board used."
+  },
+  {
+    "name": "FourKites",
+    "ats": "greenhouse",
+    "board_token": "fourkites",
+    "status": "resolved"
+  },
+  {
+    "name": "Klaviyo",
+    "ats": "greenhouse",
+    "board_token": "klaviyo",
+    "status": "resolved",
+    "notes": "Chicago office presence still unconfirmed."
+  },
+  {
+    "name": "Discover Financial Services",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found; likely Workday/custom careers site."
+  },
+  {
+    "name": "Cboe Global Markets",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Careers host on careers.cboe.com; no public G/L/A board found."
+  },
+  {
+    "name": "Guaranteed Rate",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "Kin Insurance",
+    "ats": "ashby",
+    "board_token": "kin",
+    "status": "resolved"
+  },
+  {
+    "name": "Clearcover",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "CCC Intelligent Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "Origami Risk",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "tastytrade",
+    "ats": "greenhouse",
+    "board_token": "tastytrade",
+    "status": "resolved"
+  },
+  {
+    "name": "Capital One",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug lever/capital matched a different company (jobs.lever.co/capital), not Capital One. Capital One careers appear Workday/custom."
+  },
+  {
+    "name": "Enova International",
+    "ats": "greenhouse",
+    "board_token": "enova",
+    "status": "resolved"
+  },
+  {
+    "name": "Vouch",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "jobs.ashbyhq.com/vouch exists as HTML, but Ashby public posting API returns 404 for token 'vouch'."
+  },
+  {
+    "name": "Coro",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "jobs.ashbyhq.com/coro exists as HTML, but Ashby public posting API returns 404 for token 'coro'."
+  },
+  {
+    "name": "Tempus",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "VillageMD",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/village matched The Village Learning Center, not VillageMD."
+  },
+  {
+    "name": "HealthJoy",
+    "ats": "greenhouse",
+    "board_token": "healthjoy",
+    "status": "resolved"
+  },
+  {
+    "name": "Artera",
+    "ats": "lever",
+    "board_token": "artera",
+    "status": "resolved"
+  },
+  {
+    "name": "ALIS",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "project44",
+    "ats": "greenhouse",
+    "board_token": "project44",
+    "status": "resolved"
+  },
+  {
+    "name": "Echo Global Logistics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/echo matched Echo Neurotechnologies, not Echo Global Logistics. Careers likely under RXO/custom."
+  },
+  {
+    "name": "Coyote Logistics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Careers redirect to RXO; no public Coyote G/L/A board found."
+  },
+  {
+    "name": "ShipBob",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found (greenhouse/shipbob 404)."
+  },
+  {
+    "name": "G2",
+    "ats": "ashby",
+    "board_token": "g2",
+    "status": "resolved"
+  },
+  {
+    "name": "ActiveCampaign",
+    "ats": "lever",
+    "board_token": "activecampaign",
+    "status": "resolved"
+  },
+  {
+    "name": "Uptake",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "Relativity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/relativity matched Relativity Space, not Relativity (eDiscovery)."
+  },
+  {
+    "name": "PowerReviews",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Careers redirect to Syndigo; no PowerReviews G/L/A board found."
+  },
+  {
+    "name": "Paylocity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "OpenGov",
+    "ats": "ashby",
+    "board_token": "opengov",
+    "status": "resolved"
+  },
+  {
+    "name": "Centro",
+    "ats": "lever",
+    "board_token": "basis",
+    "status": "resolved",
+    "notes": "Centro careers now under Basis (jobs.lever.co/basis)."
+  },
+  {
+    "name": "Civis Analytics",
+    "ats": "greenhouse",
+    "board_token": "civisanalytics",
+    "status": "resolved"
+  },
+  {
+    "name": "Lessen",
+    "ats": "lever",
+    "board_token": "lessen",
+    "status": "resolved"
+  },
+  {
+    "name": "Cameo",
+    "ats": "greenhouse",
+    "board_token": "cameo",
+    "status": "resolved"
+  },
+  {
+    "name": "SpotHero",
+    "ats": "greenhouse",
+    "board_token": "spothero",
+    "status": "resolved"
+  },
+  {
+    "name": "Tovala",
+    "ats": "lever",
+    "board_token": "tovala",
+    "status": "resolved"
+  },
+  {
+    "name": "Cars.com",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "Reverb",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "Groupon",
+    "ats": "greenhouse",
+    "board_token": "groupon",
+    "status": "resolved"
+  },
+  {
+    "name": "Motorola Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found; likely Workday."
+  },
+  {
+    "name": "Morningstar",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "Halo Investing",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "Upside",
+    "ats": "ashby",
+    "board_token": "upside",
+    "status": "resolved"
+  },
+  {
+    "name": "Metropolis",
+    "ats": "greenhouse",
+    "board_token": "metropolis",
+    "status": "resolved"
+  },
+  {
+    "name": "37signals",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Uses custom 37signals.com/jobs page, not G/L/A public API."
+  },
+  {
+    "name": "Fooda",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No public Greenhouse/Lever/Ashby board found."
+  },
+  {
+    "name": "ParkWhiz",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Acquired into SpotHero; no separate board. Covered by SpotHero entry if needed."
+  },
+  {
+    "name": "Cleo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/cleo matched Cleo (US) personal-finance (meetcleo), not Chicago Cleo (integration)."
+  },
+  {
+    "name": "Block",
+    "ats": "greenhouse",
+    "board_token": "block",
+    "status": "resolved"
+  }
+]
