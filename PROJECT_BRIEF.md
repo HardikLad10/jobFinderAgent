@@ -76,8 +76,8 @@ Deterministic pipeline with exactly one agentic step.
 
 - **Matching model:** Claude Haiku 4.5, via Anthropic Console API key (personal account, $500 credit). Chosen because this is a classification/judgment task, not creative generation, and Haiku is the cost/speed-appropriate tier for that. Current pricing: $1 input / $5 output per million tokens.
 - **Fireworks AI ($500 credit):** not used in v1. Reserved for later, specifically as a cheap pre-filter layer if posting volume grows large enough that filtering everything through Claude becomes wasteful. Documented reasoning, not dead credits.
-- **Scheduling:** GitHub Actions (cron trigger, free tier).
-- **Email delivery:** simple email API or SMTP from within the scheduled script.
+- **Email delivery:** Resend API. To: `hardik.lad773@gmail.com`. From: Resend onboarding sender until a custom domain is verified.
+- **Scheduling:** GitHub Actions cron `0 13 * * *` (8:00 AM America/Chicago during CDT) + manual `workflow_dispatch`.
 - **Language/runtime:** Python 3. Chosen during v0 scaffolding; keep it simple, no heavy framework.
 - **Resume input:** `config/resume_profile.md`, stripped version, not the original PDF.
 
@@ -123,6 +123,6 @@ Recorded here so they're not lost, and so the code doesn't accidentally make the
 
 ## 10. Open Decisions
 
-- Exact email delivery method (API vs SMTP) not yet chosen.
 - ATS board tokens still unresolved for 28 of 50 companies (notes in `config/companies.json`).
 - Title/location keyword tuning in `config/filters.json` after more real runs.
+- Email To locked to Gmail (`hardik.lad773@gmail.com`) until a Resend domain is verified for Hotmail.

@@ -24,7 +24,8 @@ node_modules/
 .idea/
 .vscode/
 
-# Runtime data
-data/
+# Runtime data (keep seen store tracked so Actions can persist it)
+data/*
+!data/seen_jobs.json
 *.db
-seen_jobs.json
+

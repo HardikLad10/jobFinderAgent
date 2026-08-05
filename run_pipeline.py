@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Full pipeline: ingest → filter → match.
+"""Full pipeline: ingest → filter → match → optional email.
 
-Email delivery and GitHub Actions scheduling are still out of scope here.
+GitHub Actions scheduling is separate; this entrypoint supports local dry-runs.
 """
 
 from __future__ import annotations
@@ -12,6 +12,7 @@ import logging
 import sys
 from pathlib import Path
 
+from delivery import deliver_matches
 from filtering import filter_postings, load_seen_urls, save_seen_urls
 from ingestion.runner import ingest_companies
 from matching import match_jobs
@@ -37,7 +38,20 @@ def main() -> int:
         action="store_true",
         help="Add filtered job URLs to data/seen_jobs.json after the run",
     )
+    parser.add_argument(
+        "--dry-run-email",
+        action="store_true",
+        help="Print the email body for strong/maybe matches; do not send",
+    )
+    parser.add_argument(
+        "--send-email",
+        action="store_true",
+        help="Send strong/maybe summary via Resend (requires RESEND_API_KEY)",
+    )
     args = parser.parse_args()
+
+    if args.dry_run_email and args.send_email:
+        parser.error("use only one of --dry-run-email or --send-email")
 
     logging.basicConfig(
         level=logging.INFO,
@@ -89,6 +103,14 @@ def main() -> int:
         print(f"  {result.reasoning}\n")
 
     print(f"Wrote {len(results)} match result(s) to {out_path}", file=sys.stderr)
+
+    if args.dry_run_email or args.send_email:
+        deliver_matches(
+            results,
+            dry_run=args.dry_run_email,
+            send=args.send_email,
+        )
+
     _maybe_mark_seen(filtered, args.mark_seen)
     return 0
 

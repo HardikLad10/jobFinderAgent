@@ -238,3 +238,67 @@ Do not delete old entries. If something changes direction, add a new entry expla
 - Email delivery mechanism (API vs SMTP) still open.
 - Whether title keywords / remote inclusion need tuning after a few real runs.
 - Wire GitHub Actions cron once email path is chosen.
+
+---
+
+## [2026-08-05] — Resend email module + local dry-run
+
+**Changed:**
+- Added `delivery/` module: builds strong+maybe summary, sends via Resend API (stdlib urllib).
+- Wired `--dry-run-email` / `--send-email` on `run_pipeline.py`.
+- Updated `.env.example` with `RESEND_API_KEY`, `TO_EMAIL`, `FROM_EMAIL`.
+- Local dry-run succeeded: To `hardiklad1@hotmail.com`, subject `Job matches: 2 strong, 1 maybe` — printed only, not sent.
+- GitHub Actions workflow **not** added yet (local-first per request).
+
+**Why:**
+- Resend chosen over Hotmail SMTP for Actions reliability later.
+- Dry-run first so email body can be reviewed before any real send or cloud cron.
+
+**Decisions made:**
+- Email includes strong + maybe only; zero matches → skip send.
+- Default To: `hardiklad1@hotmail.com`. Default From: Resend onboarding sender until a domain is verified.
+- Cloud Actions still the intended daily scheduler; not implemented this step.
+
+**Open questions carried forward:**
+- User needs a Resend API key in `.env` before `--send-email` works.
+- Next: add GitHub Actions cron (`0 13 * * *` UTC / 8am CT) + persist `seen_jobs.json`.
+
+---
+
+## [2026-08-05] — First real Resend send (Gmail test recipient)
+
+**Changed:**
+- Confirmed `RESEND_API_KEY` in `.env` and sent a live email.
+- Resend id `f29266a1-512f-406d-9178-b107025c70df`, subject `Job matches: 2 strong, 1 maybe`.
+
+**Why / constraint:**
+- Without a verified domain, Resend only allows sending to the account owner email (`hardik.lad773@gmail.com`). Sending to `hardiklad1@hotmail.com` returns HTTP 403.
+
+**Decisions made:**
+- For now, deliver to Gmail (Resend account email) until a domain is verified at resend.com/domains; then switch `TO_EMAIL` / `FROM_EMAIL` back to hotmail + custom from-address.
+
+**Open questions carried forward:**
+- Verify a domain (or keep Gmail as To) before Actions goes live to hotmail.
+- GitHub Actions cron still not built.
+
+---
+
+## [2026-08-05] — GitHub Actions daily cron + Gmail as To
+
+**Changed:**
+- Default `TO_EMAIL` → `hardik.lad773@gmail.com` (Resend account email; hotmail deferred).
+- Added `.github/workflows/daily_job_search.yml`: cron `0 13 * * *` (8am CDT) + `workflow_dispatch`.
+- Pipeline on Actions: `python run_pipeline.py --send-email --mark-seen`, then commit-back of `data/seen_jobs.json`.
+- Track `data/seen_jobs.json` in git (gitignore exception) so seen URLs persist across runs.
+
+**Why:**
+- Secrets are already in the repo; workflow was the missing piece for unattended cloud runs.
+- Commit-back beats Actions cache for durable dedupe on a private personal agent.
+
+**Decisions made:**
+- Keep Gmail as destination (user confirmed). No Resend domain required for v1.
+- Schedule only fires from the repo default branch (`main`); feature branch can still use Run workflow manually after push.
+
+**Open questions carried forward:**
+- Merge workflow to `main` so the daily cron actually arms.
+- Optional: add `TO_EMAIL` secret (defaults to Gmail if omitted).
