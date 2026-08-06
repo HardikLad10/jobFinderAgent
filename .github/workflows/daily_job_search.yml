@@ -1,15 +1,15 @@
 # Daily unattended job search: ingest → filter → match → email.
 #
-# Target local time: 8:00 AM America/Chicago.
-# Dual UTC crons cover CDT (13:00) vs CST (14:00); season-guard job keeps
-# only the in-season expression so the pipeline does not double-run.
-# GitHub may still start the scheduled job late under load.
+# Target: email in the early morning America/Chicago window.
+# Cron is set for 6:00 AM Central so GitHub schedule lag (often 1–2h) still
+# tends to deliver near 8:00 AM; on-time runs at ~6:00 AM are acceptable.
+# Dual UTC crons cover CDT vs CST; season-guard keeps only the in-season one.
 name: Daily job search
 
 on:
   schedule:
-    - cron: "0 13 * * *" # 8:00 AM CDT (UTC-5)
-    - cron: "0 14 * * *" # 8:00 AM CST (UTC-6)
+    - cron: "0 11 * * *" # 6:00 AM CDT (UTC-5)
+    - cron: "0 12 * * *" # 6:00 AM CST (UTC-6)
   workflow_dispatch:
 
 permissions:
@@ -34,11 +34,11 @@ jobs:
           echo "schedule=$SCHEDULE america/chicago_offset=$OFFSET"
           echo "UTC=$(date -u '+%Y-%m-%d %H:%M:%S') Chicago=$(TZ=America/Chicago date '+%Y-%m-%d %H:%M:%S %Z')"
           SHOULD=true
-          if [ "$OFFSET" = "-0500" ] && [ "$SCHEDULE" != "0 13 * * *" ]; then
+          if [ "$OFFSET" = "-0500" ] && [ "$SCHEDULE" != "0 11 * * *" ]; then
             echo "Skipping CST cron while America/Chicago is on CDT."
             SHOULD=false
           fi
-          if [ "$OFFSET" = "-0600" ] && [ "$SCHEDULE" != "0 14 * * *" ]; then
+          if [ "$OFFSET" = "-0600" ] && [ "$SCHEDULE" != "0 12 * * *" ]; then
             echo "Skipping CDT cron while America/Chicago is on CST."
             SHOULD=false
           fi

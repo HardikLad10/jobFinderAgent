@@ -107,7 +107,7 @@ Deterministic pipeline with exactly one agentic step.
 
 4. **Matching (the one agentic step).** For each new, filtered posting, one Claude Opus 5 call compares it against the resume/profile and returns a fit verdict plus short reasoning.
 5. **Delivery (deterministic).** Strong/maybe matches emailed at end of run. Format: tiny header with counts, then separate **Strong** / **Maybe** sections, each with **one compact line per match** — `Title — Company — Posted date — one-line reasoning — link`. Reasoning is trimmed/capped (~120 chars) for email display; no multi-paragraph per-job summaries.
-6. **Scheduling (deterministic, infrastructure).** GitHub Actions cron triggers the pipeline at **8:00 AM America/Chicago**. Separate workflow for Illinois CSOD reminder (same local target).
+6. **Scheduling (deterministic, infrastructure).** GitHub Actions cron triggers the pipeline for an early-morning America/Chicago delivery window (cron at 6:00 AM Central; see Tech Stack). Separate workflow for Illinois CSOD reminder (same window).
 
 ### Company geography (locked)
 
@@ -124,7 +124,7 @@ Why: for a UIUC user, callback odds rise with local/regional roles and Midwest e
 - **Matching model:** Claude Opus 5 (`claude-opus-5`), via Anthropic Console API key. Chosen because deterministic filters already narrow the set; Opus 5 provides stronger fit judgment than Haiku on the survivors. Pricing: **$5 input / $25 output** per million tokens. Matching uses medium effort (thinking on by default for Opus 5) with `max_tokens` 4096.
 - **Fireworks AI ($500 credit):** not used in v1. Reserved for later, specifically as a cheap pre-filter layer if posting volume grows large enough that filtering everything through Claude becomes wasteful. Documented reasoning, not dead credits.
 - **Email delivery:** Resend API. To: `hardik.lad773@gmail.com`. From: Resend onboarding sender until a custom domain is verified.
-- **Scheduling:** GitHub Actions — `Daily job search` + `Illinois CSOD reminder`. Target **8:00 AM America/Chicago** every day. UTC crons: `0 13 * * *` (CDT) and `0 14 * * *` (CST), with a season-guard job so only the in-season expression runs. `workflow_dispatch` remains for manual runs. Note: GitHub may start scheduled jobs late under load (minutes to a couple of hours).
+- **Scheduling:** GitHub Actions — `Daily job search` + `Illinois CSOD reminder`. Cron aims at **6:00 AM America/Chicago** so that with typical GitHub schedule lag the email still tends to arrive near **8:00 AM** Central; an on-time 6am delivery is acceptable, a 10am delivery is worse for the user. UTC crons: `0 11 * * *` (CDT) and `0 12 * * *` (CST), with a season-guard job so only the in-season expression runs. `workflow_dispatch` remains for manual runs.
 - **Language/runtime:** Python 3. Chosen during v0 scaffolding; keep it simple, no heavy framework.
 - **Resume input:** `config/resume_profile.md`, stripped version, not the original PDF.
 
@@ -146,7 +146,7 @@ Roughly 1,500 input tokens + a few hundred output tokens per job evaluated (Opus
 - Deterministic filtering (title, location, sponsorship, freshness N=7) + URL-based seen dedupe
 - One Claude Opus 5 call per new filtered posting for fit + reasoning
 - Compact one-line-per-match email of strong/maybe results
-- GitHub Actions cron at 8:00 AM America/Chicago, fully unattended
+- GitHub Actions cron aimed at early-morning Central delivery (6:00 AM America/Chicago cron → ~8:00 AM after typical lag), fully unattended
 - Separate Illinois CSOD within-1-day reminder workflow
 - Backend only, no UI
 

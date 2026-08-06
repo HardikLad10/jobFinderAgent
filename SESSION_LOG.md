@@ -660,3 +660,14 @@ Funnel (`max_age_days=7`, null posted_date kept):
 **Decisions made:**
 - Keep filter-then-Claude; do not move geography into the model.
 - Medium effort (not max) for fit JSON — quality bump without max-tier spend.
+
+---
+
+## [2026-08-06] — Shift cron to 6:00 AM Central (lag buffer)
+
+**Changed:**
+- Both workflows: `0 11 * * *` (6:00 AM CDT) + `0 12 * * *` (6:00 AM CST); season-guard strings updated to match.
+- Brief/log: product goal is email near **8:00 AM** Central; cron is intentionally **earlier** because GitHub schedule lag of ~1–2h is common. On-time 6am is OK; 10am is too late for the user.
+
+**Why:**
+- User tradeoff: prefer early over late for the daily digest.
