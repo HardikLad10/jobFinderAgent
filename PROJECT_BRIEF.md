@@ -42,7 +42,7 @@ Manually pasting a job posting into Claude and asking "does this fit me" works, 
 
 An agent means the fetching, filtering, and deduping are automated and unattended. Claude is invoked only for the one step that needs real judgment: does this specific posting fit this specific profile. The value isn't "smarter AI," it's removing the manual checking.
 
-**Cost posture:** always **filter first, then Claude**. Haiku on survivors only. At current volume cost is negligible (cents); do not optimize Claude spend until filters are wrong or volume explodes. Fireworks remains a documented future pre-filter, not v1 work.
+**Cost posture:** always **filter first, then Claude**. Opus 5 on survivors only (deterministic filters already cut the firehose). At current filtered volume cost stays modest; do not optimize Claude spend until filters are wrong or volume explodes. Fireworks remains a documented future pre-filter, not v1 work.
 
 **Note on "learning":** this project does not involve the model updating its own weights (that's fine-tuning/RL, a different and heavier thing, out of scope). "Learning" here, if built later, means storing feedback on past matches and feeding examples back into future prompts. Real, but it's adaptation through context, not model training. Don't conflate the two.
 
@@ -80,7 +80,7 @@ Deterministic pipeline with exactly one agentic step.
    2. Else if location contains `remote`: **drop** when a non-US country/region token appears (`remote_non_us_exclude_any`); **keep** when a US signal appears (`remote_us_include_any`); ambiguous remote-only strings are **kept** (residual noise accepted).
    3. Else drop.
 
-   Residual noise is expected; geography must not rely on Haiku. Indiana uses full tokens (`indiana`, `indianapolis`) — not `, in` — to avoid India false positives.
+   Residual noise is expected; geography must not rely on the matching model. Indiana uses full tokens (`indiana`, `indianapolis`) — not `, in` — to avoid India false positives.
 
    **Freshness filter (deterministic):** Keep postings whose `posted_date` falls within the last **N = 7** days (`max_age_days` in `config/filters.json`). Missing, null, or unparseable `posted_date` values are **kept** (do not drop on uncertainty). Older than N days are dropped. Sits after sponsorship and before seen-URL dedupe so stale boards do not reach Claude; stage drop count is logged as `freshness_drop`. Seen-URL dedupe remains the identity gate for "already emailed / already judged" — freshness does not replace it.
 
@@ -105,9 +105,9 @@ Deterministic pipeline with exactly one agentic step.
 
    Dependency: requires full job description body text, not just title/location. Greenhouse uses `?content=true`; Lever/Ashby include plain text on list endpoints.
 
-4. **Matching (the one agentic step).** For each new, filtered posting, one Claude call compares it against the resume/profile and returns a fit verdict plus short reasoning.
+4. **Matching (the one agentic step).** For each new, filtered posting, one Claude Opus 5 call compares it against the resume/profile and returns a fit verdict plus short reasoning.
 5. **Delivery (deterministic).** Strong/maybe matches emailed at end of run. Format: tiny header with counts, then separate **Strong** / **Maybe** sections, each with **one compact line per match** — `Title — Company — Posted date — one-line reasoning — link`. Reasoning is trimmed/capped (~120 chars) for email display; no multi-paragraph per-job summaries.
-6. **Scheduling (deterministic, infrastructure).** GitHub Actions cron triggers the pipeline. Separate workflow for Illinois CSOD reminder.
+6. **Scheduling (deterministic, infrastructure).** GitHub Actions cron triggers the pipeline at **8:00 AM America/Chicago**. Separate workflow for Illinois CSOD reminder (same local target).
 
 ### Company geography (locked)
 
@@ -121,10 +121,10 @@ Why: for a UIUC user, callback odds rise with local/regional roles and Midwest e
 
 ## 6. Tech Stack — Locked Decisions
 
-- **Matching model:** Claude Haiku 4.5, via Anthropic Console API key (personal account, $500 credit). Chosen because this is a classification/judgment task, not creative generation, and Haiku is the cost/speed-appropriate tier for that. Current pricing: $1 input / $5 output per million tokens.
+- **Matching model:** Claude Opus 5 (`claude-opus-5`), via Anthropic Console API key. Chosen because deterministic filters already narrow the set; Opus 5 provides stronger fit judgment than Haiku on the survivors. Pricing: **$5 input / $25 output** per million tokens. Matching uses medium effort (thinking on by default for Opus 5) with `max_tokens` 4096.
 - **Fireworks AI ($500 credit):** not used in v1. Reserved for later, specifically as a cheap pre-filter layer if posting volume grows large enough that filtering everything through Claude becomes wasteful. Documented reasoning, not dead credits.
 - **Email delivery:** Resend API. To: `hardik.lad773@gmail.com`. From: Resend onboarding sender until a custom domain is verified.
-- **Scheduling:** GitHub Actions — `Daily job search` + `Illinois CSOD reminder`, cron `0 13 * * *` (8:00 AM America/Chicago during CDT) + `workflow_dispatch`.
+- **Scheduling:** GitHub Actions — `Daily job search` + `Illinois CSOD reminder`. Target **8:00 AM America/Chicago** every day. UTC crons: `0 13 * * *` (CDT) and `0 14 * * *` (CST), with a season-guard job so only the in-season expression runs. `workflow_dispatch` remains for manual runs. Note: GitHub may start scheduled jobs late under load (minutes to a couple of hours).
 - **Language/runtime:** Python 3. Chosen during v0 scaffolding; keep it simple, no heavy framework.
 - **Resume input:** `config/resume_profile.md`, stripped version, not the original PDF.
 
@@ -137,16 +137,16 @@ Why: for a UIUC user, callback odds rise with local/regional roles and Midwest e
 
 ### Cost Reference (so this isn't re-derived later)
 
-Roughly 1,500 input tokens + 150 output tokens per job evaluated. At Haiku 4.5 rates, that's about **$0.0025 per job checked**. Filters keep Claude volume small; expanding the company list mainly increases ATS fetch work, not a 1:1 Claude bill. Don't spend time optimizing cost in v1 while filter-then-match holds.
+Roughly 1,500 input tokens + a few hundred output tokens per job evaluated (Opus 5 may use additional thinking tokens at medium effort). At Opus 5 rates ($5/$25 per MTok), expect on the order of **a few cents per job** — still fine while filters keep daily survivors in the tens. Expanding the company list mainly increases ATS fetch work, not a 1:1 Claude bill. Don't spend time optimizing cost in v1 while filter-then-match holds.
 
 ## 7. V1 Scope
 
 - Company config list (Midwest geography above; Greenhouse/Lever/Ashby/Breezy only; prefer ~10–999 emp)
 - Ingestion from each resolved company's ATS API
 - Deterministic filtering (title, location, sponsorship, freshness N=7) + URL-based seen dedupe
-- One Claude Haiku call per new filtered posting for fit + reasoning
+- One Claude Opus 5 call per new filtered posting for fit + reasoning
 - Compact one-line-per-match email of strong/maybe results
-- GitHub Actions cron, fully unattended
+- GitHub Actions cron at 8:00 AM America/Chicago, fully unattended
 - Separate Illinois CSOD within-1-day reminder workflow
 - Backend only, no UI
 

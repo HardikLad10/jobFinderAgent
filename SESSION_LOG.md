@@ -642,3 +642,21 @@ Funnel (`max_age_days=7`, null posted_date kept):
 - Open polish: title keywords (`entry level` / recruiter bleed).
 
 **Why empty seen now:** User wants a clean slate overnight; first cron after empty will re-evaluate today’s survivors if still open + anything new — acceptable tradeoff vs carrying experimental marks.
+
+---
+
+## [2026-08-06] — 8am America/Chicago schedule + Opus 5 matching
+
+**Changed:**
+- Both workflows now target **8:00 AM America/Chicago** year-round via dual crons (`0 13 * * *` CDT, `0 14 * * *` CST) plus a `season_guard` job so only the in-season expression runs the real work (no double email in one day).
+- Matching default model: `claude-haiku-4-5` → **`claude-opus-5`** (`matching/__init__.py`). Medium effort, `max_tokens` 4096, 120s timeout (Opus 5 thinking-on-by-default needs headroom).
+- `PROJECT_BRIEF.md` updated for model, cost posture, and schedule semantics. Daily job timeout raised to 45m for Opus latency.
+
+**Why:**
+- User wants true 8am local (Urbana-Champaign / CDT) including winter CST — single UTC cron cannot do both.
+- Yesterday’s ~10:11 AM starts were GitHub schedule lag on an already-correct 13:00 UTC cron, not a wrong timezone. Lag can still happen; season guard does not remove platform delay.
+- Deterministic filters already gate volume; Opus 5 is the better judgment tier on survivors.
+
+**Decisions made:**
+- Keep filter-then-Claude; do not move geography into the model.
+- Medium effort (not max) for fit JSON — quality bump without max-tier spend.

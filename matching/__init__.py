@@ -1,4 +1,4 @@
-"""Claude Haiku fit-matching — the one agentic step.
+"""Claude Opus fit-matching — the one agentic step.
 
 Deterministic filters already ran. This module only answers: does this
 posting fit the candidate profile, and why.
@@ -22,9 +22,12 @@ logger = logging.getLogger(__name__)
 
 DEFAULT_RESUME_PATH = Path(__file__).resolve().parent.parent / "config" / "resume_profile.md"
 ANTHROPIC_MESSAGES_URL = "https://api.anthropic.com/v1/messages"
-# Alias resolves to the current Haiku 4.5 snapshot (PROJECT_BRIEF model choice).
-DEFAULT_MODEL = "claude-haiku-4-5"
+# Opus 5: stronger judgment on filtered survivors (PROJECT_BRIEF model choice).
+DEFAULT_MODEL = "claude-opus-5"
 MAX_DESCRIPTION_CHARS = 6000
+# Thinking is on by default for Opus 5; budget must cover thinking + JSON answer.
+DEFAULT_MAX_TOKENS = 4096
+REQUEST_TIMEOUT_SECONDS = 120
 
 
 @dataclass(frozen=True)
@@ -158,7 +161,9 @@ Description:
 
     payload = {
         "model": model,
-        "max_tokens": 300,
+        "max_tokens": DEFAULT_MAX_TOKENS,
+        # Medium effort: better fit judgment than Haiku without max-tier spend.
+        "output_config": {"effort": "medium"},
         "messages": [{"role": "user", "content": user_prompt}],
     }
     request = urllib.request.Request(
@@ -174,7 +179,7 @@ Description:
     )
 
     try:
-        with urllib.request.urlopen(request, timeout=60) as response:
+        with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
             body = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode("utf-8", errors="replace")
