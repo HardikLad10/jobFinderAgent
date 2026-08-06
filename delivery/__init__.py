@@ -22,6 +22,10 @@ logger = logging.getLogger(__name__)
 RESEND_API_URL = "https://api.resend.com/emails"
 DEFAULT_TO_EMAIL = "hardik.lad773@gmail.com"
 DEFAULT_FROM_EMAIL = "Job Finder Agent <onboarding@resend.dev>"
+DEFAULT_ILLINOIS_TO_EMAILS = (
+    "hardik.lad773@gmail.com",
+    "anvekshavinod24@gmail.com",
+)
 NOTIFY_FITS = frozenset({"strong", "maybe"})
 
 
@@ -117,16 +121,23 @@ def send_email(
     text: str,
     html: str,
     api_key: str | None = None,
-    to_email: str | None = None,
+    to_email: str | Sequence[str] | None = None,
     from_email: str | None = None,
 ) -> dict[str, Any]:
     key = api_key or load_env_var("RESEND_API_KEY")
-    to_addr = to_email or load_env_var("TO_EMAIL", default=DEFAULT_TO_EMAIL)
+    if to_email is None:
+        recipients = [load_env_var("TO_EMAIL", default=DEFAULT_TO_EMAIL)]
+    elif isinstance(to_email, str):
+        recipients = [to_email]
+    else:
+        recipients = [addr for addr in to_email if addr]
+    if not recipients:
+        raise RuntimeError("no email recipients configured")
     from_addr = from_email or load_env_var("FROM_EMAIL", default=DEFAULT_FROM_EMAIL)
 
     payload = {
         "from": from_addr,
-        "to": [to_addr],
+        "to": recipients,
         "subject": subject,
         "text": text,
         "html": html,
@@ -148,8 +159,20 @@ def send_email(
         detail = exc.read().decode("utf-8", errors="replace")
         raise RuntimeError(f"Resend HTTP {exc.code}: {detail[:500]}") from exc
 
-    logger.info("email sent to %s via Resend id=%s", to_addr, body.get("id"))
+    logger.info("email sent to %s via Resend id=%s", recipients, body.get("id"))
     return body
+
+
+def illinois_recipients() -> list[str]:
+    """Recipients for the separate Illinois reminder email."""
+    raw = None
+    try:
+        raw = load_env_var("ILLINOIS_TO_EMAILS")
+    except RuntimeError:
+        raw = None
+    if raw:
+        return [part.strip() for part in raw.split(",") if part.strip()]
+    return list(DEFAULT_ILLINOIS_TO_EMAILS)
 
 
 def deliver_matches(
@@ -191,12 +214,13 @@ def deliver_matches(
 def deliver_illinois_reminder(
     *,
     count: int,
-    titles: Sequence[str],
+    software_count: int,
+    analyst_count: int,
     board_url: str,
     dry_run: bool = False,
     send: bool = False,
 ) -> bool:
-    """If count > 0, remind the user to check the Illinois CSOD board."""
+    """If count > 0, send a minimal separate reminder (not fit-matching)."""
     if dry_run and send:
         raise ValueError("pass only one of dry_run or send")
     if count <= 0:
@@ -204,25 +228,24 @@ def deliver_illinois_reminder(
         print("Illinois CSOD: 0 jobs today — reminder skipped.")
         return False
 
-    subject = f"Illinois careers: {count} job(s) posted within 1 day"
-    title_lines = "\n".join(f"- {t}" for t in titles) or "- (titles unavailable)"
+    subject = f"Illinois careers: {count} new job(s) today"
     text = (
-        f"{count} jobs found from this page (posted within ~1 day).\n"
-        f"Open the board and review manually:\n{board_url}\n\n"
-        f"Titles returned by the board:\n{title_lines}\n"
+        f"{count} new jobs found today.\n"
+        f"a software jobs: {software_count}\n"
+        f"b analyst jobs: {analyst_count}\n"
+        f"\nBoard: {board_url}\n"
     )
-    html_titles = "".join(f"<li>{_escape(t)}</li>" for t in titles) or "<li>(titles unavailable)</li>"
     html = (
-        f"<p><strong>{count} jobs found from this page</strong> "
-        f"(posted within ~1 day).</p>"
-        f'<p><a href="{board_url}">Open the Illinois career board</a></p>'
-        f"<p>Titles:</p><ul>{html_titles}</ul>"
+        f"<p><strong>{count} new jobs found today.</strong></p>"
+        f"<p>a software jobs: {software_count}<br>"
+        f"b analyst jobs: {analyst_count}</p>"
+        f'<p><a href="{board_url}">Open Illinois career board</a></p>'
     )
-    to_addr = load_env_var("TO_EMAIL", default=DEFAULT_TO_EMAIL)
+    recipients = illinois_recipients()
 
     if dry_run:
         print("=== DRY RUN ILLINOIS REMINDER ===")
-        print(f"To: {to_addr}")
+        print(f"To: {', '.join(recipients)}")
         print(f"Subject: {subject}")
         print()
         print(text)
@@ -230,8 +253,8 @@ def deliver_illinois_reminder(
         return True
 
     if send:
-        send_email(subject=subject, text=text, html=html, to_email=to_addr)
-        print(f"Illinois reminder sent to {to_addr}: {subject}")
+        send_email(subject=subject, text=text, html=html, to_email=recipients)
+        print(f"Illinois reminder sent to {', '.join(recipients)}: {subject}")
         return True
 
     return False

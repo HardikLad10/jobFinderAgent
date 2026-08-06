@@ -38,6 +38,22 @@ class IllinoisBoardSnapshot:
     board_url: str = CAREER_URL
 
 
+def count_keyword_hits(titles: tuple[str, ...] | list[str]) -> tuple[int, int]:
+    """Case-insensitive substring counts for reminder flags.
+
+    Returns (software_count, analyst_count). A title can count toward both.
+    """
+    software = 0
+    analyst = 0
+    for title in titles:
+        lower = title.lower()
+        if "software" in lower:
+            software += 1
+        if "analyst" in lower:
+            analyst += 1
+    return software, analyst
+
+
 def fetch_postings_within_one_day() -> IllinoisBoardSnapshot:
     """Return how many Illinois CSOD jobs were posted within ~1 day."""
     html = _get_text(CAREER_URL)

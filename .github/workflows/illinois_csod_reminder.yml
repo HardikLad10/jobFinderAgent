@@ -1,0 +1,31 @@
+# Illinois CSOD within-1-day reminder — separate from main fit-matching.
+# Same 8:00 AM America/Chicago (CDT) schedule as the main agent, own runner.
+name: Illinois CSOD reminder
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check Illinois board and email if count > 0
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'Job Finder Agent <onboarding@resend.dev>' }}
+          ILLINOIS_TO_EMAILS: ${{ secrets.ILLINOIS_TO_EMAILS || 'hardik.lad773@gmail.com,anvekshavinod24@gmail.com' }}
+        run: python run_illinois_reminder.py --send-email

@@ -340,3 +340,25 @@ Do not delete old entries. If something changes direction, add a new entry expla
 **Open questions carried forward:**
 - Optional: include role links in the Illinois email (currently titles + board URL).
 - Recency filter for G/L/A boards still optional.
+
+---
+
+## [2026-08-05] — Illinois reminder separated + minimal dual-recipient email
+
+**Changed:**
+- Removed Illinois from `run_pipeline.py` (main G/L/A agent intact again).
+- Added standalone `run_illinois_reminder.py` + `.github/workflows/illinois_csod_reminder.yml`.
+- Email body minimized: `X new jobs found today` + `a software jobs` / `b analyst jobs` (case-insensitive title substring) + board link.
+- Recipients: `hardik.lad773@gmail.com` and `anvekshavinod24@gmail.com` via `ILLINOIS_TO_EMAILS`.
+
+**Why:**
+- User requested hard separation from main logic and a nudge email a classmate can also receive.
+- Keyword flags are coarse on purpose — JDs still need manual review.
+
+**Decisions made:**
+- Separate workflow over shared job (isolation > tiny Actions-minute savings).
+- Resend may 403 the second Gmail until a domain is verified; dry-run validates content regardless.
+
+**Open questions carried forward:**
+- Confirm real send to `anvekshavinod24@gmail.com` after Resend domain / allowlisting.
+- Recency filter for main G/L/A boards still optional.
