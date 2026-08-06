@@ -73,9 +73,14 @@ Deterministic pipeline with exactly one agentic step.
 2. **Ingestion (deterministic).** Poll each company's public ATS API on a schedule. Normalize into one schema: title, company, location, posted date, URL, description (full body text required by the sponsorship filter below).
 3. **Filtering (deterministic, no LLM).** Title keywords → location → sponsorship exclusion → **freshness (posted within last N days)** → dedupe against a "seen jobs" store (URL identity). Robust filters are the cost and quality control plane; Claude never sees the raw firehose.
 
-   **Location filter intent:** Illinois (Chicago metro + suburbs such as Naperville/Schaumburg/Bolingbrook + Champaign/Urbana and other IL tech locales) **and** neighboring Midwest signals (WI/IN/MI/MO/IA) **and** **US-remote** (not global remote). Exact keyword list lives in `config/filters.json`.
+   **Location filter intent:** Illinois (Chicago metro + suburbs such as Naperville/Schaumburg/Bolingbrook + Champaign/Urbana and other IL tech locales) **and** neighboring Midwest signals (WI/IN/MI/MO/IA/MN) **and** **US-remote**.
 
-   **Known v1 gap (must fix in v1):** `location_include_any` currently contains the bare token `remote`. Substring match accepts any location string containing "remote" (e.g. `Ireland | Remote`, `Spain | Remote`). Product intent is US/Midwest-remote; bare `remote` over-admits EU/global seats and can crowd out Midwest on-site roles in the Haiku queue. Fix options (pick in implementation): require remote + US signal (`united states`, `usa`, `u.s.`, `, us`, `remote us`, etc.) and/or exclude non-US country tokens when remote is present; also revisit `, in` vs India. Accept residual noise; prioritize Midwest + US-remote recall over global remote recall.
+   **Location rules (deterministic, before Claude):**
+   1. Pass if location matches a Midwest/geo include token (`location_include_any` in `config/filters.json`). Bare `remote` is **not** a geo token.
+   2. Else if location contains `remote`: **drop** when a non-US country/region token appears (`remote_non_us_exclude_any`); **keep** when a US signal appears (`remote_us_include_any`); ambiguous remote-only strings are **kept** (residual noise accepted).
+   3. Else drop.
+
+   Residual noise is expected; geography must not rely on Haiku. Indiana uses full tokens (`indiana`, `indianapolis`) — not `, in` — to avoid India false positives.
 
    **Freshness filter (deterministic):** Keep postings whose `posted_date` falls within the last **N = 7** days (`max_age_days` in `config/filters.json`). Missing, null, or unparseable `posted_date` values are **kept** (do not drop on uncertainty). Older than N days are dropped. Sits after sponsorship and before seen-URL dedupe so stale boards do not reach Claude; stage drop count is logged as `freshness_drop`. Seen-URL dedupe remains the identity gate for "already emailed / already judged" — freshness does not replace it.
 

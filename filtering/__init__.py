@@ -78,6 +78,8 @@ def filter_postings(
     title_include = _lower_list(cfg.get("title_include_any", []))
     title_exclude = _lower_list(cfg.get("title_exclude_any", []))
     location_include = _lower_list(cfg.get("location_include_any", []))
+    remote_us = _lower_list(cfg.get("remote_us_include_any", []))
+    remote_non_us = _lower_list(cfg.get("remote_non_us_exclude_any", []))
     phrases = _lower_list(cfg.get("sponsorship_exclusion_phrases", []))
     max_age_days = _max_age_days(cfg.get("max_age_days", 7))
 
@@ -102,7 +104,12 @@ def filter_postings(
             continue
 
         location_l = posting.location.lower()
-        if location_include and not any(k.strip() in location_l for k in location_include):
+        if not _location_allowed(
+            location_l,
+            geo_include=location_include,
+            remote_us_include=remote_us,
+            remote_non_us_exclude=remote_non_us,
+        ):
             stats["location_drop"] += 1
             continue
 
@@ -154,6 +161,36 @@ def sponsorship_flag(
     return "none_found", None
 
 
+def _location_allowed(
+    location_l: str,
+    *,
+    geo_include: list[str],
+    remote_us_include: list[str],
+    remote_non_us_exclude: list[str],
+) -> bool:
+    """Midwest/geo hit OR US-remote (not global remote).
+
+    - Geo tokens (Chicago, IL, Champaign, …) pass as before.
+    - Bare `remote` alone is no longer a geo include token.
+    - Remote path: drop if a non-US country/region token appears; keep if a
+      US signal appears; bare \"Remote\" with neither still kept (residual noise).
+    """
+    if any(token and token in location_l for token in geo_include):
+        return True
+
+    if "remote" not in location_l:
+        return False
+
+    if any(token and token in location_l for token in remote_non_us_exclude):
+        return False
+
+    if any(token and token in location_l for token in remote_us_include):
+        return True
+
+    # Ambiguous remote-only location strings — keep for recall; expect some noise.
+    return True
+
+
 def _is_stale(posted_date: str | None, *, max_age_days: int, now: datetime) -> bool:
     """True only when posted_date parses and is older than max_age_days.
 
@@ -202,4 +239,5 @@ def _phrase_in_text(phrase: str, text: str) -> bool:
 def _lower_list(values: Any) -> list[str]:
     if not isinstance(values, list):
         return []
-    return [str(v).lower().strip() for v in values if str(v).strip()]
+    # Do not strip: tokens like " il " / ", il" need surrounding spaces/commas.
+    return [str(v).lower() for v in values if str(v).strip()]

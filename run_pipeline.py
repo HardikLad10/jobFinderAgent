@@ -24,6 +24,11 @@ DATA_DIR = Path(__file__).resolve().parent / "data"
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run jobFinderAgent pipeline")
     parser.add_argument(
+        "--reuse-ingest",
+        action="store_true",
+        help="Skip ATS fetch; reload data/latest_ingestion.json (filter/match iteration)",
+    )
+    parser.add_argument(
         "--skip-match",
         action="store_true",
         help="Ingest + filter only (no Claude calls)",
@@ -61,12 +66,33 @@ def main() -> int:
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    postings = ingest_companies()
-    (DATA_DIR / "latest_ingestion.json").write_text(
-        json.dumps([p.to_dict() for p in postings], indent=2) + "\n",
-        encoding="utf-8",
-    )
-    logging.info("ingested %d postings", len(postings))
+    if args.reuse_ingest:
+        ingest_path = DATA_DIR / "latest_ingestion.json"
+        if not ingest_path.exists():
+            logging.error("no %s — run without --reuse-ingest first", ingest_path)
+            return 1
+        from ingestion.schema import JobPosting
+
+        raw = json.loads(ingest_path.read_text(encoding="utf-8"))
+        postings = [
+            JobPosting(
+                title=str(row.get("title", "")),
+                company=str(row.get("company", "")),
+                location=str(row.get("location", "")),
+                posted_date=str(row.get("posted_date", "")),
+                url=str(row.get("url", "")),
+                description=str(row.get("description", "")),
+            )
+            for row in raw
+        ]
+        logging.info("reused %d postings from %s", len(postings), ingest_path)
+    else:
+        postings = ingest_companies()
+        (DATA_DIR / "latest_ingestion.json").write_text(
+            json.dumps([p.to_dict() for p in postings], indent=2) + "\n",
+            encoding="utf-8",
+        )
+        logging.info("ingested %d postings", len(postings))
 
     filtered = filter_postings(postings)
     (DATA_DIR / "latest_filtered.json").write_text(

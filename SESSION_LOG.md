@@ -602,3 +602,28 @@ Funnel (`max_age_days=7`, null posted_date kept):
 **Open questions carried forward:**
 - Exact remote rule for the v1 fix (remote+US include list vs non-US exclude list vs both) — brief before implementing.
 - Whether to clear/revisit `seen_jobs.json` for geo-false emails already marked seen (those URLs won't reappear until store prune/manual edit).
+
+---
+
+## [2026-08-05] — US-remote location gate (before Haiku) + seen reset
+
+**Changed:**
+- Removed bare `remote` from `location_include_any`; removed `, in` (India false positive).
+- Added `remote_us_include_any` + `remote_non_us_exclude_any` and `_location_allowed()` in `filtering/`: Midwest geo OR (remote without non-US tokens; US signals preferred; bare remote kept as residual noise).
+- Emptied `data/seen_jobs.json` so the prior EU-heavy digest does not block a clean re-score.
+- `PROJECT_BRIEF.md` updated to match implemented rules.
+
+**Why:**
+- Geography is a deterministic cost/quality gate. Non-US remotes must not reach Haiku. Resetting seen avoids permanently suppressing jobs that were only "seen" under the bad rule.
+
+**Decisions made:**
+- Filter before Haiku (not prompt-based geo).
+- Ambiguous "Remote" with no country still kept (recall > zero residual noise).
+- Re-run filter+match on existing ingest (no need to re-poll 191 boards for this validation).
+- `_lower_list` must **not** strip tokens: `" il "` → `"il"` was matching Oakv**il**le / Manv**il**le and admitting Canada/NJ noise. Fixed before re-score.
+
+**Re-run (reuse ingest, empty seen):** 15092 → kept **16** (location_drop **640**) → Haiku 16 → **4 strong / 4 maybe / 8 no**. Email sent (Resend `f4684757-…`). EU remotes gone from digest. Residual title noise (Carvana “entry level” auto roles, Samsara recruiter via “software engineering” substring) correctly scored `no` by Haiku — title-keyword tighten still open.
+
+**Open questions carried forward:**
+- Title include: exclude `recruiter`; avoid bare `entry level` or require SWE co-token.
+- Whether Atlanta-only “Remote Friendly” without US token should stay (currently kept as ambiguous remote).
