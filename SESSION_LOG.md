@@ -627,3 +627,18 @@ Funnel (`max_age_days=7`, null posted_date kept):
 **Open questions carried forward:**
 - Title include: exclude `recruiter`; avoid bare `entry level` or require SWE co-token.
 - Whether Atlanta-only “Remote Friendly” without US token should stay (currently kept as ambiguous remote).
+
+---
+
+## [2026-08-05] — End of day: pause for tomorrow
+
+**Changed:**
+- Emptied `data/seen_jobs.json` again so the next automated/manual run starts without today’s scored URLs blocking re-delivery.
+- Session closed after US-remote gate + Strong/Maybe email polish shipped on `main`.
+
+**State for tomorrow:**
+- Daily GitHub Action (`daily_job_search.yml`) remains enabled on `main`: cron `0 13 * * *` UTC (~8am CDT), runs `run_pipeline.py --send-email --mark-seen`, commits back `seen_jobs.json`. Illinois reminder is a separate workflow, same cron.
+- Requires repo secrets `ANTHROPIC_API_KEY` and `RESEND_API_KEY` (already configured earlier).
+- Open polish: title keywords (`entry level` / recruiter bleed).
+
+**Why empty seen now:** User wants a clean slate overnight; first cron after empty will re-evaluate today’s survivors if still open + anything new — acceptable tradeoff vs carrying experimental marks.
