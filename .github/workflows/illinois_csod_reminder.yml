@@ -27,5 +27,5 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'Job Finder Agent <onboarding@resend.dev>' }}
-          ILLINOIS_TO_EMAILS: ${{ secrets.ILLINOIS_TO_EMAILS || 'hardik.lad773@gmail.com,anvekshavinod24@gmail.com' }}
+          ILLINOIS_TO_EMAILS: ${{ secrets.ILLINOIS_TO_EMAILS || 'hardik.lad773@gmail.com' }}
         run: python run_illinois_reminder.py --send-email

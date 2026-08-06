@@ -362,3 +362,21 @@ Do not delete old entries. If something changes direction, add a new entry expla
 **Open questions carried forward:**
 - Confirm real send to `anvekshavinod24@gmail.com` after Resend domain / allowlisting.
 - Recency filter for main G/L/A boards still optional.
+
+---
+
+## [2026-08-05] — Illinois email: Hardik only (Gmail forward later)
+
+**Changed:**
+- `ILLINOIS_TO_EMAILS` default / workflow fallback → `hardik.lad773@gmail.com` only.
+- Dropped dual Resend `to:` that caused HTTP 403 (blocked entire send including Hardik).
+
+**Why:**
+- Resend without a verified domain cannot email `anvekshavinod24@gmail.com`. User chose free option A: send to Hardik, Gmail auto-forward to classmate later (no domain spend).
+
+**Decisions made:**
+- Gmail SMTP / paid domain deferred. Forwarding is a Gmail UI step, not agent code.
+
+**Open questions carried forward:**
+- Set up Gmail filter/forward: subject contains `Illinois careers` → `anvekshavinod24@gmail.com`.
+- Recency filter for main G/L/A boards still optional.

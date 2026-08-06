@@ -24,7 +24,6 @@ DEFAULT_TO_EMAIL = "hardik.lad773@gmail.com"
 DEFAULT_FROM_EMAIL = "Job Finder Agent <onboarding@resend.dev>"
 DEFAULT_ILLINOIS_TO_EMAILS = (
     "hardik.lad773@gmail.com",
-    "anvekshavinod24@gmail.com",
 )
 NOTIFY_FITS = frozenset({"strong", "maybe"})
 
