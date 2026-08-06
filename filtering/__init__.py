@@ -1,7 +1,7 @@
 """Deterministic filters — no LLM.
 
 Order matters: cheap title/location checks first, then sponsorship on body
-text, then dedupe against the seen-jobs store.
+text, then posted-date freshness, then dedupe against the seen-jobs store.
 """
 
 from __future__ import annotations
@@ -10,6 +10,7 @@ import json
 import logging
 import re
 from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -63,15 +64,22 @@ def filter_postings(
     *,
     filter_config: dict[str, Any] | None = None,
     seen_urls: set[str] | None = None,
+    now: datetime | None = None,
 ) -> list[FilteredJob]:
-    """Apply title → location → sponsorship → dedupe. Returns survivors only."""
+    """Apply title → location → sponsorship → freshness → dedupe.
+
+    Freshness sits after sponsorship and before URL-based seen dedupe so
+    stale postings never consume a Claude call or a seen-store slot.
+    """
     cfg = filter_config if filter_config is not None else load_filter_config()
     seen = seen_urls if seen_urls is not None else load_seen_urls()
+    clock = now if now is not None else datetime.now(timezone.utc)
 
     title_include = _lower_list(cfg.get("title_include_any", []))
     title_exclude = _lower_list(cfg.get("title_exclude_any", []))
     location_include = _lower_list(cfg.get("location_include_any", []))
     phrases = _lower_list(cfg.get("sponsorship_exclusion_phrases", []))
+    max_age_days = _max_age_days(cfg.get("max_age_days", 7))
 
     kept: list[FilteredJob] = []
     stats = {
@@ -79,6 +87,7 @@ def filter_postings(
         "title_drop": 0,
         "location_drop": 0,
         "sponsorship_drop": 0,
+        "freshness_drop": 0,
         "dedupe_drop": 0,
         "kept": 0,
     }
@@ -108,6 +117,10 @@ def filter_postings(
             )
             continue
 
+        if _is_stale(posting.posted_date, max_age_days=max_age_days, now=clock):
+            stats["freshness_drop"] += 1
+            continue
+
         if posting.url in seen:
             stats["dedupe_drop"] += 1
             continue
@@ -117,11 +130,12 @@ def filter_postings(
     stats["kept"] = len(kept)
     logger.info(
         "filter stats: input=%d title_drop=%d location_drop=%d "
-        "sponsorship_drop=%d dedupe_drop=%d kept=%d",
+        "sponsorship_drop=%d freshness_drop=%d dedupe_drop=%d kept=%d",
         stats["input"],
         stats["title_drop"],
         stats["location_drop"],
         stats["sponsorship_drop"],
+        stats["freshness_drop"],
         stats["dedupe_drop"],
         stats["kept"],
     )
@@ -138,6 +152,43 @@ def sponsorship_flag(
         if _phrase_in_text(phrase, text):
             return "exclusion_found", phrase
     return "none_found", None
+
+
+def _is_stale(posted_date: str | None, *, max_age_days: int, now: datetime) -> bool:
+    """True only when posted_date parses and is older than max_age_days.
+
+    Missing / empty / unparseable dates are kept (return False).
+    """
+    parsed = _parse_posted_date(posted_date)
+    if parsed is None:
+        return False
+    cutoff = now - timedelta(days=max_age_days)
+    return parsed < cutoff
+
+
+def _parse_posted_date(value: str | None) -> datetime | None:
+    if value is None:
+        return None
+    raw = str(value).strip()
+    if not raw:
+        return None
+    # ATS feeds use ISO-8601; accept trailing Z and naive timestamps as UTC.
+    normalized = raw.replace("Z", "+00:00") if raw.endswith("Z") else raw
+    try:
+        parsed = datetime.fromisoformat(normalized)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def _max_age_days(value: Any) -> int:
+    try:
+        days = int(value)
+    except (TypeError, ValueError):
+        return 7
+    return days if days > 0 else 7
 
 
 def _phrase_in_text(phrase: str, text: str) -> bool:

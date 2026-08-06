@@ -26,6 +26,7 @@ DEFAULT_ILLINOIS_TO_EMAILS = (
     "hardik.lad773@gmail.com",
 )
 NOTIFY_FITS = frozenset({"strong", "maybe"})
+REASON_MAX_CHARS = 120
 
 
 def load_env_var(name: str, *, default: str | None = None) -> str:
@@ -56,7 +57,11 @@ def selectable_matches(matches: Sequence[Any]) -> list[Any]:
 
 
 def build_email(matches: Sequence[Any]) -> tuple[str, str, str] | None:
-    """Return (subject, text, html) or None when there is nothing worth sending."""
+    """Return (subject, text, html) or None when there is nothing worth sending.
+
+    Each match is one compact line:
+    Title — Company — Posted date — one-line reasoning — link
+    """
     chosen = selectable_matches(matches)
     if not chosen:
         return None
@@ -71,47 +76,46 @@ def build_email(matches: Sequence[Any]) -> tuple[str, str, str] | None:
     )
 
     text_parts = [
-        "Daily job search summary",
         f"{len(strong)} strong · {len(maybe)} maybe",
         "",
     ]
     html_parts = [
-        "<h2>Daily job search summary</h2>",
         f"<p><strong>{len(strong)}</strong> strong · <strong>{len(maybe)}</strong> maybe</p>",
+        "<ul>",
     ]
 
-    def add_section(label: str, items: list[Any]) -> None:
-        if not items:
-            return
-        text_parts.append(f"== {label} ==")
-        html_parts.append(f"<h3>{label}</h3><ul>")
-        for m in items:
-            posted = getattr(m, "posted_date", "") or "unknown"
-            text_parts.extend(
-                [
-                    f"[{m.fit.upper()}] {m.company} — {m.title}",
-                    f"  Posted: {posted}",
-                    f"  {m.location}",
-                    f"  {m.url}",
-                    f"  {m.reasoning}",
-                    "",
-                ]
-            )
-            html_parts.append(
-                "<li>"
-                f"<p><strong>[{m.fit.upper()}] {m.company} — {m.title}</strong><br>"
-                f"Posted: {_escape(posted)}<br>"
-                f"{_escape(m.location)}<br>"
-                f'<a href="{m.url}">{m.url}</a></p>'
-                f"<p>{_escape(m.reasoning)}</p>"
-                "</li>"
-            )
-        html_parts.append("</ul>")
+    for m in strong + maybe:
+        line = format_match_line(m)
+        text_parts.append(line)
+        html_parts.append(
+            f"<li>{_escape(m.title)} — {_escape(m.company)} — "
+            f"{_escape(_posted_display(m))} — {_escape(_short_reason(m))} — "
+            f'<a href="{m.url}">{_escape(m.url)}</a></li>'
+        )
 
-    add_section("STRONG", strong)
-    add_section("MAYBE", maybe)
-
+    html_parts.append("</ul>")
     return subject, "\n".join(text_parts).strip() + "\n", "\n".join(html_parts)
+
+
+def format_match_line(match: Any) -> str:
+    """One compact email line per match (reasons capped for display)."""
+    return (
+        f"{match.title} — {match.company} — {_posted_display(match)} — "
+        f"{_short_reason(match)} — {match.url}"
+    )
+
+
+def _posted_display(match: Any) -> str:
+    posted = getattr(match, "posted_date", "") or ""
+    posted = str(posted).strip()
+    return posted if posted else "unknown"
+
+
+def _short_reason(match: Any) -> str:
+    reason = " ".join(str(getattr(match, "reasoning", "") or "").split())
+    if len(reason) <= REASON_MAX_CHARS:
+        return reason
+    return reason[: REASON_MAX_CHARS - 1].rstrip() + "…"
 
 
 def send_email(

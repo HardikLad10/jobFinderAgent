@@ -380,3 +380,188 @@ Do not delete old entries. If something changes direction, add a new entry expla
 **Open questions carried forward:**
 - Set up Gmail filter/forward: subject contains `Illinois careers` → `anvekshavinod24@gmail.com`.
 - Recency filter for main G/L/A boards still optional.
+
+---
+
+## [2026-08-05] — Locked Midwest/UIUC product geography + ATS tiers (pre-discovery)
+
+**Changed:**
+- Updated `PROJECT_BRIEF.md`: product outcome (daily curated SWE list for UIUC/Midwest grads), company geography (Greater Chicago + all Illinois + neighboring WI/IN/MI/MO/IA), location-filter intent, ATS tiers (G/L/A/Breezy primary → Workday next → defer Comeet/Paylocity/Oracle), filter-then-Claude cost posture.
+- Discovery of 100–150+ companies **not started** — design/tradeoffs discussion next.
+
+**Why:**
+- Chicago-only under-serves a UIUC student in Urbana–Champaign. Location reward + school/alumni recognition in Midwest employers is the customer-obsessed framing.
+- User OK exceeding 100–150 during discovery; triage effort later. Cost OK while filters run before Claude (~cents so far).
+
+**Decisions made (locked):**
+- Geography: all of metro+suburbs, statewide IL, neighboring-state tech footprint.
+- ATS: expand on Greenhouse/Lever/Ashby/Breezy first; Workday second; skip Comeet/Paylocity/Oracle for now.
+- Filters (title + location + sponsorship) remain the quality/cost control plane.
+- End-product bar: daily list where most emailed roles are worth opening/applying.
+
+**Open questions carried forward:**
+- Design/tradeoffs for discovery execution (sources, false-positive checks, when to build Workday client, exact `filters.json` keyword expansion).
+- Then run discovery with user go-ahead.
+
+---
+
+## [2026-08-05] — Workday canned for v1; prefer 10–999 emp companies
+
+**Changed:**
+- `PROJECT_BRIEF.md`: Workday moved from "v1 next" to **out of v1**. Discovery/resolution targets Greenhouse/Lever/Ashby/Breezy only.
+- Company size bias locked: prefer small–mid (~10–999 employees), not megacorp Workday boards.
+
+**Why:**
+- v1 excludes Workday because boards are tenant-specific, fragile to scrape, and not a clean public JSON feed like G/L/A/Breezy; client cost (URL shape, POST, pagination, descriptions) is poor ROI.
+- SMB-focused Midwest discovery (~10–999 employees for UIUC/callback fit / ATS mix) already targets G/L/A/Breezy — Workday would mainly surface megacorp boards outside that product criterion.
+- May still note a Workday careers URL on unresolved rows for a future phase; no client build.
+
+**Decisions made (confirm set for discovery plan):**
+1. Seed style: curated Midwest/UIUC list (not aggregator scrape).
+2. Workday: canned for v1.
+3. Remote in location filter: keep while company list is Midwest-curated.
+4. Phases: widen filters → discover G/L/A/Breezy → smoke ingest/filter (Claude capped); no Workday phase.
+5. Strict false-positive spot-check before marking resolved.
+6. Size: prefer ~10–999 emp.
+
+**Open questions carried forward:**
+- Execute via Cursor Plan when user approves the plan.
+
+---
+
+## [2026-08-05] — Phase 1: Midwest location filter widened
+
+**Changed:**
+- Expanded `config/filters.json` `location_include_any` with Chicago suburbs, Champaign/Urbana + other IL cities, and neighbor-state city/state tokens (WI/IN/MI/MN/MO/IA). Kept `remote`.
+- Discovery seed ceiling noted for Phase 2: allow **>250** company names (user request).
+
+**Why:**
+- Locked product geography is Midwest/UIUC-local, not Chicago-only. Without wider location strings, good suburban/Champaign/neighbor roles would never reach Claude.
+
+**Decisions made:**
+- Short state tokens use comma/space forms where possible (`, wi`, `, in`) to reduce bare-word false positives; city names carry most of the signal.
+- Phase 2 not started; waiting for user go. Seed size target raised above 250.
+
+**Open questions carried forward:**
+- Phase 2: curated seed >250 + probe G/L/A/Breezy.
+
+---
+
+## [2026-08-05] — Phase 2: Midwest seed discovery + merge
+
+**Changed:**
+- Wrote `config/midwest_seed.json` — **822** unique company names (existing 50 + Midwest/UIUC-relevant tech/fintech/health/logistics and adjacent SaaS).
+- Upgraded `scripts/discover_ats.py` to load seed file, probe Greenhouse/Lever/Ashby/**Breezy**, prefer longer/specific slugs (short first-word tokens only via ALIASES), write `config/companies.discovered.json`.
+- Ran full probe: raw hits **201/822** (G 143 / A 33 / L 24 / Breezy 1).
+- Strict spot-check rejected **8** false positives; **0** Breezy boards kept after review.
+- Merged into `config/companies.json`: **191 resolved** (was 22), **631 unresolved**, **822** total.
+
+**Rejected false positives (this pass):**
+- `greenhouse/fetch` ≠ Fetch Rewards (pet-insurance board)
+- `greenhouse/indigo` ≠ Indigo Ag (underwriting board)
+- `greenhouse/motive` ≠ Motive/KeepTruckin (`wearemotive.com` agency)
+- `greenhouse/current` ≠ Current banking (Drupal/web agency)
+- `ashby/shift` ≠ Shift used cars (Australia finance)
+- `greenhouse/autotrader` ≠ Cox AutoTrader US (UK Auto Trader)
+- `greenhouse/seesaw` ≠ Seesaw Learning (Amman/Qatar board)
+- `breezy/katapult` ≠ Katapult Holdings (`Katapult Network`)
+
+**Why:**
+- Expand coverage beyond the original ~50 Chicago list without Workday; keep only boards that survive identity spot-check.
+
+**Decisions made:**
+- Prefer full-name/alias slugs over bare first-word guesses (blocks capital/village/echo/cleo class of FPs).
+- Empty-but-valid boards (0 jobs at discovery) kept as resolved for future posts.
+- Duplicate board names (`Block Inc`, `PathAI Inc`) left unresolved pointing at canonical entry.
+- **No Phase 3 Breezy client** for now — only Breezy hit was a false company match.
+
+**Open questions carried forward:**
+- Phase 4: smoke ingest+filter (Claude capped) + push `main` when user says go.
+- Triage unresolved megacorps / non-SMB entries later if ingest volume is noisy.
+
+---
+
+## [2026-08-05] — Discovery backlog: unresolved ≠ no careers board
+
+**Clarified (product scoping, not Phase 4):**
+- Phase 2 method: guess slug tokens → HTTP probe Greenhouse/Lever/Ashby/Breezy → spot-check board identity before marking resolved.
+- **~631 of 822 unresolved does not mean "no careers board."** Usual causes: wrong ATS (Workday, custom/iCIMS/etc.), or a real G/L/A/Breezy slug that was unguessable from the company name.
+- v1 intentionally does **not** deep-hunt careers pages for unresolved names (no HTML crawl of company sites to find the ATS).
+- **Future scoping backlog:** when a real G/L/A/Breezy careers URL/slug is found in the wild, add the token to `config/companies.json`. Optional later: deeper ATS discovery — out of current v1 scope.
+- **Phase 3 Breezy client skipped:** 0 verified Breezy boards after spot-check (only FP was Katapult Network ≠ Katapult Holdings).
+
+**Decisions made:**
+- Keep unresolved rows as a backlog of "public board not yet found," not "company has no jobs."
+- Do not re-enable Workday or start Phase 4 from this note.
+
+---
+
+## [2026-08-05] — Phase 4: smoke ingest + filter (Claude capped)
+
+**Command:** `python3 run_pipeline.py --match-limit 5` (~71s wall; full_network). Cap = **5** Claude Haiku calls (`--match-limit 5`). No `--mark-seen`, no email, no push, no commit.
+
+**Funnel:**
+| Stage | Count |
+| --- | --- |
+| Resolved boards attempted | **191** / 191 (G 135 / A 32 / L 24); 631 unresolved skipped |
+| Hard ingest failures / rate limits | **0** |
+| Empty boards (HTTP OK, 0 jobs) | **9** (KeepTruckin, OnDeck, Optiver, Carbon Health, Plaid, HubSpot, Boomi, Instructure, MyCase) |
+| Jobs ingested | **15,092** (15,088 with description) |
+| After title filter | **785** (title_drop=14,307) |
+| After location filter | **248** (location_drop=537) |
+| After sponsorship | **248** (sponsorship_drop=0) |
+| After dedupe | **245** (dedupe_drop=3) |
+| Claude matched (capped) | **5** → 1 strong / 1 maybe / 3 no |
+
+**Claude spend:** ~5 Haiku calls only (~$0.01–0.02 at brief rates). Full filtered set was 245; matching stopped at the hard cap of 5.
+
+**Issues worth knowing (not blockers):**
+- Title include keywords `new grad` / `entry level` alone let non-SWE roles through (Flexport SDR ×2, Samsara tech sales, Grafana AE). Claude correctly marked sales as `no`; tighten title include (require SWE token) or add sales excludes later.
+- Entrata `STRONG` hit is Pune, India — false location hit: filter token `, in` matches inside `, India`. Tighten Indiana token later.
+- Empty boards above may be stale tokens or truly empty — leave as resolved for future posts (same Phase 2 policy).
+
+**Artifacts:** `data/latest_ingestion.json`, `data/latest_filtered.json`, `data/latest_matches.json`, `data/phase4_smoke.log`. Working tree left dirty; **not pushed**.
+
+**Decisions made:**
+- Phase 4 smoke proven at 191-board scale; Claude remains optional/capped for cost.
+- No Breezy client; no unresolved deep-hunt; push deferred until user says go.
+
+---
+
+## [2026-08-05] — Freshness filter (N=7) + compact match email
+
+**Changed:**
+- Added `max_age_days: 7` to `config/filters.json`.
+- Extended `filtering/`: after sponsorship and before seen-URL dedupe, drop postings older than 7 days; missing/null/unparseable `posted_date` kept. Stage logged as `freshness_drop`.
+- Reworked match email in `delivery/` to one compact line per strong/maybe: `Title — Company — Posted date — reasoning — link` (reasoning capped ~120 chars). Tiny count header only.
+- Updated `PROJECT_BRIEF.md` Architecture/Delivery/V1 for freshness + email shape; removed "posted-within-N-days" from pure future list.
+
+**Why:**
+- Stale ATS listings were surviving title/location/sponsorship and reaching Claude/email; a deterministic date gate cuts noise before the agentic step without replacing URL-based seen dedupe.
+- Multi-paragraph per-job emails were hard to scan; one line per match matches how the list is actually used (open link or skip).
+
+**Decisions made:**
+- Freshness N=7; null/missing/unparseable `posted_date` → keep.
+- Chain order: title → location → sponsorship → **freshness** → URL seen-dedupe → Haiku.
+- Email: one line per match; truncate long Claude reasons at display time only (matching prompt unchanged).
+- Spec language stays third-person product rationale in `PROJECT_BRIEF.md`.
+
+**Open questions carried forward:**
+- No re-smoke ingest, no Claude matching, no push/commit in this session.
+- Indiana location false-positive (`, in` vs India) and title-include sales bleed still open from Phase 4.
+
+---
+
+## [2026-08-05] — Actions verify + freshness filter re-smoke
+
+**Actions (Step 4):** PASS — no edits.
+- `.github/workflows/daily_job_search.yml` already runs `python run_pipeline.py --send-email --mark-seen`.
+- Follow-up step commits/pushes `data/seen_jobs.json` when changed (`chore: update seen jobs after daily run`).
+- Illinois reminder workflow untouched.
+
+**Filter re-smoke (Step 5):** Reused `data/latest_ingestion.json` (15,092 postings); no re-ingest; `--skip-match` / no Claude; no `--mark-seen`.
+
+Funnel (`max_age_days=7`, null posted_date kept):
+- ingested **15092** → title_drop **14307** → location_drop **537** → sponsorship_drop **0** → freshness_drop **209** → dedupe_drop **0** → kept **39**
+
+**Artifacts:** refreshed `data/latest_filtered.json` (39). **No push, no commit.**

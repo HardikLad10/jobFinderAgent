@@ -288,7 +288,8 @@
     "name": "Upside",
     "ats": "ashby",
     "board_token": "upside",
-    "status": "resolved"
+    "status": "resolved",
+    "notes": "Ashby board jobs.ashbyhq.com/upside; confirm Chicago Upside vs Upside Foods if mismatched roles appear."
   },
   {
     "name": "Metropolis",
@@ -329,5 +330,5250 @@
     "ats": "greenhouse",
     "board_token": "block",
     "status": "resolved"
+  },
+  {
+    "name": "Packback",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Built In",
+    "ats": "greenhouse",
+    "board_token": "builtin",
+    "status": "resolved"
+  },
+  {
+    "name": "Rise Science",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Simple Mills",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Fieldwire",
+    "ats": "greenhouse",
+    "board_token": "fieldwire",
+    "status": "resolved"
+  },
+  {
+    "name": "Narrativ",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Narrative Science",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Braintree",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Avant",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "OppFi",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Belly",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Threadless",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Grubhub",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Trunk Club",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Foxtrot",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "LogicGate",
+    "ats": "greenhouse",
+    "board_token": "logicgate",
+    "status": "resolved"
+  },
+  {
+    "name": "Bungii",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Fetch Rewards",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/fetch matched pet-insurance Fetch board, not Fetch Rewards."
+  },
+  {
+    "name": "Nowsta",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "BenchPrep",
+    "ats": "greenhouse",
+    "board_token": "benchprep",
+    "status": "resolved"
+  },
+  {
+    "name": "Shiftgig",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "GTreasury",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "HighRadius",
+    "ats": "greenhouse",
+    "board_token": "highradius",
+    "status": "resolved"
+  },
+  {
+    "name": "Bill.com",
+    "ats": "greenhouse",
+    "board_token": "billcom",
+    "status": "resolved"
+  },
+  {
+    "name": "AvidXchange",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "nCino",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Alkami",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MX Technologies",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Yardi",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Entrata",
+    "ats": "lever",
+    "board_token": "entrata",
+    "status": "resolved"
+  },
+  {
+    "name": "AppFolio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "RealPage",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MRI Software",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Procore",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PlanGrid",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bushel",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "FarmLogs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Granular",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Conservis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Indigo Ag",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/indigo matched underwriting firm, not Indigo Ag."
+  },
+  {
+    "name": "Farmers Business Network",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Climate Corporation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Descartes Labs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "ShipMonk",
+    "ats": "greenhouse",
+    "board_token": "shipmonk",
+    "status": "resolved"
+  },
+  {
+    "name": "Flexport",
+    "ats": "greenhouse",
+    "board_token": "flexport",
+    "status": "resolved"
+  },
+  {
+    "name": "FreightWaves",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MacroPoint",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Loadsmart",
+    "ats": "lever",
+    "board_token": "loadsmart",
+    "status": "resolved"
+  },
+  {
+    "name": "Transfix",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Convoy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Motive",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/motive matched wearemotive.com agency, not Motive (KeepTruckin)."
+  },
+  {
+    "name": "Samsara",
+    "ats": "greenhouse",
+    "board_token": "samsara",
+    "status": "resolved"
+  },
+  {
+    "name": "Geotab",
+    "ats": "greenhouse",
+    "board_token": "geotab",
+    "status": "resolved"
+  },
+  {
+    "name": "KeepTruckin",
+    "ats": "ashby",
+    "board_token": "keeptruckin",
+    "status": "resolved",
+    "notes": "Board resolved but 0 jobs at discovery."
+  },
+  {
+    "name": "Manhattan Associates",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Blue Yonder",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kinaxis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "o9 Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Coupa",
+    "ats": "lever",
+    "board_token": "coupa",
+    "status": "resolved"
+  },
+  {
+    "name": "Tipalti",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Melio",
+    "ats": "greenhouse",
+    "board_token": "melio",
+    "status": "resolved"
+  },
+  {
+    "name": "Routable",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MineralTree",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kyriba",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "OnDeck",
+    "ats": "ashby",
+    "board_token": "ondeck",
+    "status": "resolved",
+    "notes": "Board resolved but 0 jobs at discovery."
+  },
+  {
+    "name": "BlueVine",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Fundbox",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Lendio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "LendingClub",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Upstart",
+    "ats": "greenhouse",
+    "board_token": "upstart",
+    "status": "resolved"
+  },
+  {
+    "name": "EarnIn",
+    "ats": "greenhouse",
+    "board_token": "earnin",
+    "status": "resolved"
+  },
+  {
+    "name": "Dave",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MoneyLion",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Brigit",
+    "ats": "ashby",
+    "board_token": "brigit",
+    "status": "resolved"
+  },
+  {
+    "name": "Chime",
+    "ats": "greenhouse",
+    "board_token": "chime",
+    "status": "resolved"
+  },
+  {
+    "name": "Varo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Current",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/current matched Drupal/web agency, not Current banking."
+  },
+  {
+    "name": "Step",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Greenlight",
+    "ats": "lever",
+    "board_token": "greenlight",
+    "status": "resolved"
+  },
+  {
+    "name": "Toast",
+    "ats": "greenhouse",
+    "board_token": "toast",
+    "status": "resolved"
+  },
+  {
+    "name": "Olo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "ChowNow",
+    "ats": "lever",
+    "board_token": "chownow",
+    "status": "resolved"
+  },
+  {
+    "name": "SpotOn",
+    "ats": "ashby",
+    "board_token": "spoton",
+    "status": "resolved"
+  },
+  {
+    "name": "BentoBox",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Popmenu",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Owner.com",
+    "ats": "ashby",
+    "board_token": "owner",
+    "status": "resolved"
+  },
+  {
+    "name": "SevenRooms",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Tock",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Resy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "OpenTable",
+    "ats": "greenhouse",
+    "board_token": "opentable",
+    "status": "resolved"
+  },
+  {
+    "name": "CarGurus",
+    "ats": "greenhouse",
+    "board_token": "cargurus",
+    "status": "resolved"
+  },
+  {
+    "name": "TrueCar",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Carvana",
+    "ats": "greenhouse",
+    "board_token": "carvana",
+    "status": "resolved"
+  },
+  {
+    "name": "Vroom",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Shift",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug ashby/shift matched Australia finance Shift, not Shift used cars."
+  },
+  {
+    "name": "AAR Corp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Wolfram Research",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Epic Systems",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Exact Sciences",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Promega",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "GE HealthCare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Oak Street Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cityblock Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Notable Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Phreesia",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PatientPop",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Komodo Health",
+    "ats": "greenhouse",
+    "board_token": "komodohealth",
+    "status": "resolved"
+  },
+  {
+    "name": "PathAI",
+    "ats": "greenhouse",
+    "board_token": "pathai",
+    "status": "resolved"
+  },
+  {
+    "name": "Color Health",
+    "ats": "ashby",
+    "board_token": "color-health",
+    "status": "resolved"
+  },
+  {
+    "name": "Guardant Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Natera",
+    "ats": "greenhouse",
+    "board_token": "natera",
+    "status": "resolved"
+  },
+  {
+    "name": "Tempus Labs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Outcome Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Catapult Sports",
+    "ats": "greenhouse",
+    "board_token": "catapultsports",
+    "status": "resolved"
+  },
+  {
+    "name": "Peapod Digital Labs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "DRW",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Jump Trading",
+    "ats": "greenhouse",
+    "board_token": "jumptrading",
+    "status": "resolved"
+  },
+  {
+    "name": "Citadel Securities",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Optiver",
+    "ats": "greenhouse",
+    "board_token": "optiver",
+    "status": "resolved",
+    "notes": "Board resolved but 0 jobs at discovery."
+  },
+  {
+    "name": "Belvedere Trading",
+    "ats": "lever",
+    "board_token": "belvederetrading",
+    "status": "resolved"
+  },
+  {
+    "name": "Akuna Capital",
+    "ats": "greenhouse",
+    "board_token": "akunacapital",
+    "status": "resolved"
+  },
+  {
+    "name": "Peak6",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "IMC Trading",
+    "ats": "greenhouse",
+    "board_token": "imc",
+    "status": "resolved"
+  },
+  {
+    "name": "TransMarket Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Wolverine Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Allston Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Chicago Trading Company",
+    "ats": "greenhouse",
+    "board_token": "chicagotrading",
+    "status": "resolved"
+  },
+  {
+    "name": "Headlands Technologies",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Radix Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Simplex Trading",
+    "ats": "greenhouse",
+    "board_token": "simplextrading",
+    "status": "resolved"
+  },
+  {
+    "name": "Group One Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "XR Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "DV Trading",
+    "ats": "greenhouse",
+    "board_token": "dvtrading",
+    "status": "resolved"
+  },
+  {
+    "name": "Hard Eight Futures",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Advantage Futures",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "RJO Futures",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "tastyworks",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Allstate",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CME Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Options Clearing Corporation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Northern Trust",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Wintrust",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "BMO Harris",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Fifth Third",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Huntington",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Associated Bank",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Old National",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "HCSC",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Blue Cross Blue Shield of Illinois",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "WEX Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Accolade",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Included Health",
+    "ats": "lever",
+    "board_token": "includedhealth",
+    "status": "resolved"
+  },
+  {
+    "name": "Teladoc",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Amwell",
+    "ats": "greenhouse",
+    "board_token": "amwell",
+    "status": "resolved"
+  },
+  {
+    "name": "Zocdoc",
+    "ats": "greenhouse",
+    "board_token": "zocdoc",
+    "status": "resolved"
+  },
+  {
+    "name": "Doximity",
+    "ats": "greenhouse",
+    "board_token": "doximity",
+    "status": "resolved"
+  },
+  {
+    "name": "Oscar Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Ro",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Hims & Hers",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Devoted Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bright Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Clover Health",
+    "ats": "greenhouse",
+    "board_token": "cloverhealth",
+    "status": "resolved"
+  },
+  {
+    "name": "Carbon Health",
+    "ats": "lever",
+    "board_token": "carbonhealth",
+    "status": "resolved",
+    "notes": "Board resolved but 0 jobs at discovery."
+  },
+  {
+    "name": "Hims",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Abbott",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "AbbVie",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Baxter",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Zimmer Biomet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Stryker",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Medline",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Hill-Rom",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Abt Associates",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "NORC",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "UI Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Carle Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "OSF HealthCare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "UW Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Froedtert",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Advocate Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Northwestern Medicine",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Rush University Medical Center",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "John Deere",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CNH Industrial",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Caterpillar",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Corteva",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "ADM",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cargill",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bunge",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Land O Lakes",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kraft Heinz",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Mondelez",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Conagra",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "General Mills",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "OSI Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Tootsie Roll",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Ferrara Candy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Mars Wrigley",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Fannie May",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Blommer Chocolate",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Vosges Haut-Chocolat",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Do-Rite Donuts",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Instacart",
+    "ats": "greenhouse",
+    "board_token": "instacart",
+    "status": "resolved"
+  },
+  {
+    "name": "DoorDash",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Uber",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Lyft",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Via Transportation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Scoop Technologies",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "GoPuff",
+    "ats": "lever",
+    "board_token": "gopuff",
+    "status": "resolved"
+  },
+  {
+    "name": "Shopify",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "BigCommerce",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Square",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Block Inc",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Duplicate of Block; same ATS board \u2014 skipped to avoid double ingest."
+  },
+  {
+    "name": "Cash App",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Venmo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PayPal",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Stripe",
+    "ats": "greenhouse",
+    "board_token": "stripe",
+    "status": "resolved"
+  },
+  {
+    "name": "Plaid",
+    "ats": "lever",
+    "board_token": "plaid",
+    "status": "resolved",
+    "notes": "Board resolved but 0 jobs at discovery."
+  },
+  {
+    "name": "Marqeta",
+    "ats": "greenhouse",
+    "board_token": "marqeta",
+    "status": "resolved"
+  },
+  {
+    "name": "Brex",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Ramp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Affirm",
+    "ats": "greenhouse",
+    "board_token": "affirm",
+    "status": "resolved"
+  },
+  {
+    "name": "Klarna",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Afterpay",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sezzle",
+    "ats": "greenhouse",
+    "board_token": "sezzle",
+    "status": "resolved"
+  },
+  {
+    "name": "Zip",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Robinhood",
+    "ats": "greenhouse",
+    "board_token": "robinhood",
+    "status": "resolved"
+  },
+  {
+    "name": "SoFi",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Wealthfront",
+    "ats": "lever",
+    "board_token": "wealthfront",
+    "status": "resolved"
+  },
+  {
+    "name": "Betterment",
+    "ats": "greenhouse",
+    "board_token": "betterment",
+    "status": "resolved"
+  },
+  {
+    "name": "Acorns",
+    "ats": "ashby",
+    "board_token": "acorns",
+    "status": "resolved"
+  },
+  {
+    "name": "Addepar",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Orion Advisor",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Envestnet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "FactSet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bloomberg",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "S&P Global",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Moody's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MSCI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "ICE",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Nasdaq",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sigma Computing",
+    "ats": "greenhouse",
+    "board_token": "sigmacomputing",
+    "status": "resolved"
+  },
+  {
+    "name": "ThoughtSpot",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Looker",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Tableau",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Domo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Mode Analytics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Hex",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Databricks",
+    "ats": "greenhouse",
+    "board_token": "databricks",
+    "status": "resolved"
+  },
+  {
+    "name": "Snowflake",
+    "ats": "ashby",
+    "board_token": "snowflake",
+    "status": "resolved"
+  },
+  {
+    "name": "dbt Labs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Fivetran",
+    "ats": "greenhouse",
+    "board_token": "fivetran",
+    "status": "resolved"
+  },
+  {
+    "name": "Airbyte",
+    "ats": "ashby",
+    "board_token": "airbyte",
+    "status": "resolved"
+  },
+  {
+    "name": "Segment",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Amplitude",
+    "ats": "greenhouse",
+    "board_token": "amplitude",
+    "status": "resolved"
+  },
+  {
+    "name": "Mixpanel",
+    "ats": "greenhouse",
+    "board_token": "mixpanel",
+    "status": "resolved"
+  },
+  {
+    "name": "Braze",
+    "ats": "greenhouse",
+    "board_token": "braze",
+    "status": "resolved"
+  },
+  {
+    "name": "Iterable",
+    "ats": "greenhouse",
+    "board_token": "iterable",
+    "status": "resolved"
+  },
+  {
+    "name": "Attentive",
+    "ats": "greenhouse",
+    "board_token": "attentive",
+    "status": "resolved"
+  },
+  {
+    "name": "Postscript",
+    "ats": "greenhouse",
+    "board_token": "postscript",
+    "status": "resolved"
+  },
+  {
+    "name": "Yotpo",
+    "ats": "greenhouse",
+    "board_token": "yotpo",
+    "status": "resolved"
+  },
+  {
+    "name": "Gorgias",
+    "ats": "ashby",
+    "board_token": "gorgias",
+    "status": "resolved"
+  },
+  {
+    "name": "Intercom",
+    "ats": "greenhouse",
+    "board_token": "intercom",
+    "status": "resolved"
+  },
+  {
+    "name": "Drift",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "6sense",
+    "ats": "greenhouse",
+    "board_token": "6sense",
+    "status": "resolved"
+  },
+  {
+    "name": "Demandbase",
+    "ats": "ashby",
+    "board_token": "demandbase",
+    "status": "resolved"
+  },
+  {
+    "name": "ZoomInfo",
+    "ats": "greenhouse",
+    "board_token": "zoominfo",
+    "status": "resolved"
+  },
+  {
+    "name": "Apollo.io",
+    "ats": "greenhouse",
+    "board_token": "apolloio",
+    "status": "resolved"
+  },
+  {
+    "name": "Outreach",
+    "ats": "lever",
+    "board_token": "outreach",
+    "status": "resolved"
+  },
+  {
+    "name": "Salesloft",
+    "ats": "greenhouse",
+    "board_token": "salesloft",
+    "status": "resolved"
+  },
+  {
+    "name": "Gong",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Calendly",
+    "ats": "greenhouse",
+    "board_token": "calendly",
+    "status": "resolved"
+  },
+  {
+    "name": "Chili Piper",
+    "ats": "ashby",
+    "board_token": "chilipiper",
+    "status": "resolved"
+  },
+  {
+    "name": "Front",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "1Password",
+    "ats": "ashby",
+    "board_token": "1password",
+    "status": "resolved"
+  },
+  {
+    "name": "Okta",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Auth0",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Duo Security",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CrowdStrike",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "SentinelOne",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cloudflare",
+    "ats": "greenhouse",
+    "board_token": "cloudflare",
+    "status": "resolved"
+  },
+  {
+    "name": "Vercel",
+    "ats": "greenhouse",
+    "board_token": "vercel",
+    "status": "resolved"
+  },
+  {
+    "name": "Netlify",
+    "ats": "greenhouse",
+    "board_token": "netlify",
+    "status": "resolved"
+  },
+  {
+    "name": "DigitalOcean",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Render",
+    "ats": "ashby",
+    "board_token": "render",
+    "status": "resolved"
+  },
+  {
+    "name": "Supabase",
+    "ats": "ashby",
+    "board_token": "supabase",
+    "status": "resolved"
+  },
+  {
+    "name": "PlanetScale",
+    "ats": "greenhouse",
+    "board_token": "planetscale",
+    "status": "resolved"
+  },
+  {
+    "name": "Neon",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cockroach Labs",
+    "ats": "greenhouse",
+    "board_token": "cockroachlabs",
+    "status": "resolved"
+  },
+  {
+    "name": "Grafana Labs",
+    "ats": "greenhouse",
+    "board_token": "grafanalabs",
+    "status": "resolved"
+  },
+  {
+    "name": "PagerDuty",
+    "ats": "greenhouse",
+    "board_token": "pagerduty",
+    "status": "resolved"
+  },
+  {
+    "name": "LaunchDarkly",
+    "ats": "greenhouse",
+    "board_token": "launchdarkly",
+    "status": "resolved"
+  },
+  {
+    "name": "Statsig",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Snyk",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Wiz",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Orca Security",
+    "ats": "greenhouse",
+    "board_token": "orcasecurity",
+    "status": "resolved"
+  },
+  {
+    "name": "HashiCorp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Datadog",
+    "ats": "greenhouse",
+    "board_token": "datadog",
+    "status": "resolved"
+  },
+  {
+    "name": "New Relic",
+    "ats": "greenhouse",
+    "board_token": "newrelic",
+    "status": "resolved"
+  },
+  {
+    "name": "Elastic",
+    "ats": "greenhouse",
+    "board_token": "elastic",
+    "status": "resolved"
+  },
+  {
+    "name": "MongoDB",
+    "ats": "greenhouse",
+    "board_token": "mongodb",
+    "status": "resolved"
+  },
+  {
+    "name": "Twilio",
+    "ats": "greenhouse",
+    "board_token": "twilio",
+    "status": "resolved"
+  },
+  {
+    "name": "SendGrid",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Mailchimp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "HubSpot",
+    "ats": "greenhouse",
+    "board_token": "hubspot",
+    "status": "resolved",
+    "notes": "Board resolved but 0 jobs at discovery."
+  },
+  {
+    "name": "Salesforce",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "ServiceNow",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Workday",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Atlassian",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "GitLab",
+    "ats": "greenhouse",
+    "board_token": "gitlab",
+    "status": "resolved"
+  },
+  {
+    "name": "GitHub",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Notion",
+    "ats": "ashby",
+    "board_token": "notion",
+    "status": "resolved"
+  },
+  {
+    "name": "Airtable",
+    "ats": "greenhouse",
+    "board_token": "airtable",
+    "status": "resolved"
+  },
+  {
+    "name": "Asana",
+    "ats": "greenhouse",
+    "board_token": "asana",
+    "status": "resolved"
+  },
+  {
+    "name": "Smartsheet",
+    "ats": "greenhouse",
+    "board_token": "smartsheet",
+    "status": "resolved"
+  },
+  {
+    "name": "ClickUp",
+    "ats": "ashby",
+    "board_token": "clickup",
+    "status": "resolved"
+  },
+  {
+    "name": "Basecamp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Miro",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Figma",
+    "ats": "greenhouse",
+    "board_token": "figma",
+    "status": "resolved"
+  },
+  {
+    "name": "Canva",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Webflow",
+    "ats": "greenhouse",
+    "board_token": "webflow",
+    "status": "resolved"
+  },
+  {
+    "name": "Contentful",
+    "ats": "greenhouse",
+    "board_token": "contentful",
+    "status": "resolved"
+  },
+  {
+    "name": "Sanity",
+    "ats": "ashby",
+    "board_token": "sanity",
+    "status": "resolved"
+  },
+  {
+    "name": "DocuSign",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PandaDoc",
+    "ats": "greenhouse",
+    "board_token": "pandadoc",
+    "status": "resolved"
+  },
+  {
+    "name": "Box",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Dropbox",
+    "ats": "greenhouse",
+    "board_token": "dropbox",
+    "status": "resolved"
+  },
+  {
+    "name": "Egnyte",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Proofpoint",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Abnormal Security",
+    "ats": "greenhouse",
+    "board_token": "abnormalsecurity",
+    "status": "resolved"
+  },
+  {
+    "name": "Varonis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Netskope",
+    "ats": "greenhouse",
+    "board_token": "netskope",
+    "status": "resolved"
+  },
+  {
+    "name": "Lacework",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Aqua Security",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sysdig",
+    "ats": "lever",
+    "board_token": "sysdig",
+    "status": "resolved"
+  },
+  {
+    "name": "Kong",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MuleSoft",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Boomi",
+    "ats": "ashby",
+    "board_token": "boomi",
+    "status": "resolved",
+    "notes": "Board resolved but 0 jobs at discovery."
+  },
+  {
+    "name": "Workato",
+    "ats": "greenhouse",
+    "board_token": "workato",
+    "status": "resolved"
+  },
+  {
+    "name": "Zapier",
+    "ats": "ashby",
+    "board_token": "zapier",
+    "status": "resolved"
+  },
+  {
+    "name": "Make",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Celigo",
+    "ats": "greenhouse",
+    "board_token": "celigo",
+    "status": "resolved"
+  },
+  {
+    "name": "Informatica",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Talend",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Alteryx",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "DataRobot",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Dataiku",
+    "ats": "greenhouse",
+    "board_token": "dataiku",
+    "status": "resolved"
+  },
+  {
+    "name": "H2O.ai",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Anaconda",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Unity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Epic Games",
+    "ats": "greenhouse",
+    "board_token": "epicgames",
+    "status": "resolved"
+  },
+  {
+    "name": "Roblox",
+    "ats": "greenhouse",
+    "board_token": "roblox",
+    "status": "resolved"
+  },
+  {
+    "name": "Zynga",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Take-Two",
+    "ats": "greenhouse",
+    "board_token": "taketwo",
+    "status": "resolved"
+  },
+  {
+    "name": "Electronic Arts",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Twitch",
+    "ats": "greenhouse",
+    "board_token": "twitch",
+    "status": "resolved"
+  },
+  {
+    "name": "Mux",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cloudinary",
+    "ats": "lever",
+    "board_token": "cloudinary",
+    "status": "resolved"
+  },
+  {
+    "name": "Imgix",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Fastly",
+    "ats": "greenhouse",
+    "board_token": "fastly",
+    "status": "resolved"
+  },
+  {
+    "name": "Akamai",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "The Browser Company",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Arc Browser",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "DuckDuckGo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Brave",
+    "ats": "greenhouse",
+    "board_token": "brave",
+    "status": "resolved"
+  },
+  {
+    "name": "Ameren",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Enterprise Holdings",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Anheuser-Busch",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Nestle Purina",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bayer Crop Science",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Syngenta",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "BASF Agricultural Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CHS Inc",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Dairy Farmers of America",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Tyson Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Hormel",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Smithfield Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "McCain Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Lamb Weston",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bush Brothers",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Goya Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "La Preferida",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Katherine Anne Confections",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bittersweet Pastry",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Stan's Donuts",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Firecakes Donuts",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Doughnut Vault",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Glazed and Infused",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Provisions Chicago",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Relativity ODA",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Syndigo",
+    "ats": "greenhouse",
+    "board_token": "syndigo",
+    "status": "resolved"
+  },
+  {
+    "name": "Basis Technologies",
+    "ats": "lever",
+    "board_token": "basis",
+    "status": "resolved"
+  },
+  {
+    "name": "Cleo Communications",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "OppLoans",
+    "ats": "greenhouse",
+    "board_token": "opploans",
+    "status": "resolved"
+  },
+  {
+    "name": "Elevate Credit",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CURO",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "NetCredit",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CashNetUSA",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Headway Capital",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CreditNinja",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Possible Finance",
+    "ats": "ashby",
+    "board_token": "possible-finance",
+    "status": "resolved"
+  },
+  {
+    "name": "Brink Software",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PAR Technology",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Agilysys",
+    "ats": "greenhouse",
+    "board_token": "agilysys",
+    "status": "resolved"
+  },
+  {
+    "name": "Hotello",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cloudbeds",
+    "ats": "greenhouse",
+    "board_token": "cloudbeds",
+    "status": "resolved"
+  },
+  {
+    "name": "Mews",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "SiteMinder",
+    "ats": "ashby",
+    "board_token": "siteminder",
+    "status": "resolved"
+  },
+  {
+    "name": "RateGain",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Airbnb",
+    "ats": "greenhouse",
+    "board_token": "airbnb",
+    "status": "resolved"
+  },
+  {
+    "name": "Vrbo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Expedia Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Booking Holdings",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Tripadvisor",
+    "ats": "greenhouse",
+    "board_token": "tripadvisor",
+    "status": "resolved"
+  },
+  {
+    "name": "Yelp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kayak",
+    "ats": "greenhouse",
+    "board_token": "kayak",
+    "status": "resolved"
+  },
+  {
+    "name": "Trivago",
+    "ats": "greenhouse",
+    "board_token": "trivago",
+    "status": "resolved"
+  },
+  {
+    "name": "Priceline",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "McLeod Software",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "TMW Systems",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MercuryGate",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PeopleNet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Omnitracs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Verizon Connect",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Fleet Complete",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Trimble Transportation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Descartes Systems Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Jaggaer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Ivalua",
+    "ats": "greenhouse",
+    "board_token": "ivalua",
+    "status": "resolved"
+  },
+  {
+    "name": "GEP",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Basware",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Tradeshift",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Tungsten Network",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Versapay",
+    "ats": "lever",
+    "board_token": "versapay",
+    "status": "resolved"
+  },
+  {
+    "name": "Corcentric",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "AvidPay",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CashAnalytics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bellin",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Biz2Credit",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Funding Circle",
+    "ats": "ashby",
+    "board_token": "fundingcircle",
+    "status": "resolved"
+  },
+  {
+    "name": "Prosper",
+    "ats": "lever",
+    "board_token": "prosper",
+    "status": "resolved"
+  },
+  {
+    "name": "Marcus by Goldman Sachs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Aspiration",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Ally Financial",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Synchrony",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bread Financial",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Uplift",
+    "ats": "greenhouse",
+    "board_token": "uplift",
+    "status": "resolved"
+  },
+  {
+    "name": "Snap Finance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Katapult",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug breezy/katapult matched Katapult Network, not Katapult Holdings lease-to-own."
+  },
+  {
+    "name": "FlexShopper",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Progressive Leasing",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Acima",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Perpay",
+    "ats": "greenhouse",
+    "board_token": "perpay",
+    "status": "resolved"
+  },
+  {
+    "name": "Splitit",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Quadpay",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Zip Co",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Afterpay Limited",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Klarna Bank",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CarMax",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "DriveTime",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Edmunds",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kelley Blue Book",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cox Automotive",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "KAR Global",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Copart",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "IAA",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Ritchie Bros",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "IronPlanet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Purple Wave",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "HEICO",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "TransDigm",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Spirit AeroSystems",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Triumph Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Howmet Aerospace",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Nucor",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Steel Dynamics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Commercial Metals",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "United States Steel",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cleveland-Cliffs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bright HealthCare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Health Care Service Corporation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Udemy",
+    "ats": "greenhouse",
+    "board_token": "udemy",
+    "status": "resolved"
+  },
+  {
+    "name": "Coursera",
+    "ats": "greenhouse",
+    "board_token": "coursera",
+    "status": "resolved"
+  },
+  {
+    "name": "2U",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Chegg",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Instructure",
+    "ats": "lever",
+    "board_token": "instructure",
+    "status": "resolved",
+    "notes": "Board resolved but 0 jobs at discovery."
+  },
+  {
+    "name": "Duolingo",
+    "ats": "greenhouse",
+    "board_token": "duolingo",
+    "status": "resolved"
+  },
+  {
+    "name": "Quizlet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kahoot",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Nearpod",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Newsela",
+    "ats": "greenhouse",
+    "board_token": "newsela",
+    "status": "resolved"
+  },
+  {
+    "name": "Renaissance Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Curriculum Associates",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "IXL Learning",
+    "ats": "greenhouse",
+    "board_token": "ixllearning",
+    "status": "resolved"
+  },
+  {
+    "name": "DreamBox Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Imagine Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PowerSchool",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Infinite Campus",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Skyward",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Blackboard",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Canvas LMS",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "D2L",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Brightspace",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Schoology",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Edmodo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "ClassDojo",
+    "ats": "ashby",
+    "board_token": "classdojo",
+    "status": "resolved"
+  },
+  {
+    "name": "Remind",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bloomz",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "SeeSaw",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/seesaw matched Middle East board (Amman/Qatar), not Seesaw Learning."
+  },
+  {
+    "name": "Seesaw Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Clever",
+    "ats": "greenhouse",
+    "board_token": "clever",
+    "status": "resolved"
+  },
+  {
+    "name": "ClassLink",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "GoGuardian",
+    "ats": "greenhouse",
+    "board_token": "goguardian",
+    "status": "resolved"
+  },
+  {
+    "name": "Securly",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Lightspeed Systems",
+    "ats": "greenhouse",
+    "board_token": "lightspeedsystems",
+    "status": "resolved"
+  },
+  {
+    "name": "i-Ready",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Illuminate Education",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Apex Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Edgenuity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Pearson Education",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "McGraw Hill",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Houghton Mifflin Harcourt",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Scholastic",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Wiley",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cengage",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Elsevier",
+    "ats": "greenhouse",
+    "board_token": "elsevier",
+    "status": "resolved"
+  },
+  {
+    "name": "Springer Nature",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "JSTOR",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "ProQuest",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "EBSCO",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Gale",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "LexisNexis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Westlaw",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bloomberg Law",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Clio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MyCase",
+    "ats": "greenhouse",
+    "board_token": "mycase",
+    "status": "resolved",
+    "notes": "Board resolved but 0 jobs at discovery."
+  },
+  {
+    "name": "PracticePanther",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Filevine",
+    "ats": "lever",
+    "board_token": "filevine",
+    "status": "resolved"
+  },
+  {
+    "name": "RelativityOne",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Everlaw",
+    "ats": "greenhouse",
+    "board_token": "everlaw",
+    "status": "resolved"
+  },
+  {
+    "name": "Logikcull",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Disco",
+    "ats": "greenhouse",
+    "board_token": "disco",
+    "status": "resolved",
+    "notes": "greenhouse/disco maps to CS Disco (csdisco.com)."
+  },
+  {
+    "name": "CS Disco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Reveal Data",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Brainspace",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Nuix",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Exterro",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Consilio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Epiq",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Consilio Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Lighthouse eDiscovery",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "HaystackID",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Inventus",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Special Counsel",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Robert Half Legal",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Aquent",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Creative Circle",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Motion Recruitment",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "TEKsystems",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Insight Global",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Robert Half",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Adecco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "ManpowerGroup",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Randstad",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kelly Services",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Aerotek",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kforce",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Modis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Hays",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Michael Page",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PageGroup",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Spencer Stuart",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Heidrick & Struggles",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Korn Ferry",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Russell Reynolds",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Egon Zehnder",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Boyden",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "DHR International",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "WittKieffer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Diversified Search",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Slate Search",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kohl's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Target",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Best Buy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "3M",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Medtronic",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cummins",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Eli Lilly",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Roche Diagnostics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Beckman Coulter",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bio-Rad Laboratories",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Thermo Fisher Scientific",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Illumina",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Danaher",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "IDEXX",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Zoetis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Elanco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Boehringer Ingelheim",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Merck Animal Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Phibro Animal Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Neogen",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "QuidelOrtho",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bio-Techne",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "DiaSorin",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "DiaSorin Molecular",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Myriad Genetics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Invitae",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Foundation Medicine",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Flatiron Health",
+    "ats": "greenhouse",
+    "board_token": "flatironhealth",
+    "status": "resolved"
+  },
+  {
+    "name": "Olive AI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Viz.ai",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Butterfly Network",
+    "ats": "greenhouse",
+    "board_token": "butterflynetwork",
+    "status": "resolved"
+  },
+  {
+    "name": "Hyperfine",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Nano-X Imaging",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Caption Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Paige AI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PathAI Inc",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Duplicate of PathAI; same ATS board \u2014 skipped to avoid double ingest."
+  },
+  {
+    "name": "Tempus AI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Grail",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Freenome",
+    "ats": "greenhouse",
+    "board_token": "freenome",
+    "status": "resolved"
+  },
+  {
+    "name": "Guardant",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Exact",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Adaptive Biotechnologies",
+    "ats": "greenhouse",
+    "board_token": "adaptivebiotechnologies",
+    "status": "resolved"
+  },
+  {
+    "name": "Seattle Genetics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Seagen",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Moderna",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "BioNTech",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Novavax",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Vaxart",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Inovio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Translate Bio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Beam Therapeutics",
+    "ats": "greenhouse",
+    "board_token": "beamtherapeutics",
+    "status": "resolved"
+  },
+  {
+    "name": "Editas Medicine",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CRISPR Therapeutics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Intellia Therapeutics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sangamo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "bluebird bio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Spark Therapeutics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sarepta",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Alnylam",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Ionis Pharmaceuticals",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Biogen",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Regeneron",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Vertex",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Gilead",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Amgen",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Genentech",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Roche",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Novartis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Pfizer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Merck",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bristol Myers Squibb",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Johnson & Johnson",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "AstraZeneca",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sanofi",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "GSK",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Takeda",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bayer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Boehringer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Teva",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Mylan",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Viatris",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Perrigo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Catalent",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Lonza",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Thermo Fisher",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Agilent",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Waters",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PerkinElmer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Revvity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bruker",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Shimadzu",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Horiba",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Mettler Toledo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sartorius",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Eppendorf",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Corning Life Sciences",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "MilliporeSigma",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sigma-Aldrich",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "VWR",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Avantor",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Thermo Scientific",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Cars Commerce",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Autotrader",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/autotrader matched UK Auto Trader (Manchester), not Cox AutoTrader US."
+  },
+  {
+    "name": "CarsDirect",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "AutoTempest",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Bring a Trailer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Hagerty",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "IDriveSafely",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Allstate Identity Protection",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Arity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Esurance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "SquareTrade",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Asurion",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Assurant",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Hippo Insurance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Lemonade",
+    "ats": "ashby",
+    "board_token": "lemonade",
+    "status": "resolved"
+  },
+  {
+    "name": "Root Insurance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Metromile",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Branch Insurance",
+    "ats": "ashby",
+    "board_token": "branchinsurance",
+    "status": "resolved"
+  },
+  {
+    "name": "Goosehead Insurance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Policygenius",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CoverHound",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "The Zebra",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Insurify",
+    "ats": "greenhouse",
+    "board_token": "insurify",
+    "status": "resolved"
+  },
+  {
+    "name": "NerdWallet",
+    "ats": "ashby",
+    "board_token": "nerdwallet",
+    "status": "resolved"
+  },
+  {
+    "name": "Bankrate",
+    "ats": "greenhouse",
+    "board_token": "bankrate",
+    "status": "resolved"
+  },
+  {
+    "name": "Credit Karma",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Experian",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Equifax",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "TransUnion",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "FICO",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "LexisNexis Risk",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "LexisNexis Risk Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Thomson Reuters",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Wolters Kluwer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "RELX",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Elsevier Clinical",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "UpToDate",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "DynaMed",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "VisualDx",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Epocrates",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Medscape",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "WebMD",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Healthline",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Everyday Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sharecare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "GoodRx",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "SingleCare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Blink Health",
+    "ats": "greenhouse",
+    "board_token": "blinkhealth",
+    "status": "resolved"
+  },
+  {
+    "name": "Capsule",
+    "ats": "ashby",
+    "board_token": "capsule",
+    "status": "resolved"
+  },
+  {
+    "name": "Alto Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "PillPack",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Amazon Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Walgreens",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "CVS Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Rite Aid",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Walmart Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kroger Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Meijer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Hy-Vee",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Schnucks",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Jewel-Osco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Mariano's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Roundy's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Pick n Save",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Metro Market",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Fresh Thyme",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Whole Foods Market",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Trader Joe's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Aldi",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Lidl",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Costco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sam's Club",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "BJ's Wholesale",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Gordon Food Service",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "US Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Sysco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Performance Food Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Dot Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "KeHE Distributors",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "UNFI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "SpartanNash",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Associated Wholesale Grocers",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "C&S Wholesale",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Wakefern",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Supervalu",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Albertsons",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Safeway",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Kroger",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Publix",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "H-E-B",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "Wegmans",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
   }
 ]
