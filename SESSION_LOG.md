@@ -579,3 +579,26 @@ Funnel (`max_age_days=7`, null posted_date kept):
 **Seen store:** `data/seen_jobs.json` 3 → 42 URLs so daily won't re-mail these.
 
 **Commit/push:** Midwest discovery + freshness N=7 + compact email landed on `main` as `a0c42b4` (see prior entry / git log).
+
+---
+
+## [2026-08-05] — Email Strong/Maybe sections + remote geo gap scoped
+
+**Changed:**
+- `delivery/__init__.py`: match email body now has separate **Strong** and **Maybe** sections under the count header (text + HTML), not one flat list.
+- `PROJECT_BRIEF.md`: location intent clarified to **US-remote** (not global remote); documented bare-`remote` substring as a known v1 gap that must be fixed in v1.
+- This log entry: root-cause of EU remotes in the first Midwest-scale digest + Midwest visibility problem.
+
+**Why / what went wrong:**
+- Brief intent said remote/US-remote; early filter decision kept the token `remote` because many boards label "Remote US." Execution was **substring include of `remote` only** — not "Remote US." Grafana-style `Ireland | Remote` therefore passes location and reaches Haiku.
+- After 191 boards + N=7, the kept set (39) was dominated by global remotes; Haiku correctly scored stack fit, so the email looked strong but **geo-wrong**. Midwest on-site roles were scarce in that survivor set (crowded out / fewer fresh title hits), not because Haiku hates Midwest.
+- Scope was partially considered (Midwest keywords widened in Phase 1) but the remote rule was never tightened to match US-remote intent before scale-up — a brief vs filters.json mismatch.
+
+**Decisions made:**
+- Email section split ships now (v1 polish).
+- Bare-`remote` over-admit is **in-scope for a v1 filter fix** (not deferred forever). Prefer deterministic filter engineering over asking Haiku to police geography. Expect some residual noise.
+- Also track: `, in` matching India; title keywords leaking non-SWE "entry level" roles.
+
+**Open questions carried forward:**
+- Exact remote rule for the v1 fix (remote+US include list vs non-US exclude list vs both) — brief before implementing.
+- Whether to clear/revisit `seen_jobs.json` for geo-false emails already marked seen (those URLs won't reappear until store prune/manual edit).

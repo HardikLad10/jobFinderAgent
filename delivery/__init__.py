@@ -59,8 +59,8 @@ def selectable_matches(matches: Sequence[Any]) -> list[Any]:
 def build_email(matches: Sequence[Any]) -> tuple[str, str, str] | None:
     """Return (subject, text, html) or None when there is nothing worth sending.
 
-    Each match is one compact line:
-    Title — Company — Posted date — one-line reasoning — link
+    Header counts, then separate Strong / Maybe sections. Each match is one
+    compact line: Title — Company — Posted date — one-line reasoning — link.
     """
     chosen = selectable_matches(matches)
     if not chosen:
@@ -81,19 +81,26 @@ def build_email(matches: Sequence[Any]) -> tuple[str, str, str] | None:
     ]
     html_parts = [
         f"<p><strong>{len(strong)}</strong> strong · <strong>{len(maybe)}</strong> maybe</p>",
-        "<ul>",
     ]
 
-    for m in strong + maybe:
-        line = format_match_line(m)
-        text_parts.append(line)
-        html_parts.append(
-            f"<li>{_escape(m.title)} — {_escape(m.company)} — "
-            f"{_escape(_posted_display(m))} — {_escape(_short_reason(m))} — "
-            f'<a href="{m.url}">{_escape(m.url)}</a></li>'
-        )
+    def _append_section(label: str, rows: list[Any]) -> None:
+        if not rows:
+            return
+        text_parts.append(label)
+        html_parts.append(f"<p><strong>{_escape(label)}</strong></p><ul>")
+        for m in rows:
+            text_parts.append(f"• {format_match_line(m)}")
+            html_parts.append(
+                f"<li>{_escape(m.title)} — {_escape(m.company)} — "
+                f"{_escape(_posted_display(m))} — {_escape(_short_reason(m))} — "
+                f'<a href="{m.url}">{_escape(m.url)}</a></li>'
+            )
+        text_parts.append("")
+        html_parts.append("</ul>")
 
-    html_parts.append("</ul>")
+    _append_section("Strong", strong)
+    _append_section("Maybe", maybe)
+
     return subject, "\n".join(text_parts).strip() + "\n", "\n".join(html_parts)
 
 
