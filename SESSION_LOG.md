@@ -565,3 +565,17 @@ Funnel (`max_age_days=7`, null posted_date kept):
 - ingested **15092** → title_drop **14307** → location_drop **537** → sponsorship_drop **0** → freshness_drop **209** → dedupe_drop **0** → kept **39**
 
 **Artifacts:** refreshed `data/latest_filtered.json` (39). **No push, no commit.**
+
+---
+
+## [2026-08-05] — Haiku match on 39 filtered (reuse, no re-ingest)
+
+**Ran:** Loaded `data/latest_filtered.json` (39) → Haiku match all → `--send-email` + `--mark-seen` (no full ingest of ~15k).
+
+**Funnel:** strong **14** · maybe **11** · no **14** (39/39). Elapsed ~109s. Rough cost ~**$0.12** (heuristic ~$0.003/job).
+
+**Email:** Sent via Resend to hardik.lad773@gmail.com — subject `Job matches: 14 strong, 11 maybe` (compact one-line format). Resend id `6bfc2d28-f4fc-44fb-a7d1-342379baeccc`.
+
+**Seen store:** `data/seen_jobs.json` 3 → 42 URLs so daily won't re-mail these.
+
+**Commit/push:** Midwest discovery + freshness N=7 + compact email landed on `main` as `a0c42b4` (see prior entry / git log).
