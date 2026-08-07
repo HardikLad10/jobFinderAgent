@@ -1,53 +1,28 @@
 # Illinois CSOD within-1-day reminder — separate from main fit-matching.
 #
-# Same morning window as Daily job search: 6:00 AM America/Chicago cron so
-# GitHub lag still tends toward ~8:00 AM delivery; early is OK, late is worse.
+# Same single cron as Daily job search: 0 11 * * * UTC
+# (6:00 AM CDT / 5:00 AM CST). No season guard — see SESSION_LOG 2026-08-07.
 name: Illinois CSOD reminder
 
 on:
   schedule:
-    - cron: "0 11 * * *" # 6:00 AM CDT (UTC-5)
-    - cron: "0 12 * * *" # 6:00 AM CST (UTC-6)
+    - cron: "0 11 * * *"
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  season_guard:
-    runs-on: ubuntu-latest
-    outputs:
-      should_run: ${{ steps.guard.outputs.should_run }}
-    steps:
-      - id: guard
-        run: |
-          set -euo pipefail
-          if [ "${{ github.event_name }}" != "schedule" ]; then
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-            echo "Manual/workflow_dispatch — run."
-            exit 0
-          fi
-          SCHEDULE="${{ github.event.schedule }}"
-          OFFSET="$(TZ=America/Chicago date +%z)"
-          echo "schedule=$SCHEDULE america/chicago_offset=$OFFSET"
-          echo "UTC=$(date -u '+%Y-%m-%d %H:%M:%S') Chicago=$(TZ=America/Chicago date '+%Y-%m-%d %H:%M:%S %Z')"
-          SHOULD=true
-          if [ "$OFFSET" = "-0500" ] && [ "$SCHEDULE" != "0 11 * * *" ]; then
-            echo "Skipping CST cron while America/Chicago is on CDT."
-            SHOULD=false
-          fi
-          if [ "$OFFSET" = "-0600" ] && [ "$SCHEDULE" != "0 12 * * *" ]; then
-            echo "Skipping CDT cron while America/Chicago is on CST."
-            SHOULD=false
-          fi
-          echo "should_run=$SHOULD" >> "$GITHUB_OUTPUT"
-
   remind:
-    needs: season_guard
-    if: needs.season_guard.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Log schedule vs America/Chicago
+        run: |
+          echo "event=${{ github.event_name }} schedule=${{ github.event.schedule }}"
+          echo "UTC=$(date -u '+%Y-%m-%d %H:%M:%S %Z')"
+          echo "Chicago=$(TZ=America/Chicago date '+%Y-%m-%d %H:%M:%S %Z')"
+
       - name: Checkout
         uses: actions/checkout@v4
 

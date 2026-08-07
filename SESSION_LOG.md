@@ -722,3 +722,22 @@ Funnel (`max_age_days=7`, null posted_date kept):
 **Decisions made:**
 - Opus 5 remains the v1 matching model; fewer `strong` labels are an accepted product effect.
 - Level phrases alone are not title includes; recruiter/non-SWE excludes are deterministic.
+
+---
+
+## [2026-08-07] — RCA: season guard skipped today’s scheduled runs + fix
+
+**What happened (simple RCA):**
+1. Workflows were changed to dual crons (`0 11` CDT / `0 12` CST) plus a **season guard** that only allows the “correct” cron string for the current offset.
+2. GitHub does not always drop old schedule strings immediately. Today both workflows still fired with the **previous** expression `0 13 * * *` (from the older 8am-CDT setup), around 9:11–9:12 AM CDT.
+3. Guard saw CDT (`-0500`) + schedule ≠ `0 11` → set `should_run=false` → **`run` / `remind` jobs skipped**. UI showed green “success” because the guard job itself succeeded.
+4. Result: **no ingest, no Opus, no digest email** for 2026-08-07.
+
+**Was this in the design analysis?** Partially. We designed for “don’t double-run in one season.” We did **not** design for “GitHub may keep delivering a retired cron string after the YAML changes.” That interaction (stale schedule × strict allowlist) was the miss.
+
+**Fix (prevent recurrence):**
+- Removed season guard from both workflows.
+- Single cron only: **`0 11 * * *` UTC** (6:00 AM CDT / 5:00 AM CST). Early is OK per product tradeoff; no allowlist that can skip a fired schedule.
+- `PROJECT_BRIEF.md` scheduling section updated with this failure mode called out so it is not reintroduced.
+
+**Open:** Optional manual `workflow_dispatch` if a same-day catch-up email is wanted; not required for the fix itself.

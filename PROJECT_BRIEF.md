@@ -128,7 +128,7 @@ Why: for a UIUC user, callback odds rise with local/regional roles and Midwest e
   **Haiku → Opus tradeoff (measured 2026-08-06, same 16 URLs):** Opus agreed with Haiku on 12/16 fits and flipped 4 toward more conservative labels (several `strong` → `maybe`, one `maybe` → `no`). Clear mismatches (recruiter, non-SWE auto roles, senior-specialist L4) stayed `no` on both. Product effect: fewer `strong` rows in email, more `maybe`. Cost for that 16-job pass was ~**$0.40** (~**$0.025/job** wall ~76s). Acceptable at tens of survivors per day; title filters should keep non-SWE junk from reaching Opus.
 - **Fireworks AI ($500 credit):** not used in v1. Reserved for later, specifically as a cheap pre-filter layer if posting volume grows large enough that filtering everything through Claude becomes wasteful. Documented reasoning, not dead credits.
 - **Email delivery:** Resend API. To: `hardik.lad773@gmail.com`. From: Resend onboarding sender until a custom domain is verified.
-- **Scheduling:** GitHub Actions — `Daily job search` + `Illinois CSOD reminder`. Cron aims at **6:00 AM America/Chicago** so that with typical GitHub schedule lag the email still tends to arrive near **8:00 AM** Central; an on-time 6am delivery is acceptable, a 10am delivery is worse for the user. UTC crons: `0 11 * * *` (CDT) and `0 12 * * *` (CST), with a season-guard job so only the in-season expression runs. `workflow_dispatch` remains for manual runs.
+- **Scheduling:** GitHub Actions — `Daily job search` + `Illinois CSOD reminder`. Single cron **`0 11 * * *` UTC** (= **6:00 AM CDT** / **5:00 AM CST**). Early morning delivery is acceptable; late morning is worse. GitHub schedule lag can still delay starts. Do **not** use dual CDT/CST crons with a season allowlist — after a cron string changes, GitHub may keep firing the old expression for a while, and an allowlist will skip the only run that fires. `workflow_dispatch` remains for manual runs.
 - **Language/runtime:** Python 3. Chosen during v0 scaffolding; keep it simple, no heavy framework.
 - **Resume input:** `config/resume_profile.md`, stripped version, not the original PDF.
 
@@ -150,7 +150,7 @@ Roughly 1,500 input tokens plus thinking/output tokens per job at medium effort.
 - Deterministic filtering (title, location, sponsorship, freshness N=7) + URL-based seen dedupe
 - One Claude Opus 5 call per new filtered posting for fit + reasoning
 - Compact one-line-per-match email of strong/maybe results
-- GitHub Actions cron aimed at early-morning Central delivery (6:00 AM America/Chicago cron → ~8:00 AM after typical lag), fully unattended
+- GitHub Actions cron aimed at early-morning Central delivery (`0 11 * * *` UTC), fully unattended
 - Separate Illinois CSOD within-1-day reminder workflow
 - Backend only, no UI
 

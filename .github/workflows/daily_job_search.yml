@@ -1,55 +1,31 @@
 # Daily unattended job search: ingest → filter → match → email.
 #
-# Target: email in the early morning America/Chicago window.
-# Cron is set for 6:00 AM Central so GitHub schedule lag (often 1–2h) still
-# tends to deliver near 8:00 AM; on-time runs at ~6:00 AM are acceptable.
-# Dual UTC crons cover CDT vs CST; season-guard keeps only the in-season one.
+# Single UTC cron (no season guard): 0 11 * * * =
+#   6:00 AM CDT (summer) / 5:00 AM CST (winter).
+# Early delivery is acceptable; late (~10am) is worse. GitHub may still lag.
+# Avoid dual CDT/CST crons + allowlists — stale schedule expressions from
+# prior workflow versions can keep firing and get incorrectly skipped.
 name: Daily job search
 
 on:
   schedule:
-    - cron: "0 11 * * *" # 6:00 AM CDT (UTC-5)
-    - cron: "0 12 * * *" # 6:00 AM CST (UTC-6)
+    - cron: "0 11 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  season_guard:
-    runs-on: ubuntu-latest
-    outputs:
-      should_run: ${{ steps.guard.outputs.should_run }}
-    steps:
-      - id: guard
-        run: |
-          set -euo pipefail
-          if [ "${{ github.event_name }}" != "schedule" ]; then
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-            echo "Manual/workflow_dispatch — run."
-            exit 0
-          fi
-          SCHEDULE="${{ github.event.schedule }}"
-          OFFSET="$(TZ=America/Chicago date +%z)"
-          echo "schedule=$SCHEDULE america/chicago_offset=$OFFSET"
-          echo "UTC=$(date -u '+%Y-%m-%d %H:%M:%S') Chicago=$(TZ=America/Chicago date '+%Y-%m-%d %H:%M:%S %Z')"
-          SHOULD=true
-          if [ "$OFFSET" = "-0500" ] && [ "$SCHEDULE" != "0 11 * * *" ]; then
-            echo "Skipping CST cron while America/Chicago is on CDT."
-            SHOULD=false
-          fi
-          if [ "$OFFSET" = "-0600" ] && [ "$SCHEDULE" != "0 12 * * *" ]; then
-            echo "Skipping CDT cron while America/Chicago is on CST."
-            SHOULD=false
-          fi
-          echo "should_run=$SHOULD" >> "$GITHUB_OUTPUT"
-
   run:
-    needs: season_guard
-    if: needs.season_guard.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
+      - name: Log schedule vs America/Chicago
+        run: |
+          echo "event=${{ github.event_name }} schedule=${{ github.event.schedule }}"
+          echo "UTC=$(date -u '+%Y-%m-%d %H:%M:%S %Z')"
+          echo "Chicago=$(TZ=America/Chicago date '+%Y-%m-%d %H:%M:%S %Z')"
+
       - name: Checkout
         uses: actions/checkout@v4
 
