@@ -73,6 +73,8 @@ Deterministic pipeline with exactly one agentic step.
 2. **Ingestion (deterministic).** Poll each company's public ATS API on a schedule. Normalize into one schema: title, company, location, posted date, URL, description (full body text required by the sponsorship filter below).
 3. **Filtering (deterministic, no LLM).** Title keywords → location → sponsorship exclusion → **freshness (posted within last N days)** → dedupe against a "seen jobs" store (URL identity). Robust filters are the cost and quality control plane; Claude never sees the raw firehose.
 
+   **Title filter intent:** Prefer software-engineering role tokens (`software engineer`, `software developer`, `swe`, fullstack/backend/frontend variants, etc.). Level-only phrases such as bare `entry level` / `new grad` / `junior` are **not** sufficient includes — they admitted non-SWE work (e.g. automotive lot roles). Real new-grad SWE titles still pass via the role token (e.g. “New Grad Software Engineer”). Explicit excludes cover recruiters, sales SDRs, and common non-SWE auto/warehouse titles so substring hits like “Software Engineering” inside a recruiter title do not reach Claude.
+
    **Location filter intent:** Illinois (Chicago metro + suburbs such as Naperville/Schaumburg/Bolingbrook + Champaign/Urbana and other IL tech locales) **and** neighboring Midwest signals (WI/IN/MI/MO/IA/MN) **and** **US-remote**.
 
    **Location rules (deterministic, before Claude):**
@@ -121,7 +123,9 @@ Why: for a UIUC user, callback odds rise with local/regional roles and Midwest e
 
 ## 6. Tech Stack — Locked Decisions
 
-- **Matching model:** Claude Opus 5 (`claude-opus-5`), via Anthropic Console API key. Chosen because deterministic filters already narrow the set; Opus 5 provides stronger fit judgment than Haiku on the survivors. Pricing: **$5 input / $25 output** per million tokens. Matching uses medium effort (thinking on by default for Opus 5) with `max_tokens` 4096.
+- **Matching model:** Claude Opus 5 (`claude-opus-5`), via Anthropic Console API key. Deterministic filters already narrow the set; Opus 5 is the locked judgment model on survivors (stronger level/stack discrimination than Haiku 4.5). Pricing: **$5 input / $25 output** per million tokens. Matching uses medium effort (thinking on by default) with `max_tokens` 4096.
+
+  **Haiku → Opus tradeoff (measured 2026-08-06, same 16 URLs):** Opus agreed with Haiku on 12/16 fits and flipped 4 toward more conservative labels (several `strong` → `maybe`, one `maybe` → `no`). Clear mismatches (recruiter, non-SWE auto roles, senior-specialist L4) stayed `no` on both. Product effect: fewer `strong` rows in email, more `maybe`. Cost for that 16-job pass was ~**$0.40** (~**$0.025/job** wall ~76s). Acceptable at tens of survivors per day; title filters should keep non-SWE junk from reaching Opus.
 - **Fireworks AI ($500 credit):** not used in v1. Reserved for later, specifically as a cheap pre-filter layer if posting volume grows large enough that filtering everything through Claude becomes wasteful. Documented reasoning, not dead credits.
 - **Email delivery:** Resend API. To: `hardik.lad773@gmail.com`. From: Resend onboarding sender until a custom domain is verified.
 - **Scheduling:** GitHub Actions — `Daily job search` + `Illinois CSOD reminder`. Cron aims at **6:00 AM America/Chicago** so that with typical GitHub schedule lag the email still tends to arrive near **8:00 AM** Central; an on-time 6am delivery is acceptable, a 10am delivery is worse for the user. UTC crons: `0 11 * * *` (CDT) and `0 12 * * *` (CST), with a season-guard job so only the in-season expression runs. `workflow_dispatch` remains for manual runs.
@@ -137,7 +141,7 @@ Why: for a UIUC user, callback odds rise with local/regional roles and Midwest e
 
 ### Cost Reference (so this isn't re-derived later)
 
-Roughly 1,500 input tokens + a few hundred output tokens per job evaluated (Opus 5 may use additional thinking tokens at medium effort). At Opus 5 rates ($5/$25 per MTok), expect on the order of **a few cents per job** — still fine while filters keep daily survivors in the tens. Expanding the company list mainly increases ATS fetch work, not a 1:1 Claude bill. Don't spend time optimizing cost in v1 while filter-then-match holds.
+Roughly 1,500 input tokens plus thinking/output tokens per job at medium effort. Measured Opus 5 spend on a 16-job head-to-head was about **$0.40** (~**$0.025 per job**). Filters keep daily Claude volume in the tens; expanding the company list mainly increases ATS fetch work, not a 1:1 Claude bill.
 
 ## 7. V1 Scope
 

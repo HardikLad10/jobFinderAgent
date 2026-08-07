@@ -671,3 +671,54 @@ Funnel (`max_age_days=7`, null posted_date kept):
 
 **Why:**
 - User tradeoff: prefer early over late for the daily digest.
+
+---
+
+## [2026-08-06] — Experiment B: Haiku vs Opus on same 16 URLs
+
+**Changed:**
+- Preserved Haiku scores as `data/latest_matches_haiku_b.json`.
+- Re-scored the **same 16** filtered URLs with `claude-opus-5` (medium effort) → `data/latest_matches_opus_b.json` + comparison `data/haiku_vs_opus_b.json`.
+- No title-filter change, no `--mark-seen`, no real email send (dry-run body only). Did **not** clear seen store (B loads jobs by URL from filtered snapshot).
+
+**Results:**
+| | strong | maybe | no |
+|---|---:|---:|---:|
+| Haiku 4.5 | 4 | 4 | 8 |
+| Opus 5 | 1 | 6 | 9 |
+
+- Same fit: **12/16**. Flips: **4**. Wall ~**76s** for 16 Opus calls (~4.8s/job).
+- Flips (all more conservative):
+  - Chime AI Enablement: strong → **maybe**
+  - Twilio SWE L2 (8097672): strong → **maybe**
+  - Twilio Platform L2: strong → **maybe**
+  - Twilio Platform L3: maybe → **no**
+- Email if sent under Opus: **1 strong · 6 maybe** (was 4 strong · 4 maybe under Haiku). Clear rejects (recruiter, Carvana auto, Twilio L4) stayed `no` on both.
+
+**Tradeoffs (to ponder before title fix / keeping Opus default):**
+- **Quality:** Opus is stricter on level/stack gaps (Go, years, L3). Fewer “apply now” strongs; more maybes. Aligns with “most emailed roles should be worth applying” if strong means high confidence.
+- **Cost/latency:** Opus >> Haiku per call; still fine at ~10–20 survivors/day after filters. Title fix next will cut junk `no`s and save Opus spend.
+- **Product:** If digest feels thin on strong, either keep Opus and accept fewer strongs, or reserve strong for clearer overlaps in the prompt — not a reason to revert without user call.
+
+**Open questions carried forward:**
+- Keep Opus as default? (already on `main`) — confirm after user reads flips.
+- Title-filter fix still next (entry level / recruiter) once B tradeoffs accepted.
+
+---
+
+## [2026-08-06] — Scope Opus tradeoffs + title-filter tighten
+
+**Changed:**
+- `PROJECT_BRIEF.md`: third-person Opus-vs-Haiku measurement (~$0.40 / 16 jobs, 12/16 agree, conservative flips); cost reference updated from that run.
+- `config/filters.json` title rules: dropped bare level-only includes (`entry level`, `new grad`, `junior`, …); added excludes (`recruiter`, sales/SDR, detailer/lot attendant/auto tech/parts/warehouse). Role tokens remain; “New Grad Software Engineer” still matches via `software engineer`.
+- Also added `colombia` / `bogota` to `remote_non_us_exclude_any` after re-filter smoke showed `Remote - Colombia` passing.
+
+**Why:**
+- Scoping should record the locked model tradeoff for any third reader.
+- Title bleed was wasting Claude calls on roles already destined for `no`.
+
+**Smoke (reuse ingest, empty seen):** old 16 → recruiter + 5 Carvana titles **DROP**; SWE titles KEEP. Full ingest kept **8** after Colombia exclude (was 9 with Colombia L3).
+
+**Decisions made:**
+- Opus 5 remains the v1 matching model; fewer `strong` labels are an accepted product effect.
+- Level phrases alone are not title includes; recruiter/non-SWE excludes are deterministic.
