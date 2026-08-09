@@ -1,0 +1,189 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+%
+% VERSION: Hardik_SWE_FullStack
+% Last updated: July 2026
+% Notes: Result-first bullets | Reverse-chronological order | BIG re-titled to SWE | Visible URLs | K8s added to BIG bullet 2
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{ragged2e}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{changepage}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Wider text block: shifts content left and gains horizontal room
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-9pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item \begin{justify}
+    \small #1
+  \end{justify} \vspace{-3pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.993\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+\vspace{-3pt} \item
+    \begin{tabular*}{0.993\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{\vspace{-3pt}
+    \item
+    \begin{tabular*}{0.993\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.05in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\vspace{-3pt}\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.13in, itemsep=3pt, topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1pt}}
+\newcommand{\justifiedItem}[1]{
+  \item \parbox[t]{6.2in}{\justifying\small #1}
+}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Hardik Lad} \\ \vspace{1pt}
+    \small
+    217-693-1462 $|$
+    \href{mailto:hardiklad1@hotmail.com}{\underline{hardiklad1@hotmail.com}} $|$
+    \href{https://linkedin.com/in/hardik-lad}{\underline{Linkedin}} $|$
+    \href{https://github.com/HardikLad10}{\underline{Github}} $|$
+    United States
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+ \begin{itemize}[leftmargin=0.13in, label={}]
+    \small{\item{Software Engineer with 2 years building production systems, with depth in distributed systems and full stack. Ships fast and owns problems end to end.}}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Teaching Assistant -- BADM 579 and BADM 550}{August 2025 -- Nov 2025}
+      {Gies College of Business, UIUC}{}
+      \resumeItemListStart
+        \resumeItem{\justifying{Improved project submission consistency across \textbf{3 cohorts} by leading workshops on \textbf{Git}, \textbf{GitHub}, and \textbf{CI/CD} fundamentals using \textbf{GitHub Actions}}}
+        \resumeItem{Reviewed technical project submissions for \textbf{100+ students} with structured feedback on system design, data modeling, and implementation quality}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer}{January 2025 -- April 2025}
+      {Business Intelligence Group, UIUC}{}
+      \resumeItemListStart
+        \resumeItem{\justifying{Cut query resolution time by \textbf{70\%} by building an \textbf{ETL} pipeline loading legal agreement PDFs into a \textbf{ChromaDB} vector database, powering an \textbf{agentic}, multi-turn \textbf{RAG} chatbot with \textbf{Dialogflow CX}}}
+        \resumeItem{\justifying{Maintained stable response times under concurrent stakeholder testing and cut deployment setup time by \textbf{60\%} by configuring \textbf{Kubernetes} horizontal pod autoscaling to dynamically scale containerized \textbf{Docker} replicas, deployed on \textbf{AWS} (\textbf{S3}, \textbf{EC2})}}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer \textit{(Senior Executive -- IT)}}{July 2022 -- July 2024}
+      {Piramal Consumer Healthcare}{}
+      \resumeItemListStart
+        \resumeItem{\justifying{Cut manual tracking effort by \textbf{40\%} by owning and developing internal web applications using \textbf{ReactJS} and \textbf{REST APIs} for E-Commerce and Modern Trade claims automation}}
+        \resumeItem{\justifying{Reduced processing time by \textbf{3+ days} by building event-driven backend pipelines using \textbf{Python} and \textbf{Power Automate}, integrating escalation matrices and webhook-based triggers}}
+        \resumeItem{\justifying{Delivered a \textbf{200\%} performance gain over legacy SharePoint by architecting an \textbf{MS SQL} database with \textbf{150k+ records}, implementing indexing and triggers for automated data routing}}
+        \resumeItem{\justifying{Saved \textbf{\$50K} annually and cut daily manual work by \textbf{3+ hours} by building an AI-powered data pipeline automating \textbf{250K+} shelf audits using \textbf{Power Apps} and \textbf{Python}}}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{RainStorm -- Real-Time Distributed Stream Processing Engine} $|$ \href{https://github.com/HardikLad10/rainstorm/tree/main}{\underline{https://github.com/HardikLad10/rainstorm}}}{}
+          \resumeItemListStart
+            \resumeItem{Processed \textbf{100+ events/sec} with \textbf{0\%} duplicate output by building a real-time distributed stream processing system in \textbf{Python} across a \textbf{10-node cluster}, developed with \textbf{Cursor}}
+            \resumeItem{Achieved \textbf{100\%} output correctness and automatic crash recovery by implementing exactly-once semantics using \textbf{Write-Ahead Logging} to a \textbf{Hybrid DFS}}
+            \resumeItem{Adjusted task parallelism in \textbf{\textless 5 seconds} under high-volume load by designing a dynamic autoscaling engine using watermark thresholds}
+          \resumeItemListEnd
+
+%-----------JOB FINDER AGENT-----------
+% Variant toggles:
+%   AI SWE  -> comment out bullet 4 (deterministic filter rewrite)
+%   AI FDE  -> comment out bullet 2 (model benchmark)
+      \resumeProjectHeading
+          {\textbf{Job Finder Agent -- Agentic Job Matching Pipeline} $|$ \href{https://github.com/HardikLad10/jobFinderAgent}{\underline{https://github.com/HardikLad10/jobFinderAgent}}}{}
+          \resumeItemListStart
+            \resumeItem{Cut LLM spend \textbf{99\%} by narrowing \textbf{15K} postings to under \textbf{40} with deterministic title, location, sponsorship, freshness, and dedupe filters across \textbf{191} Greenhouse/Lever/Ashby boards, reserving one \textbf{Claude} call for fit judgment}
+            \resumeItem{Tightened match precision by benchmarking \textbf{Claude Opus 5} against \textbf{Haiku 4.5} on 16 identical postings, measuring \textbf{12/16} agreement and \textbf{4} conservative flips at \textbf{\$0.025} per job, shipping Opus for stricter level and stack judgment}
+            \resumeItem{Hardened unattended daily runs by root-causing a stale \textbf{GitHub Actions} cron that reported green while running nothing, validating model output against a strict fit schema, and gating seen-state writes on successful send}
+            % AI FDE only — comment back in for FDE; keep out for AI SWE
+            % \resumeItem{Eliminated non-US and non-SWE false positives by rewriting remote and title gates in code rather than prompting the model, after digests surfaced EU-remote roles and recruiter titles passing on substring matches}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Illinois Urbana-Champaign}{Urbana-Champaign, IL}
+      {Master of Science, Information Management}{May 2026}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.13in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript (ES6+), SQL, Bash} \\
+     \textbf{Frameworks and Databases}{: React.js, Typescript, Node.js, Express, MySQL, MS SQL, ChromaDB (Vector/NoSQL)} \\
+     \textbf{Cloud and Tools}{: AWS, GCP, Docker, Kubernetes, Git, Cursor, Linux CLI, Power Platform} \\
+     \textbf{Domains}{: Distributed Systems, Microservices, Event-Driven Architecture, ETL, RAG, CI/CD, REST APIs}
+    }}
+ \end{itemize}
+
+\end{document}
