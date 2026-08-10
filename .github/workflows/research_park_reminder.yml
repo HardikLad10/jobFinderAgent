@@ -1,0 +1,38 @@
+# Research Park careers within-1-day reminder — personal tracking only.
+# Same single cron as Daily job search: 0 11 * * * UTC
+# (6:00 AM CDT / 5:00 AM CST). Not part of fit-matching.
+name: Research Park reminder
+
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Log schedule vs America/Chicago
+        run: |
+          echo "event=${{ github.event_name }} schedule=${{ github.event.schedule }}"
+          echo "UTC=$(date -u '+%Y-%m-%d %H:%M:%S %Z')"
+          echo "Chicago=$(TZ=America/Chicago date '+%Y-%m-%d %H:%M:%S %Z')"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check Research Park board and email if count > 0
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'Job Finder Agent <onboarding@resend.dev>' }}
+          TO_EMAIL: ${{ secrets.TO_EMAIL || 'hardik.lad773@gmail.com' }}
+        run: python run_research_park_reminder.py --send-email

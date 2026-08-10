@@ -270,6 +270,55 @@ def deliver_illinois_reminder(
     return False
 
 
+def deliver_research_park_reminder(
+    *,
+    count: int,
+    software_count: int,
+    intern_count: int,
+    board_url: str,
+    dry_run: bool = False,
+    send: bool = False,
+) -> bool:
+    """If count > 0, send a minimal Research Park reminder (not fit-matching)."""
+    if dry_run and send:
+        raise ValueError("pass only one of dry_run or send")
+    if count <= 0:
+        logger.info("Research Park: 0 postings within 1 day — reminder skipped")
+        print("Research Park: 0 jobs today — reminder skipped.")
+        return False
+
+    subject = f"Research Park careers: {count} new job(s) today"
+    text = (
+        f"{count} new Research Park job(s) found today.\n"
+        f"software/eng/dev titles: {software_count}\n"
+        f"intern titles: {intern_count}\n"
+        f"\nBoard: {board_url}\n"
+    )
+    html = (
+        f"<p><strong>{count} new Research Park job(s) found today.</strong></p>"
+        f"<p>software/eng/dev titles: {software_count}<br>"
+        f"intern titles: {intern_count}</p>"
+        f'<p><a href="{board_url}">Open Research Park job board</a></p>'
+    )
+    to_addr = load_env_var("TO_EMAIL", default=DEFAULT_TO_EMAIL)
+
+    if dry_run:
+        print("=== DRY RUN RESEARCH PARK REMINDER ===")
+        print(f"To: {to_addr}")
+        print(f"Subject: {subject}")
+        print()
+        print(text)
+        print("=== END DRY RUN (not sent) ===")
+        return True
+
+    if send:
+        send_email(subject=subject, text=text, html=html, to_email=to_addr)
+        print(f"Research Park reminder sent to {to_addr}: {subject}")
+        return True
+
+    return False
+
+
 def _escape(value: str) -> str:
     return (
         value.replace("&", "&amp;")
