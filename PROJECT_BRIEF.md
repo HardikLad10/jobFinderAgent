@@ -107,7 +107,7 @@ Deterministic pipeline with exactly one agentic step.
 
    Dependency: requires full job description body text, not just title/location. Greenhouse uses `?content=true`; Lever/Ashby include plain text on list endpoints.
 
-4. **Matching (the one agentic step).** For each new, filtered posting, one Claude Opus 5 call compares it against the resume/profile and returns a fit verdict plus short reasoning.
+4. **Matching (the one agentic step).** For each new, filtered posting, one Claude Opus 5 call compares the resume/profile to that posting’s **full normalized record**: title, company, location, posted date, URL, and **complete job description** (About / Requirements / responsibilities / preferred quals as the ATS provided them). **Do not truncate the description** for matching — filters already bound daily Claude volume to tens of survivors; email-only trimming of *reasoning* display is separate (step 5).
 5. **Delivery (deterministic).** Strong/maybe matches emailed at end of run. Format: tiny header with counts, then separate **Strong** / **Maybe** sections, each with **one compact line per match** — `Title — Company — Posted date — one-line reasoning — link`. Reasoning is trimmed/capped (~120 chars) for email display; no multi-paragraph per-job summaries.
 6. **Scheduling (deterministic, infrastructure).** GitHub Actions cron triggers the pipeline for an early-morning America/Chicago delivery window (cron at 6:00 AM Central; see Tech Stack). Separate workflow for Illinois CSOD reminder (same window).
 

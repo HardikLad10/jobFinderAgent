@@ -24,7 +24,8 @@ DEFAULT_RESUME_PATH = Path(__file__).resolve().parent.parent / "config" / "resum
 ANTHROPIC_MESSAGES_URL = "https://api.anthropic.com/v1/messages"
 # Opus 5: stronger judgment on filtered survivors (PROJECT_BRIEF model choice).
 DEFAULT_MODEL = "claude-opus-5"
-MAX_DESCRIPTION_CHARS = 6000
+# Full JD text to Claude (locked in PROJECT_BRIEF): filters bound volume;
+# do not truncate description for fit judgment.
 # Thinking is on by default for Opus 5; budget must cover thinking + JSON answer.
 DEFAULT_MAX_TOKENS = 4096
 REQUEST_TIMEOUT_SECONDS = 120
@@ -132,7 +133,7 @@ def _call_claude(
     resume: str,
     posting: Any,
 ) -> tuple[str, str]:
-    description = posting.description[:MAX_DESCRIPTION_CHARS]
+    description = posting.description or ""
     user_prompt = f"""You are scoring fit between a candidate profile and one job posting.
 
 Return ONLY valid JSON with this exact shape:

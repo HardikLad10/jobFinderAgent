@@ -741,3 +741,19 @@ Funnel (`max_age_days=7`, null posted_date kept):
 - `PROJECT_BRIEF.md` scheduling section updated with this failure mode called out so it is not reintroduced.
 
 **Open:** Optional manual `workflow_dispatch` if a same-day catch-up email is wanted; not required for the fix itself.
+
+---
+
+## [2026-08-10] — Matching uses full JD text (correct default; undo undocumented 6k slice)
+
+**Changed:**
+- Removed undocumented `MAX_DESCRIPTION_CHARS = 6000` truncation in `matching/__init__.py`. Survivors send **full** `description` to Opus.
+- Locked the same rule in `PROJECT_BRIEF.md` §5 matching: complete JD in the prompt; do not truncate description for fit judgment. Email still may trim *reasoning* for display only.
+
+**Why / correction:**
+- Product intent from the start: Claude judges on the full funneled posting (About, Requirements, what you’ll do, preferred). Ingestion already stored full body text for sponsorship + matching.
+- The 6k prompt slice was never a brief-approved tradeoff; it silently cut Requirements/Preferred on long Greenhouse JDs (~65% of ingest sample >6k). Cost control belongs in deterministic filters (tens of survivors/day), not JD truncation.
+
+**Decisions made:**
+- Full description for matching is the v1 default going forward.
+- No per-day ingest archive; `latest_*` overwrite behavior unchanged.
