@@ -5575,5 +5575,803 @@
     "board_token": null,
     "status": "unresolved",
     "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+  },
+  {
+    "name": "66degrees, LLC",
+    "ats": "greenhouse",
+    "board_token": "66degrees",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 24 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Adams Street Partners, LLC",
+    "ats": "greenhouse",
+    "board_token": "adamsstreetpartners",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 15 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "ADESA, Inc.",
+    "ats": "greenhouse",
+    "board_token": "adesa",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 95 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Aera Technology, Inc.",
+    "ats": "lever",
+    "board_token": "aeratechnology",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 11 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Aledade, Inc.",
+    "ats": "lever",
+    "board_token": "aledade",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 39 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "AlphaSense Inc.",
+    "ats": "greenhouse",
+    "board_token": "alphasense",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 229 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Amount, Inc.",
+    "ats": "greenhouse",
+    "board_token": "amount",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Anaplan, Inc.",
+    "ats": "greenhouse",
+    "board_token": "anaplan",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 162 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Appian Corporation",
+    "ats": "greenhouse",
+    "board_token": "appian",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 188 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "ArmorCode Inc",
+    "ats": "greenhouse",
+    "board_token": "armorcode",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 3 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Atlan Inc",
+    "ats": "ashby",
+    "board_token": "atlan",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Beyond Finance LLC",
+    "ats": "greenhouse",
+    "board_token": "beyondfinance",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 42 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "BloomReach, Inc.",
+    "ats": "greenhouse",
+    "board_token": "bloomreach",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 72 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Bold Orange Company, LLC",
+    "ats": "lever",
+    "board_token": "bold-orange",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 13 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Bounteous Inc.",
+    "ats": "lever",
+    "board_token": "bounteous",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 28 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "BUDDERFLY, INC",
+    "ats": "greenhouse",
+    "board_token": "budderfly",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 25 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Clarkson Eyecare, LLC",
+    "ats": "greenhouse",
+    "board_token": "clarksoneyecare",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 154 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Clinical Architecture, LLC",
+    "ats": "greenhouse",
+    "board_token": "clinicalarchitecture",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 3 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Cohere Health, Inc.",
+    "ats": "greenhouse",
+    "board_token": "coherehealth",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 69 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Coinbase, Inc.",
+    "ats": "greenhouse",
+    "board_token": "coinbase",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 167 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "COLLECTIVEHEALTH, INC.",
+    "ats": "greenhouse",
+    "board_token": "collectivehealth",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 13 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Collinear Ai Inc.",
+    "ats": "ashby",
+    "board_token": "collinear-ai",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 7 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Concurrency, Inc.",
+    "ats": "lever",
+    "board_token": "concurrency",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Confluent, Inc.",
+    "ats": "ashby",
+    "board_token": "confluent",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 29 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Conga Corporation",
+    "ats": "greenhouse",
+    "board_token": "conga",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 50 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Content Square, Inc.",
+    "ats": "lever",
+    "board_token": "contentsquare",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 20 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "CoreWeave, Inc.",
+    "ats": "greenhouse",
+    "board_token": "coreweave",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 272 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Demiurge Studios, Inc.",
+    "ats": "lever",
+    "board_token": "demiurgestudios",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Dewpoint, LLC",
+    "ats": "breezy",
+    "board_token": "dewpoint",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 3 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Dremio Corporation",
+    "ats": "greenhouse",
+    "board_token": "dremio",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Duetto Research, Inc.",
+    "ats": "greenhouse",
+    "board_token": "duettoresearch",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 21 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "DYOPATH, LLC",
+    "ats": "greenhouse",
+    "board_token": "dyopath",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Energy CX, LLC",
+    "ats": "greenhouse",
+    "board_token": "energycx",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Ensono, Inc.",
+    "ats": "greenhouse",
+    "board_token": "ensono",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 70 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Extend, Inc.",
+    "ats": "greenhouse",
+    "board_token": "extend",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 20 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Extreme Networks Inc",
+    "ats": "lever",
+    "board_token": "extremenetworks",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 116 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "FASTENAL COMPANY",
+    "ats": "breezy",
+    "board_token": "fastenal",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 21 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "First National Bank of America",
+    "ats": "greenhouse",
+    "board_token": "firstnationalbankofamerica",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 18 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "FUSEGLOBAL PARTNERS, INC.",
+    "ats": "greenhouse",
+    "board_token": "fuseglobalpartners",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 30 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Gainsight, Inc.",
+    "ats": "ashby",
+    "board_token": "gainsight",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 17 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Gallup, Inc.",
+    "ats": "greenhouse",
+    "board_token": "gallup",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 54 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "GOOD AI, LLC",
+    "ats": "greenhouse",
+    "board_token": "goodai",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "GuidePoint Security, LLC",
+    "ats": "greenhouse",
+    "board_token": "guidepointsecurity",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 65 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Gusto, Inc.",
+    "ats": "greenhouse",
+    "board_token": "gusto",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 91 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "HOT TOPIC, INC.",
+    "ats": "lever",
+    "board_token": "hottopic",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 18 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Infomedia Group Inc.",
+    "ats": "greenhouse",
+    "board_token": "infomedia",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 9 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Inovalon, Inc.",
+    "ats": "greenhouse",
+    "board_token": "inovalon",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 68 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "IQVIA Inc.",
+    "ats": "breezy",
+    "board_token": "iqvia",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 7 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Learneo, Inc.",
+    "ats": "greenhouse",
+    "board_token": "learneo",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Lila Sciences, Inc.",
+    "ats": "greenhouse",
+    "board_token": "lilasciences",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 127 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "LinkedIn Corporation",
+    "ats": "greenhouse",
+    "board_token": "linkedin",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 53 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Mainspring Energy, Inc.",
+    "ats": "lever",
+    "board_token": "mainspringenergy",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 76 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Mapbox, Inc.",
+    "ats": "ashby",
+    "board_token": "mapbox",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 62 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Maven Clinic Co.",
+    "ats": "greenhouse",
+    "board_token": "mavenclinic",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 30 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "May Mobility, Inc.",
+    "ats": "greenhouse",
+    "board_token": "maymobility",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 46 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Medical Informatics Engineering Inc.",
+    "ats": "greenhouse",
+    "board_token": "medicalinformaticsengineering",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "MeridianLink, Inc.",
+    "ats": "ashby",
+    "board_token": "meridianlink",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 31 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Mission Lane LLC",
+    "ats": "greenhouse",
+    "board_token": "missionlane",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 19 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "MSX International RNS LLC",
+    "ats": "lever",
+    "board_token": "msx-international-rns",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Narwal Inc.",
+    "ats": "breezy",
+    "board_token": "narwal",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Neo4j, Inc.",
+    "ats": "greenhouse",
+    "board_token": "neo4j",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 41 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "NeuraFlash",
+    "ats": "greenhouse",
+    "board_token": "neuraflash",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 74 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Nextiva, Inc.",
+    "ats": "greenhouse",
+    "board_token": "nextiva",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 18 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "NinjaTrader Group, LLC",
+    "ats": "greenhouse",
+    "board_token": "ninjatrader",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 24 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Nova Credit, Inc.",
+    "ats": "greenhouse",
+    "board_token": "novacredit",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 10 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Oliver Wyman, LLC",
+    "ats": "lever",
+    "board_token": "oliverwyman",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "One Pass Solutions, Inc.",
+    "ats": "ashby",
+    "board_token": "one-pass-solutions",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Pacific Cycle Inc.",
+    "ats": "greenhouse",
+    "board_token": "pacificcycle",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "phData, Inc.",
+    "ats": "greenhouse",
+    "board_token": "phdata",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 39 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Philo, Inc.",
+    "ats": "greenhouse",
+    "board_token": "philo",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 7 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Pindrop Security, Inc.",
+    "ats": "greenhouse",
+    "board_token": "pindropsecurity",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 17 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Pinterest, Inc.",
+    "ats": "greenhouse",
+    "board_token": "pinterest",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 215 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Platform Science, Inc.",
+    "ats": "greenhouse",
+    "board_token": "platformscience",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 23 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Qualified Digital LLC",
+    "ats": "greenhouse",
+    "board_token": "qualifieddigital",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "QuinStreet, Inc.",
+    "ats": "greenhouse",
+    "board_token": "quinstreet",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 30 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "RAD AI, INC.",
+    "ats": "ashby",
+    "board_token": "radai",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 16 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Reddit, Inc.",
+    "ats": "greenhouse",
+    "board_token": "reddit",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 162 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Rightway Healthcare, Inc.",
+    "ats": "greenhouse",
+    "board_token": "rightwayhealthcare",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 20 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Rubrik, Inc.",
+    "ats": "greenhouse",
+    "board_token": "rubrik",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 107 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Sabanto, Inc.",
+    "ats": "breezy",
+    "board_token": "sabanto",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 9 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "SafetyCulture, Inc.",
+    "ats": "ashby",
+    "board_token": "safetyculture",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 31 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Sign-IN Solutions INC",
+    "ats": "lever",
+    "board_token": "signinsolutions",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Sonatus, Inc.",
+    "ats": "greenhouse",
+    "board_token": "sonatus",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 23 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Sophos, Inc.",
+    "ats": "lever",
+    "board_token": "sophos",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 109 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Speechify, Inc.",
+    "ats": "greenhouse",
+    "board_token": "speechify",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1289 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "SPINS LLC",
+    "ats": "greenhouse",
+    "board_token": "spins",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Spire Inc.",
+    "ats": "greenhouse",
+    "board_token": "spire",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 47 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Spry Methods Inc.",
+    "ats": "lever",
+    "board_token": "sprymethods",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 36 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Stitch Fix, Inc.",
+    "ats": "greenhouse",
+    "board_token": "stitchfix",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 12 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Stoneridge Software LLC",
+    "ats": "lever",
+    "board_token": "stoneridgesoftware",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "tastylive, Inc.",
+    "ats": "greenhouse",
+    "board_token": "tastylive",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 14 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Techtorch, Inc",
+    "ats": "ashby",
+    "board_token": "techtorch",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 16 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Tekion Corp",
+    "ats": "ashby",
+    "board_token": "tekion",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 72 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "THE TRADE DESK, INC.",
+    "ats": "greenhouse",
+    "board_token": "thetradedesk",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 201 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Thirdwave, LLC",
+    "ats": "breezy",
+    "board_token": "thirdwave",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Thoughtworks, Inc.",
+    "ats": "greenhouse",
+    "board_token": "thoughtworks",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 55 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Toradex, Inc.",
+    "ats": "greenhouse",
+    "board_token": "toradex",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 14 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "TORC Robotics, Inc.",
+    "ats": "greenhouse",
+    "board_token": "torcrobotics",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 61 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Toshiba Global Commerce Solutions, Inc.",
+    "ats": "greenhouse",
+    "board_token": "toshibaglobalcommercesolutions",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 34 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Triple Lift, Inc.",
+    "ats": "greenhouse",
+    "board_token": "triplelift",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 29 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "TTEC DIGITAL, LLC",
+    "ats": "lever",
+    "board_token": "ttecdigital",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 69 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Twin Health, Inc.",
+    "ats": "greenhouse",
+    "board_token": "twinhealth",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 29 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Ultragenyx Pharmaceutical, Inc.",
+    "ats": "greenhouse",
+    "board_token": "ultragenyxpharmaceutical",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 24 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Vanta Inc.",
+    "ats": "ashby",
+    "board_token": "vanta",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 88 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "VeriFone, Inc.",
+    "ats": "greenhouse",
+    "board_token": "verifone",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 42 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Verkada, Inc",
+    "ats": "greenhouse",
+    "board_token": "verkada",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 282 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "viaPhoton Inc.",
+    "ats": "greenhouse",
+    "board_token": "viaphoton",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 26 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Waltz Health, Inc.",
+    "ats": "greenhouse",
+    "board_token": "waltzhealth",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "webAI, Inc",
+    "ats": "ashby",
+    "board_token": "webai",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 23 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Welbe Health LLC",
+    "ats": "greenhouse",
+    "board_token": "welbehealth",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 151 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "William Blair & Company, LLC",
+    "ats": "greenhouse",
+    "board_token": "williamblair",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 47 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Yourco, Inc.",
+    "ats": "ashby",
+    "board_token": "yourco",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Zscaler, Inc.",
+    "ats": "greenhouse",
+    "board_token": "zscaler",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 329 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Zuora, Inc.",
+    "ats": "greenhouse",
+    "board_token": "zuora",
+    "status": "resolved",
+    "notes": "LCA FY2025 seed; 43 jobs at discovery; needs spot-check."
   }
 ]

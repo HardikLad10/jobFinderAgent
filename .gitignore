@@ -30,3 +30,7 @@ data/*
 !data/quarantine.json
 *.db
 
+
+# DOL H-1B LCA disclosure Excel (local only; too large for GitHub)
+discovery/*.xlsx
+discovery/*.xls
