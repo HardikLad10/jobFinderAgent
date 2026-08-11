@@ -166,5 +166,6 @@
     "clearance required",
     "itar"
   ],
-  "max_age_days": 7
+  "max_age_days": 7,
+  "max_survivors": 100
 }

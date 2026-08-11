@@ -1,0 +1,15 @@
+{
+  "id": "gold_03",
+  "expected_fit": "maybe",
+  "boundary": true,
+  "posting": {
+    "title": "Software Engineer II, Frontend",
+    "company": "Greenlight",
+    "location": "Atlanta (Remote Friendly)",
+    "posted_date": "2026-07-31T22:15:21.084000+00:00",
+    "url": "https://jobs.lever.co/greenlight/85f57a40-ef24-4fb2-bea8-e881efb0f660",
+    "description": "Greenlight is a family technology company on a mission to help families raise financially smart kids and navigate life together. Its suite of products \u2014 including the Greenlight app, debit card, Safe Family GPS trackers, and Family Hub \u2014 brings together financial tools, safety features, and everyday family management in one connected experience. Designed for busy families who want convenience without compromise, Greenlight continues to innovate alongside the evolving needs of modern life. Today, more than 6.5 million family members trust Greenlight to stay in sync.\nAt Greenlight, we're here to make the day-to-day easier and futures brighter, so families can spend less time managing life, and more time living it. That's why we get out of bed every morning.\nWe are looking for a\u00a0 Software Engineer II, Frontend with a background in web development to join our Web Platform and Family Hub team. Our ideal candidate has a background in NextJS web application development, understands application design and development but also wants to participate in the deployment and operational phases of the SDLC.\u00a0\nThis role reports to the Director, Engineering."
+  },
+  "sponsorship_flag": "none_found",
+  "label_source": "opus5_bakeoff_2026-08-06"
+}

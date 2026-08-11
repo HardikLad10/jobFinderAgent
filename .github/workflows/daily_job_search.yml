@@ -42,14 +42,20 @@ jobs:
           FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'Job Finder Agent <onboarding@resend.dev>' }}
         run: python run_pipeline.py --send-email --mark-seen
 
-      - name: Persist seen jobs store
+      - name: Persist seen jobs and quarantine stores
         run: |
-          if git diff --quiet -- data/seen_jobs.json; then
-            echo "seen_jobs.json unchanged"
+          changed=0
+          for f in data/seen_jobs.json data/quarantine.json; do
+            if ! git diff --quiet -- "$f"; then
+              changed=1
+            fi
+          done
+          if [ "$changed" -eq 0 ]; then
+            echo "seen_jobs.json / quarantine.json unchanged"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/seen_jobs.json
-          git commit -m "chore: update seen jobs after daily run"
+          git add data/seen_jobs.json data/quarantine.json
+          git commit -m "chore: update seen jobs and quarantine after daily run"
           git push

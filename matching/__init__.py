@@ -2,6 +2,11 @@
 
 Deterministic filters already ran. This module only answers: does this
 posting fit the candidate profile, and why.
+
+Guardrails (PROJECT_BRIEF §7a):
+- Fail-closed: malformed/unknown fit → invalid; API failures → error.
+- One in-run retry with backoff on transient Anthropic errors.
+- Quarantine after 3 invalid/error attempts (data/quarantine.json).
 """
 
 from __future__ import annotations
@@ -10,6 +15,7 @@ import json
 import logging
 import os
 import re
+import time
 import urllib.error
 import urllib.request
 from dataclasses import asdict, dataclass
@@ -17,18 +23,25 @@ from pathlib import Path
 from typing import Any
 
 from filtering import FilteredJob
+from matching.quarantine import (
+    clear_failure,
+    load_quarantine,
+    quarantined_urls,
+    record_failure,
+    save_quarantine,
+)
 
 logger = logging.getLogger(__name__)
 
 DEFAULT_RESUME_PATH = Path(__file__).resolve().parent.parent / "config" / "resume_profile.md"
 ANTHROPIC_MESSAGES_URL = "https://api.anthropic.com/v1/messages"
-# Opus 5: stronger judgment on filtered survivors (PROJECT_BRIEF model choice).
 DEFAULT_MODEL = "claude-opus-5"
-# Full JD text to Claude (locked in PROJECT_BRIEF): filters bound volume;
-# do not truncate description for fit judgment.
-# Thinking is on by default for Opus 5; budget must cover thinking + JSON answer.
+DEFAULT_EFFORT = "medium"
 DEFAULT_MAX_TOKENS = 4096
 REQUEST_TIMEOUT_SECONDS = 120
+VALID_FITS = frozenset({"strong", "maybe", "no"})
+FAIL_CLOSED_FITS = frozenset({"invalid", "error"})
+RETRY_WAIT_SECONDS = 2.0
 
 
 @dataclass(frozen=True)
@@ -39,11 +52,23 @@ class MatchResult:
     url: str
     posted_date: str
     sponsorship_flag: str
-    fit: str  # strong | maybe | no
+    fit: str  # strong | maybe | no | invalid | error
     reasoning: str
+    model: str = DEFAULT_MODEL
+    effort: str = DEFAULT_EFFORT
+    input_tokens: int | None = None
+    output_tokens: int | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+    @property
+    def is_scored(self) -> bool:
+        return self.fit in VALID_FITS
+
+    @property
+    def is_fail_closed(self) -> bool:
+        return self.fit in FAIL_CLOSED_FITS
 
 
 def load_resume(path: Path | None = None) -> str:
@@ -82,12 +107,21 @@ def match_jobs(
     resume: str | None = None,
     api_key: str | None = None,
     model: str = DEFAULT_MODEL,
+    effort: str = DEFAULT_EFFORT,
     limit: int | None = None,
+    persist_quarantine: bool = True,
 ) -> list[MatchResult]:
     profile = resume if resume is not None else load_resume()
     key = api_key if api_key is not None else load_api_key()
 
-    targets = jobs if limit is None else jobs[:limit]
+    qstore = load_quarantine()
+    blocked = quarantined_urls(qstore)
+    eligible = [item for item in jobs if item.posting.url not in blocked]
+    skipped = len(jobs) - len(eligible)
+    if skipped:
+        logger.info("skipping %d quarantined URL(s)", skipped)
+
+    targets = eligible if limit is None else eligible[:limit]
     results: list[MatchResult] = []
 
     for index, item in enumerate(targets, start=1):
@@ -99,16 +133,17 @@ def match_jobs(
             posting.company,
             posting.title,
         )
-        try:
-            fit, reasoning = _call_claude(
-                api_key=key,
-                model=model,
-                resume=profile,
-                posting=posting,
-            )
-        except Exception as exc:  # noqa: BLE001 — one bad call must not kill the run
-            logger.error("match failed for %s (%s): %s", posting.title, posting.url, exc)
-            fit, reasoning = "error", f"match call failed: {exc}"
+        fit, reasoning, usage = _score_with_retry(
+            api_key=key,
+            model=model,
+            effort=effort,
+            resume=profile,
+            posting=posting,
+        )
+        if fit in FAIL_CLOSED_FITS:
+            record_failure(qstore, posting.url, error=f"{fit}: {reasoning}")
+        else:
+            clear_failure(qstore, posting.url)
 
         results.append(
             MatchResult(
@@ -120,19 +155,60 @@ def match_jobs(
                 sponsorship_flag=item.sponsorship_flag,
                 fit=fit,
                 reasoning=reasoning,
+                model=model,
+                effort=effort,
+                input_tokens=(usage or {}).get("input_tokens"),
+                output_tokens=(usage or {}).get("output_tokens"),
             )
         )
 
+    if persist_quarantine:
+        save_quarantine(qstore)
+
     return results
+
+
+def _score_with_retry(
+    *,
+    api_key: str,
+    model: str,
+    effort: str,
+    resume: str,
+    posting: Any,
+) -> tuple[str, str, dict[str, int] | None]:
+    """One retry with backoff on transport/API failures; parse is fail-closed."""
+    last_exc: Exception | None = None
+    for attempt in range(2):
+        try:
+            return _call_claude(
+                api_key=api_key,
+                model=model,
+                effort=effort,
+                resume=resume,
+                posting=posting,
+            )
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            logger.error(
+                "match attempt %d failed for %s (%s): %s",
+                attempt + 1,
+                posting.title,
+                posting.url,
+                exc,
+            )
+            if attempt == 0:
+                time.sleep(RETRY_WAIT_SECONDS)
+    return "error", f"match call failed: {last_exc}", None
 
 
 def _call_claude(
     *,
     api_key: str,
     model: str,
+    effort: str,
     resume: str,
     posting: Any,
-) -> tuple[str, str]:
+) -> tuple[str, str, dict[str, int] | None]:
     description = posting.description or ""
     user_prompt = f"""You are scoring fit between a candidate profile and one job posting.
 
@@ -163,8 +239,7 @@ Description:
     payload = {
         "model": model,
         "max_tokens": DEFAULT_MAX_TOKENS,
-        # Medium effort: better fit judgment than Haiku without max-tier spend.
-        "output_config": {"effort": "medium"},
+        "output_config": {"effort": effort},
         "messages": [{"role": "user", "content": user_prompt}],
     }
     request = urllib.request.Request(
@@ -187,7 +262,21 @@ Description:
         raise RuntimeError(f"Anthropic HTTP {exc.code}: {detail[:500]}") from exc
 
     text = _extract_text(body)
-    return _parse_fit_json(text)
+    fit, reasoning = _parse_fit_json(text)
+    usage = _extract_usage(body)
+    return fit, reasoning, usage
+
+
+def _extract_usage(body: dict[str, Any]) -> dict[str, int] | None:
+    usage = body.get("usage")
+    if not isinstance(usage, dict):
+        return None
+    out: dict[str, int] = {}
+    for key in ("input_tokens", "output_tokens"):
+        value = usage.get(key)
+        if isinstance(value, int):
+            out[key] = value
+    return out or None
 
 
 def _extract_text(body: dict[str, Any]) -> str:
@@ -205,16 +294,20 @@ def _extract_text(body: dict[str, Any]) -> str:
 
 
 def _parse_fit_json(text: str) -> tuple[str, str]:
-    # Model sometimes wraps JSON in fences; pull the first object.
+    """Fail-closed: bad JSON or unknown fit → invalid (never maybe)."""
     match = re.search(r"\{.*\}", text, flags=re.DOTALL)
     raw = match.group(0) if match else text
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
-        return "maybe", text.strip()[:500]
+        return "invalid", f"malformed model JSON: {text.strip()[:500]}"
 
-    fit = str(data.get("fit", "maybe")).strip().lower()
-    if fit not in {"strong", "maybe", "no"}:
-        fit = "maybe"
+    if not isinstance(data, dict):
+        return "invalid", f"model JSON was not an object: {text.strip()[:500]}"
+
+    fit = str(data.get("fit", "")).strip().lower()
+    if fit not in VALID_FITS:
+        return "invalid", f"unknown fit {fit!r}: {text.strip()[:500]}"
+
     reasoning = str(data.get("reasoning", "")).strip() or text.strip()[:500]
     return fit, reasoning

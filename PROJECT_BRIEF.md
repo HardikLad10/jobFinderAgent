@@ -148,11 +148,34 @@ Roughly 1,500 input tokens plus thinking/output tokens per job at medium effort.
 - Company config list (Midwest geography above; Greenhouse/Lever/Ashby/Breezy only; prefer ~10–999 emp)
 - Ingestion from each resolved company's ATS API
 - Deterministic filtering (title, location, sponsorship, freshness N=7) + URL-based seen dedupe
-- One Claude Opus 5 call per new filtered posting for fit + reasoning
+- One Claude Opus 5 call per new filtered posting for fit + reasoning (**full description**, no prompt truncation)
 - Compact one-line-per-match email of strong/maybe results
 - GitHub Actions cron aimed at early-morning Central delivery (`0 11 * * *` UTC), fully unattended
 - Separate Illinois CSOD within-1-day reminder workflow
 - Backend only, no UI
+- **Guardrails + evals** per §7a (P0 then P1; locked 2026-08-10)
+
+### 7a. V1 guardrails and evals (locked 2026-08-10 — implemented)
+
+Plain intent: fail closed on bad model output; never permanently hide jobs the model did not reliably score; stop infinite Opus retries on poison URLs; lock filter regressions with tests; then add a freshness-sorted score ceiling, a snapshotted gold eval, and an ingest-empty alarm.
+
+**P0 (ship before claiming production schema/seen guardrails; resume bullet 3 depends on this):**
+
+1. **Fail-closed fit schema.** Malformed JSON or unknown `fit` → explicit `invalid`. API/scoring failures → `error`. `invalid` and `error` share identical handling: not in `NOTIFY_FITS`, not emailed.
+2. **Split seen-state.** Stamp `seen` only for jobs that received a real score (`strong` / `maybe` / `no`). Mark `no` after successful score. Mark `strong` / `maybe` only after successful email send. Never mark `invalid` / `error` as ordinary seen on that attempt.
+3. **Retry + quarantine.** One in-run Anthropic retry with backoff. Persist quarantine in `data/quarantine.json` (attempt count, last error, URL); gitignore exception + Actions commit-back like `seen_jobs.json`. After **3** failed attempts, quarantine with an explanatory note so the URL stops burning Opus. **P0 acceptance:** observe a real quarantine event (forced or natural), not merge-only.
+4. **Filter unit tests.** Fixture-based; seed the four historical bugs: bare `remote` → non-US; `, in` → India false positive; `" il "` strip / substring geo bleed; level-only / recruiter–non-SWE title admits.
+
+**P1 (after P0):**
+
+5. **Survivor ceiling 100**, survivors sorted by `posted_date` descending before the cut. **Token/spend logging included in the same work** (required — not optional/best-effort).
+6. **Gold eval set of 12** — store **snapshotted posting JSON** (not live URLs). Severity-weighted pass rule (e.g. ≥10/12 exact; **zero** `no↔strong` flips; include 3–4 boundary cases). Record `model` + `effort` on match output for diffs.
+7. **Ingest-health alert:** `ingested == 0` only for this alert’s v1 (same-day). Trailing-average drop detection deferred unless a persisted stats file ships alongside quarantine-style persistence.
+
+**Explicitly deferred:**
+
+- Zero-kept streak alerts (`kept=0` is often a quiet day)
+- Wiring `--match-limit` into the daily cron (unsafe until split seen-state lands; weakest guardrail)
 
 ## 8. Explicitly Out of Scope for V1
 
@@ -162,6 +185,7 @@ Roughly 1,500 input tokens plus thinking/output tokens per job at medium effort.
 - No Handshake or Wellfound as data sources
 - No Comeet / Paylocity / Oracle Cloud / **Workday** clients in v1 (Workday explicitly canned)
 - No CSOD full fit-matching (reminder only)
+- No Firecrawl / auto-apply automation
 
 ## 9. Future Scaling Ideas — Documented, Not Built
 
@@ -175,9 +199,11 @@ Recorded here so they're not lost, and so the code doesn't accidentally make the
 - **Draft (never auto-send) a tailored outreach note per strong match.** Stays human-approved by design, this should never become an auto-send feature.
 - **Lightweight application tracking.** Did I apply, did I hear back, layered on top of existing match data.
 - **Tunable freshness window** beyond the locked N=7 default (already shipped as `max_age_days`).
+- **Ingest trailing-average / sharp-drop alert** (beyond `ingested == 0`) if a durable stats file is added later.
+- **Zero-kept streak alert** (deferred; quiet days are normal).
 
 ## 10. Open Decisions / Next
 
 - Discovery Phase 2 complete (~191 resolved / ~631 unresolved of 822). Unresolved = public board not yet found on G/L/A/Breezy — backlog for opportunistic slug adds when a real careers URL turns up; deeper ATS hunting is out of v1.
-- Phase 4 when ready: smoke ingest+filter (Claude capped); no Phase 3 Breezy client (0 verified Breezy boards after spot-check).
+- **Next build:** operate on §7a daily; run `python -m unittest` and `python scripts/eval_matches.py` when changing prompts/filters.
 - Email To locked to Gmail (`hardik.lad773@gmail.com`) for Resend; classmate Illinois copy is manual forward for now.

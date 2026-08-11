@@ -20,6 +20,7 @@ logger = logging.getLogger(__name__)
 
 DEFAULT_FILTERS_PATH = Path(__file__).resolve().parent.parent / "config" / "filters.json"
 DEFAULT_SEEN_PATH = Path(__file__).resolve().parent.parent / "data" / "seen_jobs.json"
+DEFAULT_MAX_SURVIVORS = 100
 
 SponsorshipFlag = str  # "exclusion_found" | "none_found"
 
@@ -59,17 +60,53 @@ def save_seen_urls(urls: set[str], path: Path | None = None) -> None:
     seen_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
+def apply_survivor_ceiling(
+    jobs: list[FilteredJob],
+    *,
+    max_survivors: int | None = None,
+    filter_config: dict[str, Any] | None = None,
+) -> tuple[list[FilteredJob], int]:
+    """Keep the newest postings up to max_survivors (posted_date descending).
+
+    Returns (kept, ceiling_drop_count).
+    """
+    cfg = filter_config if filter_config is not None else load_filter_config()
+    if max_survivors is None:
+        max_survivors = _max_survivors(cfg.get("max_survivors", DEFAULT_MAX_SURVIVORS))
+    if max_survivors <= 0 or len(jobs) <= max_survivors:
+        return jobs, 0
+
+    ranked = sorted(
+        jobs,
+        key=lambda item: _parse_posted_date(item.posting.posted_date)
+        or datetime.min.replace(tzinfo=timezone.utc),
+        reverse=True,
+    )
+    kept = ranked[:max_survivors]
+    dropped = len(jobs) - len(kept)
+    logger.info(
+        "survivor ceiling: max=%d input=%d kept=%d ceiling_drop=%d",
+        max_survivors,
+        len(jobs),
+        len(kept),
+        dropped,
+    )
+    return kept, dropped
+
+
 def filter_postings(
     postings: list[JobPosting],
     *,
     filter_config: dict[str, Any] | None = None,
     seen_urls: set[str] | None = None,
+    extra_skip_urls: set[str] | None = None,
     now: datetime | None = None,
 ) -> list[FilteredJob]:
     """Apply title → location → sponsorship → freshness → dedupe.
 
     Freshness sits after sponsorship and before URL-based seen dedupe so
     stale postings never consume a Claude call or a seen-store slot.
+    `extra_skip_urls` is for quarantine (and similar) without mixing stores.
     """
     cfg = filter_config if filter_config is not None else load_filter_config()
     seen = seen_urls if seen_urls is not None else load_seen_urls()
@@ -82,6 +119,9 @@ def filter_postings(
     remote_non_us = _lower_list(cfg.get("remote_non_us_exclude_any", []))
     phrases = _lower_list(cfg.get("sponsorship_exclusion_phrases", []))
     max_age_days = _max_age_days(cfg.get("max_age_days", 7))
+    skip_urls = set(seen)
+    if extra_skip_urls:
+        skip_urls |= set(extra_skip_urls)
 
     kept: list[FilteredJob] = []
     stats = {
@@ -128,7 +168,7 @@ def filter_postings(
             stats["freshness_drop"] += 1
             continue
 
-        if posting.url in seen:
+        if posting.url in skip_urls:
             stats["dedupe_drop"] += 1
             continue
 
@@ -147,6 +187,14 @@ def filter_postings(
         stats["kept"],
     )
     return kept
+
+
+def _max_survivors(value: Any) -> int:
+    try:
+        n = int(value)
+    except (TypeError, ValueError):
+        return DEFAULT_MAX_SURVIVORS
+    return n if n > 0 else DEFAULT_MAX_SURVIVORS
 
 
 def sponsorship_flag(

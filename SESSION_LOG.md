@@ -757,3 +757,42 @@ Funnel (`max_age_days=7`, null posted_date kept):
 **Decisions made:**
 - Full description for matching is the v1 default going forward.
 - No per-day ingest archive; `latest_*` overwrite behavior unchanged.
+
+---
+
+## [2026-08-10] — Locked v1 guardrails + evals (P0 / P1) — not implemented yet
+
+**Plain terms (product intent):**
+- Bad model output must not become a `maybe` in email → explicit `invalid` / `error`, fail-closed.
+- Do not stamp every filtered URL seen forever → only real scores; email-worthy rows wait for successful send.
+- Stop indefinite Opus retries on poison URLs → one in-run retry; quarantine after 3 failures in `data/quarantine.json`.
+- Filters caused the real bugs → fixture unit tests locking four historical failures.
+- Then P1: freshness-sorted ceiling 100 + spend logging, 12 snapshotted gold evals, `ingested == 0` alert.
+
+**Locked package (Codex + agent; amendments accepted):**
+- **P0:** fail-closed schema (`invalid`+`error`); split seen-state (`no` on score, `strong`/`maybe` on send); retry + quarantine persistence (`quarantine.json`, git + Actions commit-back); filter tests seeded with four historical bugs. **Acceptance:** observe a real quarantine event, not merge-only.
+- **P1:** survivor ceiling 100 sorted by `posted_date` desc **with required token/spend logging** (folded together; not “when available”); gold set of 12 snapshotted postings + severity-weighted pass rule; ingest alert = `ingested == 0` only unless a stats file ships with quarantine-style persistence; record `model`+`effort` on match output.
+- **Defer:** zero-kept streak; `--match-limit` on daily cron.
+
+**Four filter fixtures to lock:** bare `remote` → non-US; `, in` → India; `" il "` / geo substring bleed; level-only / recruiter–non-SWE titles.
+
+**Why:** Resume/production claims about schema + seen gating are only true after P0. Quiet `kept=0` days are normal; empty ingest is the Aug-7 failure class.
+
+**Next:** implement P0, prove quarantine, then P1. Documented in `PROJECT_BRIEF.md` §7a.
+
+---
+
+## [2026-08-10] — Implemented §7a P0 + P1 guardrails and evals
+
+**Changed:**
+- Fail-closed matching: malformed/unknown fit → `invalid`; API failures → `error` (never coerce to `maybe`).
+- Split seen-state in `run_pipeline.py`: `no` after score; `strong`/`maybe` only after successful `--send-email`; never for `invalid`/`error`.
+- Anthropic one-retry backoff; `data/quarantine.json` persistence (3 failures → quarantine); Actions commits quarantine with seen store.
+- Filter unit tests for four historical bugs + ceiling sort test; quarantine acceptance test observes a real quarantine event.
+- Survivor ceiling `max_survivors: 100` (newest first) + token/spend logging on match results (`model`, `effort`, token fields).
+- Gold set: 12 snapshotted postings under `evals/gold/` + `scripts/eval_matches.py` (severity-weighted pass rule).
+- Ingest-health: `ingested == 0` aborts and emails an alert.
+
+**P0 acceptance:** `tests.test_matching_guardrails.QuarantineAcceptanceTest` prints and asserts a quarantine event.
+
+**Deferred (unchanged):** zero-kept streak; `--match-limit` on daily cron.

@@ -24,8 +24,9 @@ node_modules/
 .idea/
 .vscode/
 
-# Runtime data (keep seen store tracked so Actions can persist it)
+# Runtime data (keep seen + quarantine tracked so Actions can persist them)
 data/*
 !data/seen_jobs.json
+!data/quarantine.json
 *.db
 

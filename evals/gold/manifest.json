@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "gold_01",
+      "path": "gold_01.json",
+      "expected_fit": "strong",
+      "boundary": false
+    },
+    {
+      "id": "gold_02",
+      "path": "gold_02.json",
+      "expected_fit": "maybe",
+      "boundary": true
+    },
+    {
+      "id": "gold_03",
+      "path": "gold_03.json",
+      "expected_fit": "maybe",
+      "boundary": true
+    },
+    {
+      "id": "gold_04",
+      "path": "gold_04.json",
+      "expected_fit": "maybe",
+      "boundary": true
+    },
+    {
+      "id": "gold_05",
+      "path": "gold_05.json",
+      "expected_fit": "maybe",
+      "boundary": true
+    },
+    {
+      "id": "gold_06",
+      "path": "gold_06.json",
+      "expected_fit": "no",
+      "boundary": false
+    },
+    {
+      "id": "gold_07",
+      "path": "gold_07.json",
+      "expected_fit": "no",
+      "boundary": false
+    },
+    {
+      "id": "gold_08",
+      "path": "gold_08.json",
+      "expected_fit": "no",
+      "boundary": false
+    },
+    {
+      "id": "gold_09",
+      "path": "gold_09.json",
+      "expected_fit": "no",
+      "boundary": false
+    },
+    {
+      "id": "gold_10",
+      "path": "gold_10.json",
+      "expected_fit": "no",
+      "boundary": false
+    },
+    {
+      "id": "gold_11",
+      "path": "gold_11.json",
+      "expected_fit": "no",
+      "boundary": false
+    },
+    {
+      "id": "gold_12",
+      "path": "gold_12.json",
+      "expected_fit": "no",
+      "boundary": false
+    }
+  ],
+  "pass_rule": {
+    "min_exact": 10,
+    "max_items": 12,
+    "forbid_no_strong_flips": true,
+    "notes": "Severity-weighted: strong\u2194maybe soft; no\u2194strong hard fail. Include boundary maybes."
+  }
+}
