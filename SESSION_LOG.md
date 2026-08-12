@@ -796,3 +796,57 @@ Funnel (`max_age_days=7`, null posted_date kept):
 **P0 acceptance:** `tests.test_matching_guardrails.QuarantineAcceptanceTest` prints and asserts a quarantine event.
 
 **Deferred (unchanged):** zero-kept streak; `--match-limit` on daily cron.
+
+---
+
+## [2026-08-11] — Lock v2: N=3 freshness + LCA seed noise rules; start seeding
+
+**Decisions locked:**
+- Freshness **N=3** (`config/filters.json` `max_age_days`).
+- v2 primary goal: expand G/L/A/Breezy Midwest coverage (LinkedIn = benchmark only, not ingest).
+- LCA is a **seed helper**, not the full company universe; non-LCA sources follow after seeding/ATS resolve.
+- **H_1B_DEPENDENT = Y → drop** from LCA seed.
+- **LLC soft-drop:** LLC/L.L.C. only when paired with noise tokens (STAFFING/CONSULTING/SOLUTIONS/SERVICES/…).
+- LLP + consultancy name patterns hard-dropped.
+
+**Changed:**
+- `scripts/seed_from_lca.py` added; writes `config/lca_midwest_swe_seed.json`.
+- Brief §5 freshness + §10a v2 locks updated.
+
+**LCA seed run (FY2025 Q1–Q4):**
+- Funnel: raw 596,552 → Midwest worksite 65,887 → certified 64,398 → SWE-ish 31,089 → after H-1B-dep drop 18,195 → kept rows 14,543 → **3,823 unique employers**.
+- Name drops: consult_pattern 613, llc_noise 1,915, llp 1,124.
+- Q1 column quirk: `H-1B_DEPENDENT` (hyphen) vs Q2–Q4 `H_1B_DEPENDENT` — seeder normalizes both.
+- Top names skew corporate (Ford, GM, Target, Deere, Cummins, Northern Trust, JPM, Caterpillar, Best Buy, Oracle…).
+- Next: `discover_ats` on names not already in `companies.json`, then non-LCA sources.
+
+**ATS discovery + merge (done):**
+- Probed **3,619** new LCA names → **140** slug hits (`config/companies.discovered.lca.json`): greenhouse 90, lever 23, ashby 19, breezy 8.
+- Spot-check dropped 10 clear FPs (e.g. breezy/adobe, lever/healthcare, ashby/brunswick neurology, greenhouse/peloton≠Peloton Group) + 13 empty/zero-job boards.
+- Merged **114** unique tokens into `config/companies.json`: **305 resolved** / 631 unresolved / **936 total** (was 191/631/822).
+- Next: non-LCA Midwest seed sources (Built In / directories / etc.).
+
+## [2026-08-11] — Non-LCA discovery: Built In Chicago software seed
+
+**Approach:** Public Built In Chicago **Software Companies** directory (`?handler=SearchResults` HTML partials) — not SEC public-co listings (low G/L/A hit-rate / Workday-heavy). Minneapolis Built In redirects away; no Detroit/Columbus/STL Built In hosts.
+
+**Changed:**
+- `scripts/seed_from_builtin.py` → `config/builtin_chicago_software_seed.json`
+- Scraped **1,199** unique names; **1,065** new after excluding `companies.json` + LCA + midwest seeds.
+- ATS discovery: **110/1,065** resolved (greenhouse 54, ashby 31, lever 17, breezy 8).
+- Dropped 12 zero-job boards; merged **98** tokens → `companies.json` now **403 resolved** / 631 unresolved / **1,034 total**.
+- Hit-rate ~10% on Built In software names (vs ~4% on LCA corporates) — better ATS fit as expected.
+
+**Note:** Raw DOL LCA `.xlsx` stay gitignored/local-only (GitHub 100MB limit).
+
+## [2026-08-11] — Built In adjacent metros (MIL / IND / DET)
+
+**Why:** Chicago suburb URL filters on Built In do not work (return full CHI list). Neighbor metros do.
+
+**Steps:**
+1. Extended `scripts/seed_from_builtin.py` with `--adjacent-metros`.
+2. Scraped software directories: Milwaukee 78 + Indianapolis ~175 + Detroit ~93 → **338** unique; **274** new after excludes.
+3. `discover_ats` → **19/274** resolved; dropped 4 zero-job; merged **15** → `companies.json` **418 resolved** / 631 unresolved / **1,049 total**.
+4. Artifact: `config/builtin_adjacent_metros_software_seed.json` + `config/companies.discovered.builtin_adjacent.json`.
+
+Lower hit-rate than Chicago software (~7%) — more regional firms on Workday/custom ATS — but still net-new boards (SpotHopper, Greenlight Guru, T2 Systems, Rivet Work, …).

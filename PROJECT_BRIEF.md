@@ -1,6 +1,6 @@
 # Job Search Agent — Project Brief
 
-**Status:** Core pipeline + daily Actions live. Next: lock Midwest/UIUC discovery scope, then expand company list. Day-to-day progress in `SESSION_LOG.md`.
+**Status:** Core pipeline + daily Actions live. V2 coverage expansion shipped (LCA + Built In seeds → ~418 resolved boards; freshness N=3). Next: Breezy ingest. Day-to-day progress in `SESSION_LOG.md`.
 **Type:** Warm-up build. Smaller and faster than the main portfolio project (OTC/FMCG agentic project, scoped separately). Purpose here is reps with the stack and real engineering judgment, not scale.
 
 This file is the stable reference. It should rarely change. Day-to-day progress, decisions made while building, and things that changed from this plan belong in `SESSION_LOG.md`, not here.
@@ -84,7 +84,7 @@ Deterministic pipeline with exactly one agentic step.
 
    Residual noise is expected; geography must not rely on the matching model. Indiana uses full tokens (`indiana`, `indianapolis`) — not `, in` — to avoid India false positives.
 
-   **Freshness filter (deterministic):** Keep postings whose `posted_date` falls within the last **N = 7** days (`max_age_days` in `config/filters.json`). Missing, null, or unparseable `posted_date` values are **kept** (do not drop on uncertainty). Older than N days are dropped. Sits after sponsorship and before seen-URL dedupe so stale boards do not reach Claude; stage drop count is logged as `freshness_drop`. Seen-URL dedupe remains the identity gate for "already emailed / already judged" — freshness does not replace it.
+   **Freshness filter (deterministic):** Keep postings whose `posted_date` falls within the last **N = 3** days (`max_age_days` in `config/filters.json`; v2 lock — was 7). Missing, null, or unparseable `posted_date` values are **kept** (do not drop on uncertainty). Older than N days are dropped. Sits after sponsorship and before seen-URL dedupe so stale boards do not reach Claude; stage drop count is logged as `freshness_drop`. Seen-URL dedupe remains the identity gate for "already emailed / already judged" — freshness does not replace it.
 
    **Sponsorship exclusion filter (deterministic, keyword-based):**
 
@@ -147,7 +147,7 @@ Roughly 1,500 input tokens plus thinking/output tokens per job at medium effort.
 
 - Company config list (Midwest geography above; Greenhouse/Lever/Ashby/Breezy only; prefer ~10–999 emp)
 - Ingestion from each resolved company's ATS API
-- Deterministic filtering (title, location, sponsorship, freshness N=7) + URL-based seen dedupe
+- Deterministic filtering (title, location, sponsorship, freshness N=3) + URL-based seen dedupe
 - One Claude Opus 5 call per new filtered posting for fit + reasoning (**full description**, no prompt truncation)
 - Compact one-line-per-match email of strong/maybe results
 - GitHub Actions cron aimed at early-morning Central delivery (`0 11 * * *` UTC), fully unattended
@@ -198,12 +198,33 @@ Recorded here so they're not lost, and so the code doesn't accidentally make the
 - **Notification tiering.** Immediate email for strong matches, weekly digest for maybes.
 - **Draft (never auto-send) a tailored outreach note per strong match.** Stays human-approved by design, this should never become an auto-send feature.
 - **Lightweight application tracking.** Did I apply, did I hear back, layered on top of existing match data.
-- **Tunable freshness window** beyond the locked N=7 default (already shipped as `max_age_days`).
+- **Tunable freshness window** (v2 default is N=3; was N=7 in early v1).
+- **Non-LCA Midwest company discovery** (Built In / other public directories) — LCA is one seed factory, not the full universe.
 - **Ingest trailing-average / sharp-drop alert** (beyond `ingested == 0`) if a durable stats file is added later.
 - **Zero-kept streak alert** (deferred; quiet days are normal).
 
 ## 10. Open Decisions / Next
 
-- Discovery Phase 2 complete (~191 resolved / ~631 unresolved of 822). Unresolved = public board not yet found on G/L/A/Breezy — backlog for opportunistic slug adds when a real careers URL turns up; deeper ATS hunting is out of v1.
-- **Next build:** operate on §7a daily; run `python -m unittest` and `python scripts/eval_matches.py` when changing prompts/filters.
+- Discovery Phase 2 + v2 coverage expansion complete locally: ~**418 resolved** / ~631 unresolved / ~1,049 total. Unresolved = public G/L/A/Breezy board not yet found — opportunistic slug backlog.
+- **Next build:** Breezy ingest client (resolved Breezy tokens are skipped today); optional more Built In industry types / unresolved slug fills.
 - Email To locked to Gmail (`hardik.lad773@gmail.com`) for Resend; classmate Illinois copy is manual forward for now.
+
+### 10a. V2 coverage expansion (locked 2026-08-11)
+
+**Product goal:** Any Midwest-relevant SWE role on a public Greenhouse/Lever/Ashby/Breezy board should reach the pipeline without manual LinkedIn hunting. LinkedIn is a coverage benchmark only — never a daily ingest source.
+
+**Freshness:** `max_age_days = 3` (72h).
+
+**LCA seed factory (DOL H-1B disclosure Excel under `discovery/`):**
+1. Filter **WORKSITE_STATE** ∈ {IL, WI, IN, MI, MO, IA, MN} first.
+2. Keep certified-ish cases; SWE-ish SOC (`15-12*`) / title keywords.
+3. **Drop `H_1B_DEPENDENT = Y`** (staffing-mill signal).
+4. **LLC soft-drop:** drop only if name matches LLC/L.L.C. **and** noise tokens (STAFFING, CONSULTING, SOLUTIONS, SERVICES, TECHNOLOGIES, …).
+5. Hard-drop LLP and consultancy / body-shop name patterns.
+6. Output: `config/lca_midwest_swe_seed.json` via `scripts/seed_from_lca.py`.
+
+**Explicit:** LCA is help for discovery, not the full Midwest universe. Built In Chicago + adjacent-metro software seeds shipped after the LCA pass.
+
+**Built In Chicago seed (locked 2026-08-11):** Public **Software Companies** directory via `scripts/seed_from_builtin.py` → `config/builtin_chicago_software_seed.json`. Exclude names already in `companies.json` / LCA / midwest seeds, then `discover_ats`. Prefer this over SEC public-company lists for G/L/A/Breezy coverage.
+
+**Built In adjacent metros:** `--adjacent-metros` scrapes Milwaukee / Indianapolis / Detroit software directories → `config/builtin_adjacent_metros_software_seed.json`. Chicago suburb path filters are not usable (no real slice).

@@ -35,6 +35,12 @@ DATA_DIR = Path(__file__).resolve().parent / "data"
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run jobFinderAgent pipeline")
     parser.add_argument(
+        "--companies",
+        type=Path,
+        default=None,
+        help="Optional companies.json path (smoke tests for a subset of boards)",
+    )
+    parser.add_argument(
         "--reuse-ingest",
         action="store_true",
         help="Skip ATS fetch; reload data/latest_ingestion.json (filter/match iteration)",
@@ -98,7 +104,7 @@ def main() -> int:
         ]
         logging.info("reused %d postings from %s", len(postings), ingest_path)
     else:
-        postings = ingest_companies()
+        postings = ingest_companies(config_path=args.companies)
         (DATA_DIR / "latest_ingestion.json").write_text(
             json.dumps([p.to_dict() for p in postings], indent=2) + "\n",
             encoding="utf-8",
