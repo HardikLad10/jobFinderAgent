@@ -866,3 +866,9 @@ Lower hit-rate than Chicago software (~7%) — more regional firms on Workday/cu
 **Local pipeline smoke (`run_pipeline.py --skip-match`, pre-FP-drop list):** **31,221** ingested from 668 boards; 621 unresolved skipped; filter kept **7** (title_drop 29,710 / location 1,279 / sponsorship 2 / freshness 220 / dedupe 3). One board 404 (Instructure/Lever). Survivors were real SWE roles (LaunchDarkly, T2 Systems, Torc, Greenlight).
 
 **companies.json (after FP drop):** **652 resolved** / **637 unresolved** / **1,289** total (greenhouse 397, lever 86, ashby 84, smartrecruiters 53, breezy 30, workable 1, recruitee 1).
+
+## [2026-08-13] — Lock daily-artifact design in the brief
+
+**Why:** Brief is the future lookup for “how does this project work.” Email/Actions/seen vs gitignored dumps was implied by `.gitignore` + the workflow, not stated as scope.
+
+**Locked in `PROJECT_BRIEF.md` §5 (Daily workflow artifacts):** email is the product; no in-repo digest; git keeps only `seen_jobs.json` + `quarantine.json` as run state; `latest_*` dumps are ephemeral; inspect a day via inbox, Resend, or Actions logs. Frontend / match archive remain out of scope.

@@ -111,6 +111,30 @@ Deterministic pipeline with exactly one agentic step.
 5. **Delivery (deterministic).** Strong/maybe matches emailed at end of run. Format: tiny header with counts, then separate **Strong** / **Maybe** sections, each with **one compact line per match** — `Title — Company — Posted date — one-line reasoning — link`. Reasoning is trimmed/capped (~120 chars) for email display; no multi-paragraph per-job summaries.
 6. **Scheduling (deterministic, infrastructure).** GitHub Actions cron triggers the pipeline for an early-morning America/Chicago delivery window (cron at 6:00 AM Central; see Tech Stack). Separate workflow for Illinois CSOD reminder (same window).
 
+### Daily workflow artifacts (locked)
+
+The **email is the product artifact** for a given day. There is no dashboard and **no in-repo daily digest** (titles, reasoning, email body are not committed). Frontend and a match archive are out of scope.
+
+**What a daily Actions run does** (`.github/workflows/daily_job_search.yml`): checkout `main` → `python run_pipeline.py --send-email --mark-seen` → if `data/seen_jobs.json` or `data/quarantine.json` changed, commit them back (`chore: update seen jobs and quarantine after daily run`). Ingest of tens of thousands of postings is **stateless**: fetch, filter in memory, discard. Noise never enters git.
+
+**What git keeps (durable state only):**
+
+- `data/seen_jobs.json` — URL list for jobs that already received a real score (`no` after score; `strong`/`maybe` only after a successful email send). Not titles, not reasoning, not the email. Freshness runs *before* this check so stale posts never occupy a seen slot.
+- `data/quarantine.json` — URLs that failed Opus repeatedly (stop retrying poison posts).
+- `config/companies.json` — boards to poll.
+- This brief + `SESSION_LOG.md` — design and build history, not a daily job board.
+
+**What git does not keep** (`data/*` gitignored except the two files above): `latest_ingestion.json`, `latest_filtered.json`, `latest_matches.json`. Those exist only on the Actions runner (or a local run) and vanish when the job ends. They are debug dumps, not the archive.
+
+**How to inspect a day later** (for yourself or when showing the project):
+
+1. **Inbox** (`hardik.lad773@gmail.com`) — the digest, if any strong/maybe survived. `kept=0` means **no email that day** (normal under N=3 + seen).
+2. **Resend** (resend.com/emails) — sent copies, subject, message id. Empty on skip days.
+3. **GitHub Actions log** for `Daily job search` — funnel (`filter stats`) and printed `[STRONG]`/`[MAYBE]`/`[NO]` when Opus ran. Quiet days show `kept=0` and `email skipped`.
+4. **`data/seen_jobs.json` on `main`** — which URLs were already judged, not what was emailed.
+
+Illinois CSOD and Research Park are **separate workflows** in the same morning window (reminder emails, not fit-matching).
+
 ### Company geography (locked)
 
 Discovery targets all of:
@@ -149,8 +173,8 @@ Roughly 1,500 input tokens plus thinking/output tokens per job at medium effort.
 - Ingestion from each resolved company's ATS API
 - Deterministic filtering (title, location, sponsorship, freshness N=3) + URL-based seen dedupe
 - One Claude Opus 5 call per new filtered posting for fit + reasoning (**full description**, no prompt truncation)
-- Compact one-line-per-match email of strong/maybe results
-- GitHub Actions cron aimed at early-morning Central delivery (`0 11 * * *` UTC), fully unattended
+- Compact one-line-per-match email of strong/maybe results (the day’s product artifact; not stored in git)
+- GitHub Actions cron aimed at early-morning Central delivery (`0 11 * * *` UTC), fully unattended; commit-back of `seen_jobs.json` / `quarantine.json` only
 - Separate Illinois CSOD within-1-day reminder workflow
 - Backend only, no UI
 - **Guardrails + evals** per §7a (P0 then P1; locked 2026-08-10)
@@ -180,6 +204,7 @@ Plain intent: fail closed on bad model output; never permanently hide jobs the m
 ## 8. Explicitly Out of Scope for V1
 
 - No frontend/dashboard
+- No in-repo daily match/email archive (`latest_matches.json` is gitignored; inspect via inbox, Resend, or Actions logs)
 - No feedback-based learning loop
 - No Fireworks integration
 - No Handshake or Wellfound as data sources
@@ -198,6 +223,7 @@ Recorded here so they're not lost, and so the code doesn't accidentally make the
 - **Notification tiering.** Immediate email for strong matches, weekly digest for maybes.
 - **Draft (never auto-send) a tailored outreach note per strong match.** Stays human-approved by design, this should never become an auto-send feature.
 - **Lightweight application tracking.** Did I apply, did I hear back, layered on top of existing match data.
+- **Persist a daily digest in git** (redacted `latest_matches.json` or email body, commit-back like seen) if the repo itself needs a clickable “what ran today” trail. Not built; email + Actions logs are the v1/v2 inspection path.
 - **Tunable freshness window** (v2 default is N=3; was N=7 in early v1).
 - **Non-LCA Midwest company discovery** (Built In / other public directories) — LCA is one seed factory, not the full universe.
 - **Ingest trailing-average / sharp-drop alert** (beyond `ingested == 0`) if a durable stats file is added later.
