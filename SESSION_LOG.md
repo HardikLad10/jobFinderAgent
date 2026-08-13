@@ -850,3 +850,19 @@ Funnel (`max_age_days=7`, null posted_date kept):
 4. Artifact: `config/builtin_adjacent_metros_software_seed.json` + `config/companies.discovered.builtin_adjacent.json`.
 
 Lower hit-rate than Chicago software (~7%) — more regional firms on Workday/custom ATS — but still net-new boards (SpotHopper, Greenlight Guru, T2 Systems, Rivet Work, …).
+
+## [2026-08-12] — Finish v2: Breezy ingest + full Chicago Built In + extra ATS
+
+**Breezy:** List JSON has no JD; ingest fetches each posting HTML and reads JobPosting JSON-LD. Smoke: **16/16** boards fetched, **159** jobs, **151** with descriptions.
+
+**Full Built In Chicago:** `--all-chicago` scraped ~6.5k names → **3,721** new after excludes + consult/staffing drop. ATS probe **293/3721** hits; merged **240** after dropping 0-job, megacorp SR, Breezy-heavy, recruitee demos.
+
+**Unresolved RCA:** Re-probed 631 names on SR/Workable/Recruitee (+ G/L/A again). **32** slug hits; most Recruitee were demo/sample boards; generic Greenhouse slugs were wrong companies. Kept **15** real boards then dropped **5** megacorp SR (AbbVie/NM/Experian/ServiceNow/Canva) so daily ingest stays bounded. Net **+10** from the old unresolved list.
+
+**Ingest clients added:** `ingestion/breezy.py`, `smartrecruiters.py` (SWE-title prefilter before detail fetch), `workable.py`, `recruitee.py`.
+
+**Spot-check FPs (post-merge):** Dropped **11** wrong-company slugs (e.g. ashby/wilson=WilsonAI, lever/kepler=Kepler Communications, greenhouse/gemini=Gemini crypto) and **5** consult/staffing boards that the name regex missed (Capco, Valtech, Cprime, PMA Consultants, LaSalle Network). Capco alone was 734 Greenhouse jobs.
+
+**Local pipeline smoke (`run_pipeline.py --skip-match`, pre-FP-drop list):** **31,221** ingested from 668 boards; 621 unresolved skipped; filter kept **7** (title_drop 29,710 / location 1,279 / sponsorship 2 / freshness 220 / dedupe 3). One board 404 (Instructure/Lever). Survivors were real SWE roles (LaunchDarkly, T2 Systems, Torc, Greenlight).
+
+**companies.json (after FP drop):** **652 resolved** / **637 unresolved** / **1,289** total (greenhouse 397, lever 86, ashby 84, smartrecruiters 53, breezy 30, workable 1, recruitee 1).

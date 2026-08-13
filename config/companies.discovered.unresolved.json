@@ -1,0 +1,4483 @@
+[
+  {
+    "name": "Discover Financial Services",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cboe Global Markets",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Guaranteed Rate",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Clearcover",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CCC Intelligent Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Origami Risk",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Capital One",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Vouch",
+    "ats": "smartrecruiters",
+    "board_token": "vouch",
+    "job_count_at_discovery": 2,
+    "sample_title": "JOb 2",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Coro",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Tempus",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "VillageMD",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "ALIS",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Echo Global Logistics",
+    "ats": "recruitee",
+    "board_token": "echogloballogistics",
+    "job_count_at_discovery": 1,
+    "sample_title": "Senior Marketer (Sample)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Coyote Logistics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "ShipBob",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Uptake",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Relativity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PowerReviews",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Paylocity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cars.com",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Reverb",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Motorola Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Morningstar",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Halo Investing",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "37signals",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Fooda",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "ParkWhiz",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cleo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Packback",
+    "ats": "workable",
+    "board_token": "packback",
+    "job_count_at_discovery": 1,
+    "sample_title": "Customer Advocacy Manager | Packback",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Rise Science",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Simple Mills",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Narrativ",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Narrative Science",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Braintree",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Avant",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "OppFi",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Belly",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Threadless",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Grubhub",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Trunk Club",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Foxtrot",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bungii",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Fetch Rewards",
+    "ats": "greenhouse",
+    "board_token": "fetch",
+    "job_count_at_discovery": 52,
+    "sample_title": "Actuarial Data Scientist",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Nowsta",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Shiftgig",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "GTreasury",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "AvidXchange",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "nCino",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Alkami",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "MX Technologies",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Yardi",
+    "ats": "smartrecruiters",
+    "board_token": "yardi",
+    "job_count_at_discovery": 1,
+    "sample_title": "Software Development Engineer II",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "AppFolio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "RealPage",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "MRI Software",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Procore",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PlanGrid",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bushel",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "FarmLogs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Granular",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Conservis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Indigo Ag",
+    "ats": "greenhouse",
+    "board_token": "indigo",
+    "job_count_at_discovery": 3,
+    "sample_title": "AVP, Facilities Underwriting",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Farmers Business Network",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Climate Corporation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Descartes Labs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "FreightWaves",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "MacroPoint",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Transfix",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Convoy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Motive",
+    "ats": "greenhouse",
+    "board_token": "motive",
+    "job_count_at_discovery": 10,
+    "sample_title": "Account Coordinator (Denver)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Manhattan Associates",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Blue Yonder",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kinaxis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "o9 Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Tipalti",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Routable",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "MineralTree",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kyriba",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "BlueVine",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Fundbox",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Lendio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "LendingClub",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Dave",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "MoneyLion",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Varo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Current",
+    "ats": "greenhouse",
+    "board_token": "current",
+    "job_count_at_discovery": 6,
+    "sample_title": "Lead Engineer (Drupal / Web Platforms)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Step",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Olo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "BentoBox",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Popmenu",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "SevenRooms",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Tock",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Resy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "TrueCar",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Vroom",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Shift",
+    "ats": "ashby",
+    "board_token": "shift",
+    "job_count_at_discovery": 12,
+    "sample_title": "Commercial Credit Analyst ",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "AAR Corp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Wolfram Research",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Epic Systems",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Exact Sciences",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Promega",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "GE HealthCare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Oak Street Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cityblock Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Notable Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Phreesia",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PatientPop",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Guardant Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Tempus Labs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Outcome Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Peapod Digital Labs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DRW",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Citadel Securities",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Peak6",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "TransMarket Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Wolverine Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Allston Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Headlands Technologies",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Radix Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Group One Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "XR Trading",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hard Eight Futures",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Advantage Futures",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "RJO Futures",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "tastyworks",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Allstate",
+    "ats": "recruitee",
+    "board_token": "allstate",
+    "job_count_at_discovery": 1,
+    "sample_title": "Senior Marketer (Sample)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "CME Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Options Clearing Corporation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Northern Trust",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Wintrust",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "BMO Harris",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Fifth Third",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Huntington",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Associated Bank",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Old National",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "HCSC",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Blue Cross Blue Shield of Illinois",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "WEX Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Accolade",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Teladoc",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Oscar Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Ro",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hims & Hers",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Devoted Health",
+    "ats": "smartrecruiters",
+    "board_token": "devotedhealth",
+    "job_count_at_discovery": 2,
+    "sample_title": "Full Time Nurse Practitioner: Home Visit (hybrid in-home & remote) - Scottsdale ",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Bright Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hims",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Abbott",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "AbbVie",
+    "ats": "smartrecruiters",
+    "board_token": "abbvie",
+    "job_count_at_discovery": 1708,
+    "sample_title": "Scientific Director, Oncology Early Development",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Baxter",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Zimmer Biomet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Stryker",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Medline",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hill-Rom",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Abt Associates",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "NORC",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "UI Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Carle Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "OSF HealthCare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "UW Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Froedtert",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Advocate Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Northwestern Medicine",
+    "ats": "smartrecruiters",
+    "board_token": "northwesternmedicine",
+    "job_count_at_discovery": 1417,
+    "sample_title": "Patient Relations Liaison, Full-Time, Days",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Rush University Medical Center",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "John Deere",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CNH Industrial",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Caterpillar",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Corteva",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "ADM",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cargill",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bunge",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Land O Lakes",
+    "ats": "smartrecruiters",
+    "board_token": "landolakes",
+    "job_count_at_discovery": 3,
+    "sample_title": "Receptionist",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Kraft Heinz",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Mondelez",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Conagra",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "General Mills",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "OSI Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Tootsie Roll",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Ferrara Candy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Mars Wrigley",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Fannie May",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Blommer Chocolate",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Vosges Haut-Chocolat",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Do-Rite Donuts",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DoorDash",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Uber",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Lyft",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Via Transportation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Scoop Technologies",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Shopify",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "BigCommerce",
+    "ats": "smartrecruiters",
+    "board_token": "bigcommerce",
+    "job_count_at_discovery": 2,
+    "sample_title": "Rene's Test Job",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Square",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Block Inc",
+    "ats": "greenhouse",
+    "board_token": "block",
+    "job_count_at_discovery": 191,
+    "sample_title": "Account Manager, SMB",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Cash App",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Venmo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PayPal",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Brex",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Ramp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Klarna",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Afterpay",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Zip",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "SoFi",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Addepar",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Orion Advisor",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Envestnet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "FactSet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bloomberg",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "S&P Global",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Moody's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "MSCI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "ICE",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Nasdaq",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "ThoughtSpot",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Looker",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Tableau",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Domo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Mode Analytics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hex",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "dbt Labs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Segment",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Drift",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Gong",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Front",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Okta",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Auth0",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Duo Security",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CrowdStrike",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "SentinelOne",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DigitalOcean",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Neon",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Statsig",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Snyk",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Wiz",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "HashiCorp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "SendGrid",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Mailchimp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Salesforce",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "ServiceNow",
+    "ats": "smartrecruiters",
+    "board_token": "servicenow",
+    "job_count_at_discovery": 489,
+    "sample_title": "Senior Director, Strategic Operations & Transformation",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Workday",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Atlassian",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "GitHub",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Basecamp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Miro",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Canva",
+    "ats": "smartrecruiters",
+    "board_token": "canva",
+    "job_count_at_discovery": 249,
+    "sample_title": "Design Lead, South Korea (24-month contract)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "DocuSign",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Box",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Egnyte",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Proofpoint",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Varonis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Lacework",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Aqua Security",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kong",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "MuleSoft",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Make",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Informatica",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Talend",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Alteryx",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DataRobot",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "H2O.ai",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Anaconda",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Unity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Zynga",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Electronic Arts",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Mux",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Imgix",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Akamai",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "The Browser Company",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Arc Browser",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DuckDuckGo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Ameren",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Enterprise Holdings",
+    "ats": "recruitee",
+    "board_token": "enterprise",
+    "job_count_at_discovery": 7,
+    "sample_title": "Logistiek Manager",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Anheuser-Busch",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Nestle Purina",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bayer Crop Science",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Syngenta",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "BASF Agricultural Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CHS Inc",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Dairy Farmers of America",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Tyson Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hormel",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Smithfield Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "McCain Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Lamb Weston",
+    "ats": "smartrecruiters",
+    "board_token": "lambweston",
+    "job_count_at_discovery": 1,
+    "sample_title": "Mechanical Drafter",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Bush Brothers",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Goya Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "La Preferida",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Katherine Anne Confections",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bittersweet Pastry",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Stan's Donuts",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Firecakes Donuts",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Doughnut Vault",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Glazed and Infused",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Provisions Chicago",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Relativity ODA",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cleo Communications",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Elevate Credit",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CURO",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "NetCredit",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CashNetUSA",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Headway Capital",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CreditNinja",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Brink Software",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PAR Technology",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hotello",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Mews",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "RateGain",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Vrbo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Expedia Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Booking Holdings",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Yelp",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Priceline",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "McLeod Software",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "TMW Systems",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "MercuryGate",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PeopleNet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Omnitracs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Verizon Connect",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Fleet Complete",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Trimble Transportation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Descartes Systems Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Jaggaer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "GEP",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Basware",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Tradeshift",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Tungsten Network",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Corcentric",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "AvidPay",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CashAnalytics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bellin",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Biz2Credit",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Marcus by Goldman Sachs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Aspiration",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Ally Financial",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Synchrony",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bread Financial",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Snap Finance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Katapult",
+    "ats": "breezy",
+    "board_token": "katapult",
+    "job_count_at_discovery": 16,
+    "sample_title": "Account Executive (Entry-Level) | Katapult Network",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "FlexShopper",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Progressive Leasing",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Acima",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Splitit",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Quadpay",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Zip Co",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Afterpay Limited",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Klarna Bank",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CarMax",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DriveTime",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Edmunds",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kelley Blue Book",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cox Automotive",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "KAR Global",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Copart",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "IAA",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Ritchie Bros",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "IronPlanet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Purple Wave",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "HEICO",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "TransDigm",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Spirit AeroSystems",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Triumph Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Howmet Aerospace",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Nucor",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Steel Dynamics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Commercial Metals",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "United States Steel",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cleveland-Cliffs",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bright HealthCare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Health Care Service Corporation",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "2U",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Chegg",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Quizlet",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kahoot",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Nearpod",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Renaissance Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Curriculum Associates",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DreamBox Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Imagine Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PowerSchool",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Infinite Campus",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Skyward",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Blackboard",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Canvas LMS",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "D2L",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Brightspace",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Schoology",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Edmodo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Remind",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bloomz",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "SeeSaw",
+    "ats": "greenhouse",
+    "board_token": "seesaw",
+    "job_count_at_discovery": 6,
+    "sample_title": "Backend Software Engineer",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Seesaw Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "ClassLink",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Securly",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "i-Ready",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Illuminate Education",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Apex Learning",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Edgenuity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Pearson Education",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "McGraw Hill",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Houghton Mifflin Harcourt",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Scholastic",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Wiley",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cengage",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Springer Nature",
+    "ats": "smartrecruiters",
+    "board_token": "springernature",
+    "job_count_at_discovery": 6,
+    "sample_title": "Software Developer (.Net + Python)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "JSTOR",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "ProQuest",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "EBSCO",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Gale",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "LexisNexis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Westlaw",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bloomberg Law",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Clio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PracticePanther",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "RelativityOne",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Logikcull",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CS Disco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Reveal Data",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Brainspace",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Nuix",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Exterro",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Consilio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Epiq",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Consilio Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Lighthouse eDiscovery",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "HaystackID",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Inventus",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Special Counsel",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Robert Half Legal",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Aquent",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Creative Circle",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Motion Recruitment",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "TEKsystems",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Insight Global",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Robert Half",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Adecco",
+    "ats": "recruitee",
+    "board_token": "adecco",
+    "job_count_at_discovery": 1,
+    "sample_title": "Senior Marketer (Sample)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "ManpowerGroup",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Randstad",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kelly Services",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Aerotek",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kforce",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Modis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hays",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Michael Page",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PageGroup",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Spencer Stuart",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Heidrick & Struggles",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Korn Ferry",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Russell Reynolds",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Egon Zehnder",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Boyden",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DHR International",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "WittKieffer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Diversified Search",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Slate Search",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kohl's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Target",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Best Buy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "3M",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Medtronic",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cummins",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Eli Lilly",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Roche Diagnostics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Beckman Coulter",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bio-Rad Laboratories",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Thermo Fisher Scientific",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Illumina",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Danaher",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "IDEXX",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Zoetis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Elanco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Boehringer Ingelheim",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Merck Animal Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Phibro Animal Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Neogen",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "QuidelOrtho",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bio-Techne",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DiaSorin",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DiaSorin Molecular",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Myriad Genetics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Invitae",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Foundation Medicine",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Olive AI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Viz.ai",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hyperfine",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Nano-X Imaging",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Caption Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Paige AI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PathAI Inc",
+    "ats": "greenhouse",
+    "board_token": "pathai",
+    "job_count_at_discovery": 8,
+    "sample_title": "Implementation Engineer, Digital Diagnostics (DDx)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Tempus AI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Grail",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Guardant",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Exact",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Seattle Genetics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Seagen",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Moderna",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "BioNTech",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Novavax",
+    "ats": "smartrecruiters",
+    "board_token": "novavax",
+    "job_count_at_discovery": 3,
+    "sample_title": "IT Support Engineer III",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Vaxart",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Inovio",
+    "ats": "smartrecruiters",
+    "board_token": "inovio",
+    "job_count_at_discovery": 3,
+    "sample_title": "Full stack Developer (Python/Django/React/Angular2)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Translate Bio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Editas Medicine",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CRISPR Therapeutics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Intellia Therapeutics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Sangamo",
+    "ats": "smartrecruiters",
+    "board_token": "sangamo",
+    "job_count_at_discovery": 1,
+    "sample_title": "Data Entry Clerk",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "bluebird bio",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Spark Therapeutics",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Sarepta",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Alnylam",
+    "ats": "smartrecruiters",
+    "board_token": "alnylam",
+    "job_count_at_discovery": 10,
+    "sample_title": "Chief dog walker",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Ionis Pharmaceuticals",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Biogen",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Regeneron",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Vertex",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Gilead",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Amgen",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Genentech",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Roche",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Novartis",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Pfizer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Merck",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bristol Myers Squibb",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Johnson & Johnson",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "AstraZeneca",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Sanofi",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "GSK",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Takeda",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bayer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Boehringer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Teva",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Mylan",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Viatris",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Perrigo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Catalent",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Lonza",
+    "ats": "smartrecruiters",
+    "board_token": "lonza",
+    "job_count_at_discovery": 6,
+    "sample_title": "Engineering Operations Manager",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Thermo Fisher",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Agilent",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Waters",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PerkinElmer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Revvity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bruker",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Shimadzu",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Horiba",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Mettler Toledo",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Sartorius",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Eppendorf",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Corning Life Sciences",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "MilliporeSigma",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Sigma-Aldrich",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "VWR",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Avantor",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Thermo Scientific",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Cars Commerce",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Autotrader",
+    "ats": "greenhouse",
+    "board_token": "autotrader",
+    "job_count_at_discovery": 20,
+    "sample_title": "Account Manager (Field based)",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "CarsDirect",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "AutoTempest",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Bring a Trailer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hagerty",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "IDriveSafely",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Allstate Identity Protection",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Arity",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Esurance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "SquareTrade",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Asurion",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Assurant",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hippo Insurance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Root Insurance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Metromile",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Goosehead Insurance",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Policygenius",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CoverHound",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "The Zebra",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Credit Karma",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Experian",
+    "ats": "smartrecruiters",
+    "board_token": "experian",
+    "job_count_at_discovery": 498,
+    "sample_title": "Coordenador(a) de Engenharia de Software",
+    "status": "resolved",
+    "needs_spot_check": true
+  },
+  {
+    "name": "Equifax",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "TransUnion",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "FICO",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "LexisNexis Risk",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "LexisNexis Risk Solutions",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Thomson Reuters",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Wolters Kluwer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "RELX",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Elsevier Clinical",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "UpToDate",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "DynaMed",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "VisualDx",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Epocrates",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Medscape",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "WebMD",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Healthline",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Everyday Health",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Sharecare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "GoodRx",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "SingleCare",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Alto Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "PillPack",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Amazon Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Walgreens",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "CVS Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Rite Aid",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Walmart Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kroger Pharmacy",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Meijer",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Hy-Vee",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Schnucks",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Jewel-Osco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Mariano's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Roundy's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Pick n Save",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Metro Market",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Fresh Thyme",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Whole Foods Market",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Trader Joe's",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Aldi",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Lidl",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Costco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Sam's Club",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "BJ's Wholesale",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Gordon Food Service",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "US Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Sysco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Performance Food Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Dot Foods",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "KeHE Distributors",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "UNFI",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "SpartanNash",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Associated Wholesale Grocers",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "C&S Wholesale",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Wakefern",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Supervalu",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Albertsons",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Safeway",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Kroger",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Publix",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "H-E-B",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  },
+  {
+    "name": "Wegmans",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates."
+  }
+]

@@ -1,6 +1,6 @@
 # Job Search Agent — Project Brief
 
-**Status:** Core pipeline + daily Actions live. V2 coverage expansion shipped (LCA + Built In seeds → ~418 resolved boards; freshness N=3). Next: Breezy ingest. Day-to-day progress in `SESSION_LOG.md`.
+**Status:** Core pipeline + daily Actions live. V2 coverage expansion shipped (LCA + Built In Chicago all-types + extra public ATS; Breezy ingest live). Day-to-day progress in `SESSION_LOG.md`.
 **Type:** Warm-up build. Smaller and faster than the main portfolio project (OTC/FMCG agentic project, scoped separately). Purpose here is reps with the stack and real engineering judgment, not scale.
 
 This file is the stable reference. It should rarely change. Day-to-day progress, decisions made while building, and things that changed from this plan belong in `SESSION_LOG.md`, not here.
@@ -56,8 +56,8 @@ An agent means the fetching, filtering, and deduping are automated and unattende
 
 | Tier | ATS | Notes |
 |---|---|---|
-| **v1 only** | Greenhouse, Lever, Ashby, BreezyHR | Clean public JSON feeds; all company discovery/resolution targets these |
-| **Out of v1** | Workday | Canned for v1 — boards are tenant-specific, fragile to scrape, and not a clean public JSON feed like G/L/A/Breezy (POST, tenant/site/dc, pagination, often detail fetch). May note `workday_url` on unresolved rows for a future phase; do not build the client now |
+| **Ingest live** | Greenhouse, Lever, Ashby, BreezyHR, SmartRecruiters, Workable, Recruitee | Public JSON (Breezy/SmartRecruiters need a per-job detail fetch for descriptions). Discovery probes all seven. |
+| **Out of v1/v2** | Workday | Canned — tenant-specific POST boards, not a clean public GET feed. Do not build the client now. |
 | **Defer** | Comeet, Paylocity, Oracle Cloud | No clean no-auth board feed for this agent |
 | **Separate product** | Illinois CSOD (`illinois.csod.com`) | Reminder-only workflow; not part of fit-matching |
 
@@ -69,7 +69,7 @@ Prefer **small–mid employers (~10–999 employees)** for the curated list. Why
 
 Deterministic pipeline with exactly one agentic step.
 
-1. **Company list (manual, deterministic).** Curated list of Midwest-relevant employers (see geography below). Lives in `config/companies.json`, grows via discovery. Target 100–150+ resolved boards; seed lists may exceed **250** names during discovery — triage afterward. Prefer ~10–999 employees. **Unresolved** rows mean "public G/L/A/Breezy board not yet found" (wrong ATS, custom careers page, or unguessable slug) — not "company has no jobs." They are a discovery backlog for later scoping, not an employment-empty signal.
+1. **Company list (manual, deterministic).** Curated list of Midwest-relevant employers (see geography below). Lives in `config/companies.json`, grows via discovery. Target 100–150+ resolved boards; seed lists may exceed **250** names during discovery — triage afterward. Prefer ~10–999 employees. **Unresolved** rows mean "no public Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board found" (Workday, custom careers page, or unguessable slug) — not "company has no jobs." They are a discovery backlog for later scoping, not an employment-empty signal.
 2. **Ingestion (deterministic).** Poll each company's public ATS API on a schedule. Normalize into one schema: title, company, location, posted date, URL, description (full body text required by the sponsorship filter below).
 3. **Filtering (deterministic, no LLM).** Title keywords → location → sponsorship exclusion → **freshness (posted within last N days)** → dedupe against a "seen jobs" store (URL identity). Robust filters are the cost and quality control plane; Claude never sees the raw firehose.
 
@@ -193,7 +193,7 @@ Recorded here so they're not lost, and so the code doesn't accidentally make the
 
 - **Feedback-based matching improvement.** Track liked/skipped decisions, feed as examples into future matching prompts.
 - **Fireworks pre-filter layer.** If daily posting volume grows large, use a cheap Fireworks model to do a first-pass filter before the more expensive Claude judgment call.
-- **More ATS platforms.** Workday (canned for v1), SmartRecruiters, etc., if revisited later.
+- **More ATS platforms.** Workday remains canned (tenant-specific POST boards). SmartRecruiters / Workable / Recruitee are live in v2.
 - **Resume-per-role-type matching.** Different resume versions for backend vs. full-stack vs. product roles; agent picks the best-fit version per posting.
 - **Notification tiering.** Immediate email for strong matches, weekly digest for maybes.
 - **Draft (never auto-send) a tailored outreach note per strong match.** Stays human-approved by design, this should never become an auto-send feature.
@@ -205,13 +205,13 @@ Recorded here so they're not lost, and so the code doesn't accidentally make the
 
 ## 10. Open Decisions / Next
 
-- Discovery Phase 2 + v2 coverage expansion complete locally: ~**418 resolved** / ~631 unresolved / ~1,049 total. Unresolved = public G/L/A/Breezy board not yet found — opportunistic slug backlog.
-- **Next build:** Breezy ingest client (resolved Breezy tokens are skipped today); optional more Built In industry types / unresolved slug fills.
+- Discovery Phase 2 + v2 coverage: **652 resolved** / **637 unresolved** / **1,289** total. Unresolved = no public JSON ATS slug found (often Workday/custom).
+- **Next:** opportunistic slug fills when a real careers URL turns up; Workday still out of scope.
 - Email To locked to Gmail (`hardik.lad773@gmail.com`) for Resend; classmate Illinois copy is manual forward for now.
 
 ### 10a. V2 coverage expansion (locked 2026-08-11)
 
-**Product goal:** Any Midwest-relevant SWE role on a public Greenhouse/Lever/Ashby/Breezy board should reach the pipeline without manual LinkedIn hunting. LinkedIn is a coverage benchmark only — never a daily ingest source.
+**Product goal:** Any Midwest-relevant SWE role on a public Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board should reach the pipeline without manual LinkedIn hunting. LinkedIn is a coverage benchmark only — never a daily ingest source.
 
 **Freshness:** `max_age_days = 3` (72h).
 
@@ -228,3 +228,7 @@ Recorded here so they're not lost, and so the code doesn't accidentally make the
 **Built In Chicago seed (locked 2026-08-11):** Public **Software Companies** directory via `scripts/seed_from_builtin.py` → `config/builtin_chicago_software_seed.json`. Exclude names already in `companies.json` / LCA / midwest seeds, then `discover_ats`. Prefer this over SEC public-company lists for G/L/A/Breezy coverage.
 
 **Built In adjacent metros:** `--adjacent-metros` scrapes Milwaukee / Indianapolis / Detroit software directories → `config/builtin_adjacent_metros_software_seed.json`. Chicago suburb path filters are not usable (no real slice).
+
+**Built In Chicago all-types (locked 2026-08-12):** `scripts/seed_from_builtin.py --all-chicago` paginates the full Chicago directory (~6.5k), drops consult/staffing name noise, excludes prior seeds → `config/builtin_chicago_all_seed.json`.
+
+**Extra public ATS (v2):** SmartRecruiters, Workable, Recruitee — same public-JSON class as G/L/A/Breezy. Skip megacorp SmartRecruiters boards (1000+ jobs) so detail-fetch does not dominate the daily run. Workday still out.

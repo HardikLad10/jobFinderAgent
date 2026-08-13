@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Build Midwest tech employer seed from Built In public directories.
 
-Pulls Software Companies listings via the public SearchResults handler
-(HTML partials), then drops names already present in companies.json / prior seeds.
+Pulls company listings via the public SearchResults handler (HTML partials),
+then drops names already present in companies.json / prior seeds.
 
-Supports Chicago + adjacent metros (Milwaukee, Indianapolis, Detroit).
-Not part of the daily pipeline — discovery helper only.
+Supports Chicago software, Chicago all-types (`--all-chicago`), and adjacent
+metros (Milwaukee, Indianapolis, Detroit). Not part of the daily pipeline.
 """
 
 from __future__ import annotations
@@ -27,6 +27,7 @@ DEFAULT_OUT = ROOT / "config" / "builtin_chicago_software_seed.json"
 DEFAULT_BASES = (
     "https://www.builtinchicago.org/companies/type/software-companies",
 )
+CHICAGO_ALL_COMPANIES = "https://www.builtinchicago.org/companies"
 
 # Neighbor metros with working builtin.com location filters.
 ADJACENT_METRO_SOFTWARE = (
@@ -37,6 +38,36 @@ ADJACENT_METRO_SOFTWARE = (
 
 H2_RE = re.compile(r"<h2[^>]*>\s*([^<]+?)\s*</h2>", re.I)
 ALIAS_RE = re.compile(r'data-company-alias="(/company/[^"]+)"')
+
+# Same body-shop / consult cut as LCA seed (full Chicago list is noisy).
+CONSULT_NAME_RE = re.compile(
+    r"\b("
+    r"INFOSYS|TATA|WIPRO|COGNIZANT|HCL\b|TECH MAHINDRA|LTIMINDTREE|MINDTREE|"
+    r"ACCENTURE|CAPGEMINI|DELOITTE|ERNST\s*&\s*YOUNG|\bEY\b|KPMG|PRICEWATER|PWC\b|"
+    r"IBM\b|HTC GLOBAL|GLOBALLOGIC|HEXAWARE|YASH TECHNOLOGIES|COMPUNNEL|"
+    r"PERSISTENT|MPHASIS|LARSEN|LTI\b|"
+    r"CONSULTING|CONSULTANTS|STAFFING|GLOBAL SERVICES"
+    r")\b",
+    re.I,
+)
+LLC_RE = re.compile(r"\bL\.?L\.?C\.?\b", re.I)
+LLP_RE = re.compile(r"\bL\.?L\.?P\.?\b", re.I)
+LLC_NOISE_TOKENS = (
+    "STAFFING",
+    "CONSULTING",
+    "CONSULTANT",
+    "CONSULTANTS",
+    "SOLUTIONS",
+    "SERVICES",
+    "TECHNOLOGIES",
+    "TECHNOLOGY",
+    "OUTSOURCE",
+    "OUTSOURCING",
+    "CONTRACTOR",
+    "CONTRACTING",
+    "RECRUIT",
+    "TALENT",
+)
 
 
 def main() -> int:
@@ -51,6 +82,11 @@ def main() -> int:
         "--adjacent-metros",
         action="store_true",
         help="Use Milwaukee + Indianapolis + Detroit software directories",
+    )
+    parser.add_argument(
+        "--all-chicago",
+        action="store_true",
+        help="Full Built In Chicago companies directory (all types, ~6.5k)",
     )
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--sleep", type=float, default=0.35, help="Delay between pages")
@@ -69,12 +105,20 @@ def main() -> int:
             ROOT / "config" / "lca_midwest_swe_seed.json",
             ROOT / "config" / "midwest_seed.json",
             ROOT / "config" / "builtin_chicago_software_seed.json",
+            ROOT / "config" / "builtin_adjacent_metros_software_seed.json",
         ],
         help="Extra name lists to exclude (LCA / prior seeds)",
     )
     args = parser.parse_args()
 
-    bases = list(ADJACENT_METRO_SOFTWARE) if args.adjacent_metros else list(args.base_url)
+    if args.all_chicago:
+        bases = [CHICAGO_ALL_COMPANIES]
+        if args.max_pages == 200:
+            args.max_pages = 400
+    elif args.adjacent_metros:
+        bases = list(ADJACENT_METRO_SOFTWARE)
+    else:
+        bases = list(args.base_url)
     if not bases:
         raise SystemExit("no --base-url provided")
 
@@ -113,14 +157,23 @@ def main() -> int:
             time.sleep(args.sleep)
 
     exclude = _load_exclude_names(args.companies, args.also_exclude)
-    fresh = [n for n in names if _norm(n) not in exclude]
+    dropped_noise = 0
+    fresh: list[str] = []
+    for n in names:
+        if _norm(n) in exclude:
+            continue
+        if _drop_reason(n):
+            dropped_noise += 1
+            continue
+        fresh.append(n)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(fresh, indent=2) + "\n", encoding="utf-8")
 
     print("\n=== Built In seed stats ===")
     print(f"  scraped_unique: {len(names)}")
-    print(f"  excluded_existing: {len(names) - len(fresh)}")
+    print(f"  excluded_existing: {len(names) - len(fresh) - dropped_noise}")
+    print(f"  dropped_consult_noise: {dropped_noise}")
     print(f"  new_for_discovery: {len(fresh)}")
     print(f"Wrote {args.out}")
     print("Sample new:")
@@ -163,6 +216,18 @@ def _norm(name: str) -> str:
         s,
     )
     return " ".join(s.split())
+
+
+def _drop_reason(name: str) -> str | None:
+    if LLP_RE.search(name):
+        return "llp"
+    if CONSULT_NAME_RE.search(name):
+        return "consult_pattern"
+    if LLC_RE.search(name):
+        upper = name.upper()
+        if any(tok in upper for tok in LLC_NOISE_TOKENS):
+            return "llc_noise"
+    return None
 
 
 def _load_exclude_names(companies_path: Path, extra_paths: list[Path]) -> set[str]:

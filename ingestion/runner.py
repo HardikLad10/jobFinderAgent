@@ -12,10 +12,14 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .ashby import fetch_ashby_jobs
+from .breezy import fetch_breezy_jobs
 from .errors import IngestionError
 from .greenhouse import fetch_greenhouse_jobs
 from .lever import fetch_lever_jobs
+from .recruitee import fetch_recruitee_jobs
 from .schema import JobPosting
+from .smartrecruiters import fetch_smartrecruiters_jobs
+from .workable import fetch_workable_jobs
 
 logger = logging.getLogger(__name__)
 
@@ -27,6 +31,10 @@ FETCHERS: dict[str, FetchFn] = {
     "greenhouse": fetch_greenhouse_jobs,
     "lever": fetch_lever_jobs,
     "ashby": fetch_ashby_jobs,
+    "breezy": fetch_breezy_jobs,
+    "smartrecruiters": fetch_smartrecruiters_jobs,
+    "workable": fetch_workable_jobs,
+    "recruitee": fetch_recruitee_jobs,
 }
 
 

@@ -14,14 +14,24 @@ USER_AGENT = "jobFinderAgent/0.1"
 
 
 def get_json(url: str, *, company_name: str) -> Any:
+    body = get_text(url, company_name=company_name, accept="application/json")
+    try:
+        return json.loads(body)
+    except json.JSONDecodeError as exc:
+        raise IngestionError(
+            f"{company_name}: malformed JSON from {url}: {exc}"
+        ) from exc
+
+
+def get_text(url: str, *, company_name: str, accept: str = "text/html,*/*") -> str:
     request = urllib.request.Request(
         url,
-        headers={"Accept": "application/json", "User-Agent": USER_AGENT},
+        headers={"Accept": accept, "User-Agent": USER_AGENT},
         method="GET",
     )
     try:
         with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
-            body = response.read().decode("utf-8")
+            body = response.read().decode("utf-8", errors="replace")
             status = getattr(response, "status", None) or response.getcode()
     except urllib.error.HTTPError as exc:
         raise IngestionError(
@@ -36,10 +46,4 @@ def get_json(url: str, *, company_name: str) -> Any:
 
     if status != 200:
         raise IngestionError(f"{company_name}: unexpected HTTP {status} for {url}")
-
-    try:
-        return json.loads(body)
-    except json.JSONDecodeError as exc:
-        raise IngestionError(
-            f"{company_name}: malformed JSON from {url}: {exc}"
-        ) from exc
+    return body

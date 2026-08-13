@@ -333,10 +333,10 @@
   },
   {
     "name": "Packback",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "workable",
+    "board_token": "packback",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 1 jobs at discovery; needs spot-check."
   },
   {
     "name": "Built In",
@@ -523,10 +523,10 @@
   },
   {
     "name": "Yardi",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "smartrecruiters",
+    "board_token": "yardi",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 1 jobs at discovery; needs spot-check."
   },
   {
     "name": "Entrata",
@@ -1404,10 +1404,10 @@
   },
   {
     "name": "Devoted Health",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "smartrecruiters",
+    "board_token": "devotedhealth",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 2 jobs at discovery; needs spot-check."
   },
   {
     "name": "Bright Health",
@@ -1448,7 +1448,7 @@
     "ats": null,
     "board_token": null,
     "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "notes": "Public SmartRecruiters board exists but skipped: megacorp volume (detail-fetch would dominate daily ingest). Prefer 10\u2013999 emp G/L/A/Breezy."
   },
   {
     "name": "Baxter",
@@ -1546,7 +1546,7 @@
     "ats": null,
     "board_token": null,
     "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "notes": "Public SmartRecruiters board exists but skipped: megacorp volume (detail-fetch would dominate daily ingest). Prefer 10\u2013999 emp G/L/A/Breezy."
   },
   {
     "name": "Rush University Medical Center",
@@ -1606,10 +1606,10 @@
   },
   {
     "name": "Land O Lakes",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "smartrecruiters",
+    "board_token": "landolakes",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 3 jobs at discovery; needs spot-check."
   },
   {
     "name": "Kraft Heinz",
@@ -2379,7 +2379,7 @@
     "ats": null,
     "board_token": null,
     "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "notes": "Public SmartRecruiters board exists but skipped: megacorp volume (detail-fetch would dominate daily ingest). Prefer 10\u2013999 emp G/L/A/Breezy."
   },
   {
     "name": "Workday",
@@ -2463,7 +2463,7 @@
     "ats": null,
     "board_token": null,
     "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "notes": "Public SmartRecruiters board exists but skipped: megacorp volume (detail-fetch would dominate daily ingest). Prefer 10\u2013999 emp G/L/A/Breezy."
   },
   {
     "name": "Webflow",
@@ -2854,10 +2854,10 @@
   },
   {
     "name": "Lamb Weston",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "smartrecruiters",
+    "board_token": "lambweston",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 1 jobs at discovery; needs spot-check."
   },
   {
     "name": "Bush Brothers",
@@ -3863,10 +3863,10 @@
   },
   {
     "name": "Springer Nature",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "smartrecruiters",
+    "board_token": "springernature",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 6 jobs at discovery; needs spot-check."
   },
   {
     "name": "JSTOR",
@@ -4564,10 +4564,10 @@
   },
   {
     "name": "Novavax",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "smartrecruiters",
+    "board_token": "novavax",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 3 jobs at discovery; needs spot-check."
   },
   {
     "name": "Vaxart",
@@ -4578,10 +4578,10 @@
   },
   {
     "name": "Inovio",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "smartrecruiters",
+    "board_token": "inovio",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 3 jobs at discovery; needs spot-check."
   },
   {
     "name": "Translate Bio",
@@ -4619,10 +4619,10 @@
   },
   {
     "name": "Sangamo",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "smartrecruiters",
+    "board_token": "sangamo",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 1 jobs at discovery; needs spot-check."
   },
   {
     "name": "bluebird bio",
@@ -4822,10 +4822,10 @@
   },
   {
     "name": "Lonza",
-    "ats": null,
-    "board_token": null,
-    "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "ats": "smartrecruiters",
+    "board_token": "lonza",
+    "status": "resolved",
+    "notes": "Unresolved re-probe + extra ATS; 6 jobs at discovery; needs spot-check."
   },
   {
     "name": "Thermo Fisher",
@@ -5128,7 +5128,7 @@
     "ats": null,
     "board_token": null,
     "status": "unresolved",
-    "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates."
+    "notes": "Public SmartRecruiters board exists but skipped: megacorp volume (detail-fetch would dominate daily ingest). Prefer 10\u2013999 emp G/L/A/Breezy."
   },
   {
     "name": "Equifax",
@@ -7164,5 +7164,1685 @@
     "board_token": "your-money-line",
     "status": "resolved",
     "notes": "Built In adjacent metros (MIL/IND/DET) software seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "160 Driving Academy",
+    "ats": "smartrecruiters",
+    "board_token": "160drivingacademy",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "3Red Partners",
+    "ats": "greenhouse",
+    "board_token": "3redpartners",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 8 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "4FRONT",
+    "ats": "lever",
+    "board_token": "4front",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "AbelsonTaylor",
+    "ats": "greenhouse",
+    "board_token": "abelsontaylor",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Above Lending",
+    "ats": "lever",
+    "board_token": "abovelending",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Acceleration Partners",
+    "ats": "greenhouse",
+    "board_token": "accelerationpartners",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 9 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "ACRELEC",
+    "ats": "smartrecruiters",
+    "board_token": "acrelec",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 11 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Advanced Technology Services",
+    "ats": "greenhouse",
+    "board_token": "advancedtechnologyservices",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 101 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Adyen",
+    "ats": "greenhouse",
+    "board_token": "adyen",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 219 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Alorica",
+    "ats": "smartrecruiters",
+    "board_token": "alorica",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 14 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Alumni Ventures",
+    "ats": "greenhouse",
+    "board_token": "alumniventures",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 10 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "American Institutes for Research",
+    "ats": "greenhouse",
+    "board_token": "americaninstitutesforresearch",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 20 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Amp Americas",
+    "ats": "greenhouse",
+    "board_token": "ampamericas",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Ampersand",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug ashby/ampersand is Ampersand (SF agent infra), not the Chicago Ampersand listing."
+  },
+  {
+    "name": "Anomalix",
+    "ats": "smartrecruiters",
+    "board_token": "anomalix",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "AnthroMed Education",
+    "ats": "greenhouse",
+    "board_token": "anthromededucation",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 159 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Apollo After School",
+    "ats": "breezy",
+    "board_token": "apollo-after-school",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 19 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "AppDirect",
+    "ats": "greenhouse",
+    "board_token": "appdirect",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 55 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Aquatic Capital Management",
+    "ats": "greenhouse",
+    "board_token": "aquaticcapitalmanagement",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 9 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Array Behavioral Care",
+    "ats": "ashby",
+    "board_token": "array-behavioral-care",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 28 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Artisight",
+    "ats": "greenhouse",
+    "board_token": "artisight",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Ashfield Advisory",
+    "ats": "greenhouse",
+    "board_token": "ashfieldadvisory",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 26 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Assembly Health",
+    "ats": "greenhouse",
+    "board_token": "assemblyhealth",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 13 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Asure Software",
+    "ats": "smartrecruiters",
+    "board_token": "asuresoftware",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "ATI Advisory",
+    "ats": "greenhouse",
+    "board_token": "atiadvisory",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 9 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Attain",
+    "ats": "greenhouse",
+    "board_token": "attain",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 14 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Aviation Institute of Maintenance",
+    "ats": "greenhouse",
+    "board_token": "aviationinstituteofmaintenance",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 89 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Belkins",
+    "ats": "lever",
+    "board_token": "belkins",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Bellhop",
+    "ats": "breezy",
+    "board_token": "bellhop",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Benefitexpress",
+    "ats": "smartrecruiters",
+    "board_token": "benefitexpress",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Berkadia",
+    "ats": "greenhouse",
+    "board_token": "berkadia",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 26 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Blue Raven Solar",
+    "ats": "smartrecruiters",
+    "board_token": "blueravensolar",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Brafton Inc.",
+    "ats": "lever",
+    "board_token": "brafton",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 17 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Brainlab",
+    "ats": "smartrecruiters",
+    "board_token": "brainlab",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 53 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Brighton Jones",
+    "ats": "lever",
+    "board_token": "brightonjones",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 37 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Brilliant Earth",
+    "ats": "greenhouse",
+    "board_token": "brilliantearth",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 82 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Brindley Engineering",
+    "ats": "lever",
+    "board_token": "brindleyengineering",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 22 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Bringg",
+    "ats": "greenhouse",
+    "board_token": "bringg",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "BryceTech",
+    "ats": "smartrecruiters",
+    "board_token": "brycetech",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 34 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "ByteDance",
+    "ats": "smartrecruiters",
+    "board_token": "bytedance",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "C.A. Carlin",
+    "ats": "greenhouse",
+    "board_token": "cacarlin",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Callan",
+    "ats": "lever",
+    "board_token": "callan",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Cambium Networks",
+    "ats": "lever",
+    "board_token": "cambiumnetworks",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "CannonDesign",
+    "ats": "greenhouse",
+    "board_token": "cannondesign",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 142 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Capco",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Consultancy (734-job Greenhouse board); dropped so daily ingest stays bounded."
+  },
+  {
+    "name": "Cargado",
+    "ats": "ashby",
+    "board_token": "cargado",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "cargo.one",
+    "ats": "ashby",
+    "board_token": "cargo-one",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Centuria",
+    "ats": "lever",
+    "board_token": "centuria",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 21 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "CG Life",
+    "ats": "smartrecruiters",
+    "board_token": "cglife",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Charles River Associates",
+    "ats": "greenhouse",
+    "board_token": "charlesriverassociates",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 68 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Chomps",
+    "ats": "smartrecruiters",
+    "board_token": "chomps",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Choreo",
+    "ats": "greenhouse",
+    "board_token": "choreo",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 11 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Chowbus",
+    "ats": "greenhouse",
+    "board_token": "chowbus",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 69 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Clear Street",
+    "ats": "greenhouse",
+    "board_token": "clearstreet",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 28 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Cleverbridge",
+    "ats": "smartrecruiters",
+    "board_token": "cleverbridge",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Coalfire",
+    "ats": "lever",
+    "board_token": "coalfire",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 14 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Cognitiv",
+    "ats": "greenhouse",
+    "board_token": "cognitiv",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 7 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Companion Maids",
+    "ats": "breezy",
+    "board_token": "companion-maids",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Compeer Financial",
+    "ats": "greenhouse",
+    "board_token": "compeerfinancial",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 31 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Convergint Federal Solutions",
+    "ats": "smartrecruiters",
+    "board_token": "convergintfederalsolutions",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 3 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Cortica",
+    "ats": "greenhouse",
+    "board_token": "cortica",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 53 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Cprime",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Consulting firm; dropped from ingest list."
+  },
+  {
+    "name": "Cranial Technologies",
+    "ats": "greenhouse",
+    "board_token": "cranialtechnologies",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 54 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Cresco Labs",
+    "ats": "greenhouse",
+    "board_token": "crescolabs",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 70 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Current Global",
+    "ats": "greenhouse",
+    "board_token": "currentglobal",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Cuyana",
+    "ats": "greenhouse",
+    "board_token": "cuyana",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Cypress Creek Renewables",
+    "ats": "greenhouse",
+    "board_token": "cypresscreekrenewables",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 24 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "DelCor Technology Solutions",
+    "ats": "greenhouse",
+    "board_token": "delcortechnologysolutions",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Digital Theatre",
+    "ats": "smartrecruiters",
+    "board_token": "digitaltheatre",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Double Good",
+    "ats": "greenhouse",
+    "board_token": "doublegood",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "DoubleVerify",
+    "ats": "greenhouse",
+    "board_token": "doubleverify",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 37 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Education Development Center",
+    "ats": "smartrecruiters",
+    "board_token": "educationdevelopmentcenter",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 3 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Efinancial",
+    "ats": "lever",
+    "board_token": "efinancial",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "ElectronX",
+    "ats": "ashby",
+    "board_token": "electronx",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Element Critical",
+    "ats": "greenhouse",
+    "board_token": "elementcritical",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "EliseAI",
+    "ats": "ashby",
+    "board_token": "eliseai",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 106 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Entara",
+    "ats": "greenhouse",
+    "board_token": "entara",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Factor",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug lever/factor is Factor ALSP (Wroclaw), not Chicago Factor."
+  },
+  {
+    "name": "fairlife, LLC",
+    "ats": "greenhouse",
+    "board_token": "fairlife",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 52 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Feastables",
+    "ats": "greenhouse",
+    "board_token": "feastables",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 15 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Finix",
+    "ats": "lever",
+    "board_token": "finix",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 10 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "FLEETCOR",
+    "ats": "smartrecruiters",
+    "board_token": "fleetcor",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Flow Traders",
+    "ats": "greenhouse",
+    "board_token": "flowtraders",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 44 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Formic",
+    "ats": "greenhouse",
+    "board_token": "formic",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 43 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Founder's CPA",
+    "ats": "breezy",
+    "board_token": "founder-s-cpa",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 3 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Four Seasons Hotels and Resorts",
+    "ats": "smartrecruiters",
+    "board_token": "fourseasonshotelsandresorts",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 8 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Fulcrum Digital Inc.",
+    "ats": "smartrecruiters",
+    "board_token": "fulcrumdigital",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "GCM Grosvenor",
+    "ats": "greenhouse",
+    "board_token": "gcmgrosvenor",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 11 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Gemini",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug greenhouse/gemini is Gemini crypto (NYC), not a Chicago Gemini listing."
+  },
+  {
+    "name": "General Assembly",
+    "ats": "greenhouse",
+    "board_token": "generalassembly",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 19 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Geneva Trading",
+    "ats": "greenhouse",
+    "board_token": "genevatrading",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 14 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Gerber Collision & Glass",
+    "ats": "smartrecruiters",
+    "board_token": "gerbercollisionglass",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 48 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Global Data Systems",
+    "ats": "smartrecruiters",
+    "board_token": "globaldatasystems",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 7 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Global Relay",
+    "ats": "greenhouse",
+    "board_token": "globalrelay",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 20 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Golin",
+    "ats": "greenhouse",
+    "board_token": "golin",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Gorilla Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug ashby/gorilla is Gorilla (energy, Germany), not Gorilla Group."
+  },
+  {
+    "name": "Grantek Systems Integration",
+    "ats": "smartrecruiters",
+    "board_token": "granteksystemsintegration",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 19 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Graphite",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug ashby/graphite is Graphite (SF code-review), not the Chicago Graphite listing."
+  },
+  {
+    "name": "Gritmind",
+    "ats": "breezy",
+    "board_token": "gritmind",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 16 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Guard Llama",
+    "ats": "smartrecruiters",
+    "board_token": "guardllama",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Hattori Hanzo Shears, Inc.",
+    "ats": "smartrecruiters",
+    "board_token": "hattorihanzoshears",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 50 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Hearst",
+    "ats": "greenhouse",
+    "board_token": "hearst",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 15 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Heitman",
+    "ats": "smartrecruiters",
+    "board_token": "heitman",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 8 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Hinge Health",
+    "ats": "ashby",
+    "board_token": "hinge-health",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 73 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Honeycomb Insurance",
+    "ats": "greenhouse",
+    "board_token": "honeycombinsurance",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 12 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Hopscotch Primary Care",
+    "ats": "greenhouse",
+    "board_token": "hopscotchprimarycare",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 28 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Horizon",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug lever/horizon is Horizon Robotics (Cupertino), not Chicago Horizon."
+  },
+  {
+    "name": "Human Agency",
+    "ats": "greenhouse",
+    "board_token": "humanagency",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 153 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "iHeartMedia",
+    "ats": "smartrecruiters",
+    "board_token": "iheartmedia",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "InfoTrust",
+    "ats": "greenhouse",
+    "board_token": "infotrust",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Inizio Evoke",
+    "ats": "greenhouse",
+    "board_token": "inizioevoke",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 48 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "InMarket",
+    "ats": "greenhouse",
+    "board_token": "inmarket",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 8 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Innovid",
+    "ats": "greenhouse",
+    "board_token": "innovid",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 18 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Inspire11",
+    "ats": "greenhouse",
+    "board_token": "inspire11",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 20 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Interdependence",
+    "ats": "greenhouse",
+    "board_token": "interdependence",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 33 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Iron Mountain",
+    "ats": "smartrecruiters",
+    "board_token": "ironmountain",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "ITS ConGlobal",
+    "ats": "smartrecruiters",
+    "board_token": "itsconglobal",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Jensen Hughes",
+    "ats": "greenhouse",
+    "board_token": "jensenhughes",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 131 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "JumpSeat",
+    "ats": "breezy",
+    "board_token": "jumpseat",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Kargo",
+    "ats": "greenhouse",
+    "board_token": "kargo",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 14 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Kay Apartment Communities",
+    "ats": "breezy",
+    "board_token": "kay-apartment-communities",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Keeper Security, Inc.",
+    "ats": "greenhouse",
+    "board_token": "keepersecurity",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 62 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Keller Postman",
+    "ats": "greenhouse",
+    "board_token": "kellerpostman",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 16 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Kepler Group",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug lever/kepler is Kepler Communications (space), not Kepler Group."
+  },
+  {
+    "name": "Keypath Education",
+    "ats": "smartrecruiters",
+    "board_token": "keypatheducation",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Kitchfix",
+    "ats": "greenhouse",
+    "board_token": "kitchfix",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Kwanso",
+    "ats": "lever",
+    "board_token": "kwanso",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 11 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "La Rabida Children's Hospital",
+    "ats": "smartrecruiters",
+    "board_token": "larabidachildrenshospital",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 24 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Landor",
+    "ats": "greenhouse",
+    "board_token": "landor",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 34 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "LaSalle Network",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Staffing firm; dropped from ingest list."
+  },
+  {
+    "name": "LaunchSquad",
+    "ats": "lever",
+    "board_token": "launchsquad",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 7 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Lextech",
+    "ats": "greenhouse",
+    "board_token": "lextech",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 10 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "LG Electronics",
+    "ats": "greenhouse",
+    "board_token": "lgelectronics",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 97 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Lincoln International",
+    "ats": "greenhouse",
+    "board_token": "lincolninternational",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 35 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Locinox",
+    "ats": "smartrecruiters",
+    "board_token": "locinox",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 10 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Lovelytics LLC",
+    "ats": "greenhouse",
+    "board_token": "lovelytics",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 10 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Mackay Sposito",
+    "ats": "greenhouse",
+    "board_token": "mackaysposito",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 43 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Maestro Health",
+    "ats": "smartrecruiters",
+    "board_token": "maestrohealth",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Make-A-Wish America",
+    "ats": "greenhouse",
+    "board_token": "makeawishamerica",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Mantra, Inc.",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug lever/mantra is Mantra (Tokyo manga AI), not Chicago Mantra, Inc."
+  },
+  {
+    "name": "Marquette Associates",
+    "ats": "lever",
+    "board_token": "marquetteassociates",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Medean",
+    "ats": "breezy",
+    "board_token": "medean",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Meeting Tomorrow",
+    "ats": "lever",
+    "board_token": "meetingtomorrow",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Mercer Advisors",
+    "ats": "greenhouse",
+    "board_token": "merceradvisors",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 104 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Minitab",
+    "ats": "greenhouse",
+    "board_token": "minitab",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 12 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Misfits Market",
+    "ats": "greenhouse",
+    "board_token": "misfitsmarket",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 83 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Nansen",
+    "ats": "greenhouse",
+    "board_token": "nansen",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Navier (Boat)",
+    "ats": "greenhouse",
+    "board_token": "navierboat",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 8 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Neocol",
+    "ats": "greenhouse",
+    "board_token": "neocol",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "New Western",
+    "ats": "lever",
+    "board_token": "newwestern",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 29 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Nexamp",
+    "ats": "greenhouse",
+    "board_token": "nexamp",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 37 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Next Street",
+    "ats": "greenhouse",
+    "board_token": "nextstreet",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "NinjaHoldings",
+    "ats": "breezy",
+    "board_token": "ninjaholdings",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 7 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Northstar Aerospace",
+    "ats": "smartrecruiters",
+    "board_token": "northstaraerospace",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "NuMat Technologies",
+    "ats": "greenhouse",
+    "board_token": "numattechnologies",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "NurseDash",
+    "ats": "breezy",
+    "board_token": "nursedash",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 3 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Nutrisense",
+    "ats": "recruitee",
+    "board_token": "nutrisense",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Octagon",
+    "ats": "greenhouse",
+    "board_token": "octagon",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Ogury",
+    "ats": "lever",
+    "board_token": "ogury",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 24 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Old Second National Bank",
+    "ats": "greenhouse",
+    "board_token": "oldsecondnationalbank",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 23 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Oportun",
+    "ats": "greenhouse",
+    "board_token": "oportun",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 34 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Pangea Money Transfer",
+    "ats": "greenhouse",
+    "board_token": "pangeamoneytransfer",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Partum Health",
+    "ats": "greenhouse",
+    "board_token": "partumhealth",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Pathward",
+    "ats": "greenhouse",
+    "board_token": "pathward",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 42 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "PatientPoint",
+    "ats": "greenhouse",
+    "board_token": "patientpoint",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 17 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Payline Data",
+    "ats": "smartrecruiters",
+    "board_token": "paylinedata",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Peachy",
+    "ats": "greenhouse",
+    "board_token": "peachy",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "PEAK Technologies",
+    "ats": "greenhouse",
+    "board_token": "peaktechnologies",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 9 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Pentair",
+    "ats": "smartrecruiters",
+    "board_token": "pentair",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "PerfectServe",
+    "ats": "greenhouse",
+    "board_token": "perfectserve",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 10 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "PharmaCann",
+    "ats": "greenhouse",
+    "board_token": "pharmacann",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 37 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Pinecone",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug ashby/pinecone is Pinecone vector DB (NYC), not a Chicago Pinecone listing."
+  },
+  {
+    "name": "Pivot Energy",
+    "ats": "lever",
+    "board_token": "pivotenergy",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 9 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Plexus Corp.",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug lever/plexus is a legal-tech board, not Plexus Corp."
+  },
+  {
+    "name": "PMA Consultants",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Consult/staffing noise (CONSULTANTS); dropped from ingest list."
+  },
+  {
+    "name": "Point72",
+    "ats": "greenhouse",
+    "board_token": "point72",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 231 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Portage Point Partners",
+    "ats": "lever",
+    "board_token": "portagepointpartners",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 53 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Prenuvo",
+    "ats": "greenhouse",
+    "board_token": "prenuvo",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 37 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Prolaio",
+    "ats": "greenhouse",
+    "board_token": "prolaio",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 7 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Protect Environmental",
+    "ats": "lever",
+    "board_token": "protectenvironmental",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 8 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Purple Strategies",
+    "ats": "greenhouse",
+    "board_token": "purplestrategies",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 3 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Quantiq",
+    "ats": "greenhouse",
+    "board_token": "quantiq",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 11 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Quantium",
+    "ats": "greenhouse",
+    "board_token": "quantium",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 20 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Quartermaster",
+    "ats": "ashby",
+    "board_token": "quartermaster",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 18 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Reach3 Insights",
+    "ats": "greenhouse",
+    "board_token": "reach3insights",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Relish Works",
+    "ats": "greenhouse",
+    "board_token": "relishworks",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Reply",
+    "ats": "lever",
+    "board_token": "reply",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 40 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Reside Living",
+    "ats": "greenhouse",
+    "board_token": "resideliving",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Retirement Solutions Advisors",
+    "ats": "smartrecruiters",
+    "board_token": "retirementsolutionsadvisors",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "RevLocal",
+    "ats": "smartrecruiters",
+    "board_token": "revlocal",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 3 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Rewards Network",
+    "ats": "greenhouse",
+    "board_token": "rewardsnetwork",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 42 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Riveron",
+    "ats": "ashby",
+    "board_token": "riveron",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 64 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Saga Education",
+    "ats": "greenhouse",
+    "board_token": "sagaeducation",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 11 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "SageSure",
+    "ats": "greenhouse",
+    "board_token": "sagesure",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 20 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "SalesJack",
+    "ats": "ashby",
+    "board_token": "salesjack",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 5 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "SALT XC",
+    "ats": "greenhouse",
+    "board_token": "saltxc",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 35 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Shapiro+Raj",
+    "ats": "breezy",
+    "board_token": "shapiro-raj",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Shippeo",
+    "ats": "smartrecruiters",
+    "board_token": "shippeo",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 9 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Skender",
+    "ats": "ashby",
+    "board_token": "skender",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Sono Bello",
+    "ats": "greenhouse",
+    "board_token": "sonobello",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 90 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Sony Honda Mobility of America",
+    "ats": "greenhouse",
+    "board_token": "sonyhondamobilityofamerica",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Spaulding Ridge",
+    "ats": "greenhouse",
+    "board_token": "spauldingridge",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 41 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Speeko",
+    "ats": "smartrecruiters",
+    "board_token": "speeko",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "SpotMe",
+    "ats": "greenhouse",
+    "board_token": "spotme",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 8 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "StackAdapt",
+    "ats": "greenhouse",
+    "board_token": "stackadapt",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 95 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Strongpoint Partners",
+    "ats": "greenhouse",
+    "board_token": "strongpointpartners",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 22 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "StudyPoint",
+    "ats": "lever",
+    "board_token": "studypoint",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 14 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Supporting Strategies",
+    "ats": "greenhouse",
+    "board_token": "supportingstrategies",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 17 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Synapse Health",
+    "ats": "greenhouse",
+    "board_token": "synapsehealth",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 19 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Taboola",
+    "ats": "greenhouse",
+    "board_token": "taboola",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 97 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Terrabis",
+    "ats": "greenhouse",
+    "board_token": "terrabis",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 19 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "TerrAscend",
+    "ats": "lever",
+    "board_token": "terrascend",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 38 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Teza Technologies",
+    "ats": "ashby",
+    "board_token": "teza-technologies",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 11 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "The Black Tux",
+    "ats": "lever",
+    "board_token": "theblacktux",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 17 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "ThinkMarkets",
+    "ats": "greenhouse",
+    "board_token": "thinkmarkets",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 10 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Tie Bar",
+    "ats": "breezy",
+    "board_token": "tie-bar",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Too Good To Go",
+    "ats": "greenhouse",
+    "board_token": "toogoodtogo",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 70 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Topel Forman LLC",
+    "ats": "greenhouse",
+    "board_token": "topelforman",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 17 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Truleo",
+    "ats": "breezy",
+    "board_token": "truleo",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 7 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Uber Freight",
+    "ats": "greenhouse",
+    "board_token": "uberfreight",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 96 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Unispace",
+    "ats": "greenhouse",
+    "board_token": "unispace",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 38 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "UpRight Law",
+    "ats": "smartrecruiters",
+    "board_token": "uprightlaw",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 2 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Valkyrie Trading",
+    "ats": "lever",
+    "board_token": "valkyrietrading",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 6 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Valtech",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Digital consultancy (148-job Greenhouse board); dropped from ingest list."
+  },
+  {
+    "name": "Vantage Specialty Chemicals",
+    "ats": "smartrecruiters",
+    "board_token": "vantagespecialtychemicals",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 18 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Vericast",
+    "ats": "smartrecruiters",
+    "board_token": "vericast",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 25 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Verity IT",
+    "ats": "breezy",
+    "board_token": "verity-it",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Viant Technology",
+    "ats": "greenhouse",
+    "board_token": "vianttechnology",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 31 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Vistar",
+    "ats": "ashby",
+    "board_token": "vistar",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 17 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Vixxo",
+    "ats": "greenhouse",
+    "board_token": "vixxo",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 34 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "VSA Partners",
+    "ats": "greenhouse",
+    "board_token": "vsapartners",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 13 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Walker Sands",
+    "ats": "greenhouse",
+    "board_token": "walkersands",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 4 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Waterworks",
+    "ats": "lever",
+    "board_token": "waterworks",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 17 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "WebFX",
+    "ats": "lever",
+    "board_token": "webfx",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 36 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Westside Children's Therapy",
+    "ats": "smartrecruiters",
+    "board_token": "westsidechildrenstherapy",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 1 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Wight & Company",
+    "ats": "greenhouse",
+    "board_token": "wight",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 14 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Wilson",
+    "ats": null,
+    "board_token": null,
+    "status": "unresolved",
+    "notes": "Slug ashby/wilson is WilsonAI (SF legal AI), not Chicago Wilson."
+  },
+  {
+    "name": "Woolpert",
+    "ats": "greenhouse",
+    "board_token": "woolpert",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 114 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "WorldQuant",
+    "ats": "greenhouse",
+    "board_token": "worldquant",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 101 jobs at discovery; needs spot-check."
+  },
+  {
+    "name": "Zion Cloud Solutions",
+    "ats": "smartrecruiters",
+    "board_token": "zioncloudsolutions",
+    "status": "resolved",
+    "notes": "Built In Chicago all-types seed; 3 jobs at discovery; needs spot-check."
   }
 ]

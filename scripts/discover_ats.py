@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """ATS board discovery for Midwest seed list.
 
-Probes Greenhouse / Lever / Ashby / BreezyHR public endpoints with slug
-candidates. Prefers longer/specific tokens; short first-word guesses are
-only used when listed in ALIASES (avoids capital/village/echo false positives).
+Probes Greenhouse / Lever / Ashby / BreezyHR / SmartRecruiters / Workable /
+Recruitee public endpoints with slug candidates. Prefers longer/specific
+tokens; short first-word guesses are only used when listed in ALIASES
+(avoids capital/village/echo false positives).
 
 Not part of the scheduled pipeline — manual discovery helper.
 """
@@ -227,11 +228,56 @@ def try_breezy(token: str) -> tuple[bool, int, str | None]:
     return True, len(data), hint or None
 
 
+def try_smartrecruiters(token: str) -> tuple[bool, int, str | None]:
+    # Unknown identifiers return 200 + totalFound=0. Require real postings.
+    status, data = http_get(
+        f"https://api.smartrecruiters.com/v1/companies/{token}/postings?limit=10&offset=0"
+    )
+    if status != 200 or not isinstance(data, dict):
+        return False, 0, None
+    content = data.get("content")
+    if not isinstance(content, list) or not content:
+        return False, 0, None
+    total = data.get("totalFound")
+    count = int(total) if isinstance(total, int) and total > 0 else len(content)
+    sample = str(content[0].get("name") or "")[:80]
+    return True, count, sample or None
+
+
+def try_workable(token: str) -> tuple[bool, int, str | None]:
+    status, data = http_get(
+        f"https://apply.workable.com/api/v1/widget/accounts/{token}?details=false"
+    )
+    if status != 200 or not isinstance(data, dict):
+        return False, 0, None
+    jobs = data.get("jobs")
+    if not isinstance(jobs, list) or not jobs:
+        return False, 0, None
+    sample = str(jobs[0].get("title") or "")[:80]
+    company = str(data.get("name") or "")
+    hint = f"{sample} | {company}".strip(" |")
+    return True, len(jobs), hint or None
+
+
+def try_recruitee(token: str) -> tuple[bool, int, str | None]:
+    status, data = http_get(f"https://{token}.recruitee.com/api/offers/")
+    if status != 200 or not isinstance(data, dict):
+        return False, 0, None
+    offers = data.get("offers")
+    if not isinstance(offers, list) or not offers:
+        return False, 0, None
+    sample = str(offers[0].get("title") or "")[:80]
+    return True, len(offers), sample or None
+
+
 PROBES: tuple[tuple[str, Callable[[str], tuple[bool, int, str | None]]], ...] = (
     ("greenhouse", try_greenhouse),
     ("lever", try_lever),
     ("ashby", try_ashby),
     ("breezy", try_breezy),
+    ("smartrecruiters", try_smartrecruiters),
+    ("workable", try_workable),
+    ("recruitee", try_recruitee),
 )
 
 # Known false-positive (ats, token) pairs from prior discovery.
@@ -241,23 +287,31 @@ KNOWN_FALSE_POSITIVES: set[tuple[str, str]] = {
     ("greenhouse", "relativity"),
     ("greenhouse", "echo"),
     ("greenhouse", "cleo"),
-    ("ashby", "upside"),  # may be Upside Foods vs Upside services — spot-check later
+    ("ashby", "upside"),  # Upside Foods vs Upside services — skip auto-resolve
+    ("breezy", "katapult"),  # Katapult Network ≠ Katapult Holdings
+    ("greenhouse", "fetch"),  # not Fetch Rewards
+    ("greenhouse", "indigo"),  # not Indigo Ag
+    ("recruitee", "allstate"),  # sample/demo board
+    ("recruitee", "adecco"),
+    ("ashby", "wilson"),  # WilsonAI ≠ Chicago Wilson
+    ("ashby", "graphite"),  # Graphite code-review ≠ Chicago Graphite
+    ("ashby", "pinecone"),  # Pinecone vector DB ≠ Chicago listing
+    ("ashby", "gorilla"),  # Gorilla energy ≠ Gorilla Group
+    ("ashby", "ampersand"),  # Ampersand SF ≠ Chicago Ampersand
+    ("lever", "horizon"),  # Horizon Robotics ≠ Chicago Horizon
+    ("lever", "mantra"),  # Tokyo Mantra ≠ Chicago Mantra, Inc.
+    ("lever", "kepler"),  # Kepler Communications ≠ Kepler Group
+    ("lever", "plexus"),  # legal-tech board ≠ Plexus Corp.
+    ("lever", "factor"),  # Factor ALSP ≠ Chicago Factor
+    ("greenhouse", "gemini"),  # Gemini crypto ≠ Chicago Gemini
 }
 
 
 def discover_one(name: str) -> dict[str, Any]:
     for token in candidates_for(name):
         for ats, probe in PROBES:
-            if (ats, token) in KNOWN_FALSE_POSITIVES and ats != "breezy":
-                # Still allow ashby/upside through for spot-check; block hard FPs.
-                if (ats, token) in {
-                    ("lever", "capital"),
-                    ("greenhouse", "village"),
-                    ("greenhouse", "relativity"),
-                    ("greenhouse", "echo"),
-                    ("greenhouse", "cleo"),
-                }:
-                    continue
+            if (ats, token) in KNOWN_FALSE_POSITIVES:
+                continue
             ok, count, sample = probe(token)
             if ok:
                 return {
@@ -275,7 +329,7 @@ def discover_one(name: str) -> dict[str, Any]:
         "ats": None,
         "board_token": None,
         "status": "unresolved",
-        "notes": "No Greenhouse/Lever/Ashby/Breezy board matched slug candidates.",
+        "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates.",
     }
 
 
