@@ -872,3 +872,7 @@ Lower hit-rate than Chicago software (~7%) — more regional firms on Workday/cu
 **Why:** Brief is the future lookup for “how does this project work.” Email/Actions/seen vs gitignored dumps was implied by `.gitignore` + the workflow, not stated as scope.
 
 **Locked in `PROJECT_BRIEF.md` §5 (Daily workflow artifacts):** email is the product; no in-repo digest; git keeps only `seen_jobs.json` + `quarantine.json` as run state; `latest_*` dumps are ephemeral; inspect a day via inbox, Resend, or Actions logs. Frontend / match archive remain out of scope.
+
+## [2026-08-13] — Public README
+
+Added root `README.md` so a GitHub visitor gets the product in plain language (what it emails, what it does not scrape, where to look for a given day). Brief remains the spec; README points at §5.

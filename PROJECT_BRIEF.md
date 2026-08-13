@@ -3,7 +3,7 @@
 **Status:** Core pipeline + daily Actions live. V2 coverage expansion shipped (LCA + Built In Chicago all-types + extra public ATS; Breezy ingest live). Day-to-day progress in `SESSION_LOG.md`.
 **Type:** Warm-up build. Smaller and faster than the main portfolio project (OTC/FMCG agentic project, scoped separately). Purpose here is reps with the stack and real engineering judgment, not scale.
 
-This file is the stable reference. It should rarely change. Day-to-day progress, decisions made while building, and things that changed from this plan belong in `SESSION_LOG.md`, not here.
+This file is the stable reference. It should rarely change. Day-to-day progress, decisions made while building, and things that changed from this plan belong in `SESSION_LOG.md`, not here. Visitors landing on the GitHub repo should start at `README.md` (plain-language overview); this brief is the design spec.
 
 ---
 
