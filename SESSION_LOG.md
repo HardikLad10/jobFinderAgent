@@ -876,3 +876,19 @@ Lower hit-rate than Chicago software (~7%) — more regional firms on Workday/cu
 ## [2026-08-13] — Public README
 
 Added root `README.md` so a GitHub visitor gets the product in plain language (what it emails, what it does not scrape, where to look for a given day). Brief remains the spec; README points at §5.
+
+## [2026-09-03] — FDE / AI Engineer titles + fuller resume
+
+**Locked:**
+- Keep FDE, AI FDE, and AI Engineer titles (intern versions too).
+- Do not keep Solutions Engineer.
+- Intern is not a search word by itself. “FDE Intern” passes; “Marketing Intern” does not.
+- Still one resume file for matching (not one file per role).
+
+**Changed:**
+- `config/filters.json` — added `forward deployed`, `forward-deployed`, `fde`, `ai engineer`, `ai/ml engineer`.
+- `config/resume_profile.md` — merged three new-grad PDFs into one stripped profile (more jobs, projects, and skills for Claude). Name / phone / email / LinkedIn / GitHub links left out.
+- Filter tests for the new keep/drop titles.
+- Brief + README updated to match.
+
+**Local run (no email):** 30,497 ingested → 10 left after filters → Claude said no on all 10. One FDE posting got through (66degrees) that the old title list would have dropped. Databricks Sr. FDE posts were dropped for U.S.-citizen language, not for title.

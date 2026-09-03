@@ -1,8 +1,8 @@
 # Job Finder Agent
 
-A **daily, unattended job search agent** for a UIUC / Midwest new-grad software engineer.
+A **daily, unattended job search agent** for a UIUC / Midwest new-grad software engineer (also FDE / AI Engineer intern and new-grad titles).
 
-It polls public company job boards, throws away everything that is not a fresh Midwest or US-remote SWE role, asks Claude whether the leftover jobs fit the resume, and **emails the strong/maybe matches**. There is no website and no “apply for me” button.
+It polls public company job boards, throws away everything that is not a fresh Midwest or US-remote SWE / FDE / AI Engineer role, asks Claude whether the leftover jobs fit the resume, and **emails the strong/maybe matches**. There is no website and no “apply for me” button. Solutions Engineer is out of scope.
 
 ## Why it exists
 
@@ -13,7 +13,7 @@ Job aggregators are often a day late and full of noise. Checking dozens of caree
 GitHub Actions runs around **6:00 AM Central** (`Daily job search` workflow):
 
 1. **Fetch** jobs from public ATS JSON feeds (Greenhouse, Lever, Ashby, Breezy, SmartRecruiters, Workable, Recruitee) — hundreds of Midwest-relevant boards, tens of thousands of postings.
-2. **Filter** (no AI): software-engineering titles → Illinois / neighboring Midwest / US-remote → drop “we don’t sponsor” language → posted in the last **3 days** → skip URLs already judged.
+2. **Filter** (no AI): SWE / FDE / AI Engineer titles (interns included) → Illinois / neighboring Midwest / US-remote → drop “we don’t sponsor” language → posted in the last **3 days** → skip URLs already judged.
 3. **Match** (the only LLM step): Claude Opus 5 scores each survivor `strong` / `maybe` / `no` against `config/resume_profile.md`.
 4. **Email** strong and maybe matches via Resend. Quiet days send **nothing** — that is normal.
 

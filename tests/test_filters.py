@@ -94,6 +94,32 @@ class FilterHistoricalBugsTest(unittest.TestCase):
         self.assertNotIn("u-rec", kept)
         self.assertIn("u-swe", kept)
 
+    def test_fde_and_ai_engineer_kept_solutions_engineer_dropped(self) -> None:
+        """FDE / AI Engineer / intern variants in; Solutions Engineer out."""
+        jobs = [
+            _job(url="u-fde", title="Forward Deployed Engineer"),
+            _job(url="u-fde-intern", title="FDE Intern"),
+            _job(url="u-ai-fde", title="AI Forward Deployed Engineer"),
+            _job(url="u-ai", title="AI Engineer"),
+            _job(url="u-ai-intern", title="AI Engineer Intern"),
+            _job(url="u-aiml", title="AI/ML Engineer, New Grad"),
+            _job(url="u-se", title="Solutions Engineer"),
+            _job(url="u-sa", title="Solutions Architect"),
+            _job(url="u-train", title="Training Coordinator"),
+        ]
+        kept = self._kept_urls(jobs)
+        self.assertEqual(
+            kept,
+            {
+                "u-fde",
+                "u-fde-intern",
+                "u-ai-fde",
+                "u-ai",
+                "u-ai-intern",
+                "u-aiml",
+            },
+        )
+
 
 class SurvivorCeilingTest(unittest.TestCase):
     def test_keeps_newest_first(self) -> None:
