@@ -2,18 +2,18 @@
   "entries": [
     {
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7871456003",
-      "attempts": 1,
-      "last_error": "error: match call failed: Anthropic HTTP 529: {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"Overloaded\"},\"request_id\":\"req_011CeghYEzSrxBtR1fbPQ3EH\"}",
+      "attempts": 0,
+      "last_error": "",
       "quarantined": false,
-      "updated_at": "2026-09-03T14:55:45.534457+00:00",
+      "updated_at": "2026-09-04T14:49:18.587052+00:00",
       "note": ""
     },
     {
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7872398003",
-      "attempts": 1,
-      "last_error": "error: match call failed: Anthropic HTTP 529: {\"type\":\"error\",\"error\":{\"type\":\"overloaded_error\",\"message\":\"Overloaded\"},\"request_id\":\"req_011CeghXBiiT679x3Nc9PmnC\"}",
+      "attempts": 0,
+      "last_error": "",
       "quarantined": false,
-      "updated_at": "2026-09-03T14:55:41.705397+00:00",
+      "updated_at": "2026-09-04T14:49:14.029040+00:00",
       "note": ""
     }
   ]
