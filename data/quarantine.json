@@ -15,6 +15,14 @@
       "quarantined": false,
       "updated_at": "2026-09-04T14:49:14.029040+00:00",
       "note": ""
+    },
+    {
+      "url": "https://ninjaholdings.breezy.hr/p/23a015fea536-software-engineer-intern",
+      "attempts": 1,
+      "last_error": "invalid: malformed model JSON: Description\n\n\nNinjaHoldings was founded in 2017 by a team of consumer finance and technology veterans with a mission to revolutionize the way everyday Americans interact with financial services. We are a fast-growing, entrepreneurial company aiming to redefine the financial industry through cutting-edge technology, powerful data analytics, and unmatched customer service. Our headquarters are in Chicago, and our brands include CreditNinja, NinjaCard, and NinjaEdge.\n",
+      "quarantined": false,
+      "updated_at": "2026-09-10T14:51:02.358011+00:00",
+      "note": ""
     }
   ]
 }
