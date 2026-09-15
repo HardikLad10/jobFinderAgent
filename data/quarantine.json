@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "url": "https://dewpoint.breezy.hr/p/bc7ead2591c9-sr-full-stack-java-developer-ai-assisted-development",
+      "attempts": 1,
+      "last_error": "invalid: malformed model JSON: to Dewpoint\u2019s core mission and values: we take Ownership, we act with Integrity, we are Stewards, we are Unified, and we Serve our people, clients, and community. What you will be doing (Position Responsibilities): Design, develop, and maintain enterprise-grade full-stack applications using Java (Spring Boot) and modern JavaScript frameworks (Angular). Integrate AI-assisted coding tools (e.g., GitHub Copilot, Amazon CodeWhisperer, or similar) into daily workflows t",
+      "quarantined": false,
+      "updated_at": "2026-09-15T15:32:22.473024+00:00",
+      "note": ""
+    },
+    {
       "url": "https://job-boards.greenhouse.io/affirm/jobs/7871456003",
       "attempts": 0,
       "last_error": "",
