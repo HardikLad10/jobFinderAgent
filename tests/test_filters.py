@@ -120,6 +120,38 @@ class FilterHistoricalBugsTest(unittest.TestCase):
             },
         )
 
+    def test_hub_locations_kept_and_lookalikes_dropped(self) -> None:
+        """Bay Area, Seattle, NYC, and Boston pass. State-wide and lookalike strings do not."""
+        keep = [
+            ("k-sf", "San Francisco, CA"),
+            ("k-ssf", "South San Francisco, CA"),
+            ("k-mv", "Mountain View, CA"),
+            ("k-sea", "Seattle, WA"),
+            ("k-bel", "Bellevue, WA"),
+            ("k-ny", "New York, NY"),
+            ("k-nyny", "New York, New York"),
+            ("k-nyc", "New York City, NY"),
+            ("k-bk", "Brooklyn, NY"),
+            ("k-bos", "Boston, MA"),
+            ("k-cam", "Cambridge, MA"),
+            ("k-chi", "Chicago, IL"),
+            ("k-remote", "Remote US"),
+        ]
+        drop = [
+            ("d-albany", "Albany, New York"),
+            ("d-tampa", "Tampa Bay Area, FL"),
+            ("d-la", "Los Angeles, CA"),
+            ("d-uk", "Cambridge, United Kingdom"),
+            ("d-jc", "Jersey City, NJ"),
+            ("d-aus", "Austin, TX"),
+            ("d-ie", "Remote - Ireland"),
+        ]
+        jobs = [
+            _job(url=url, location=location) for url, location in keep + drop
+        ]
+        kept = self._kept_urls(jobs)
+        self.assertEqual(kept, {url for url, _location in keep})
+
 
 class SurvivorCeilingTest(unittest.TestCase):
     def test_keeps_newest_first(self) -> None:
