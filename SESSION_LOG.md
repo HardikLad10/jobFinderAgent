@@ -892,3 +892,22 @@ Added root `README.md` so a GitHub visitor gets the product in plain language (w
 - Brief + README updated to match.
 
 **Local run (no email):** 30,497 ingested → 10 left after filters → Claude said no on all 10. One FDE posting got through (66degrees) that the old title list would have dropped. Databricks Sr. FDE posts were dropped for U.S.-citizen language, not for title.
+
+## [2026-09-25] — Hub cities on the existing location filter
+
+**Changed:**
+- `config/filters.json` `location_include_any` appends `san francisco`, `oakland`, `berkeley`, `emeryville`, `san jose`, `sunnyvale`, `mountain view`, `palo alto`, `menlo park`, `redwood city`, `cupertino`, `santa clara`, `fremont`, `san mateo`, `burlingame`, `foster city`, `milpitas`, `los altos`, `seattle`, `bellevue`, `redmond`, `kirkland`, `new york, ny`, `new york, new york`, `new york city`, `nyc`, `manhattan`, `brooklyn`, `queens`, `bronx`, `long island city`, `boston`, `cambridge, ma`, `cambridge, massachusetts`, `somerville`. No two-letter tokens, no bare `new york`, no bare `bay area`, no bare `cambridge`.
+- `tests/test_filters.py`: keep those hubs plus Chicago and Remote US; drop Albany, Tampa Bay Area, Los Angeles, Cambridge UK, Jersey City, Austin, and Remote - Ireland.
+
+**Why:**
+- About 1,180 software-titled jobs a day were already downloaded and then dropped for location. The email target is 5–8 strong or maybe roles a day. This uses the current fetch before any new company boards.
+
+**Decisions made:**
+- Freshness stays 3 days. Title rules, sponsorship rules, and strong/maybe-only email stay.
+- Two scheduled Daily job search runs after this commit is on `main` decide the next step. Record `kept`, `[STRONG]`, `[MAYBE]`, and `[NO]`.
+- If either morning has at least 5 strong plus maybe, leave the tokens and do not add companies yet.
+- If either morning has `kept` of 15 or more and strong plus maybe under 5, the bottleneck is fit, not geography. Do not add companies until that is looked at separately.
+- Otherwise the next project is coastal company discovery. That discovery is not designed here.
+
+**Open questions carried forward:**
+- The two-morning counts are unknown until the filter commit is on `main`.

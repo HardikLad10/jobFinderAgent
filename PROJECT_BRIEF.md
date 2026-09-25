@@ -143,7 +143,9 @@ Discovery targets all of:
 - **All Illinois**, including UIUC / Champaign–Urbana ecosystem
 - **Neighboring states with a tech footprint** (WI, IN, MI, MO, IA)
 
-Why: for a UIUC user, callback odds rise with local/regional roles and Midwest employers that recognize the school and host alumni — not with "Chicago startups only."
+The location filter also keeps on-site and hybrid jobs in four hubs on boards already polled: San Francisco Bay Area, Seattle, New York City, and Boston. Tokens are full city names in `config/filters.json`. This is not a new company-discovery pass. Albany, the rest of New York State, Los Angeles, and other non-hub US cities stay dropped.
+
+Why: for a UIUC user, callback odds rise with local/regional roles and Midwest employers that recognize the school and host alumni — not with "Chicago startups only." Hub offices on those same boards were already in the daily fetch and were being deleted before matching.
 
 ## 6. Tech Stack — Locked Decisions
 
