@@ -911,3 +911,22 @@ Added root `README.md` so a GitHub visitor gets the product in plain language (w
 
 **Open questions carried forward:**
 - The two-morning counts are unknown until the filter commit is on `main`.
+
+## [2026-09-25] — Matching model Opus 5.5, extra-high effort
+
+**Changed:**
+- `matching/__init__.py`: `DEFAULT_MODEL` `claude-opus-5` → `claude-opus-5-5`. `DEFAULT_EFFORT` `medium` → `xhigh`. `DEFAULT_MAX_TOKENS` 4096 → 32768. Per-request timeout 120s → 300s.
+- Daily workflow job timeout 45m → 90m.
+- `PROJECT_BRIEF.md` and `README.md` updated to the new model, effort, and Opus 5.5 list price ($4 / $20 per million input / output tokens).
+
+**Why:**
+- User asked on 2026-09-24 to move the fit call to Opus 5.5 and to use extra-high reasoning. The previous default was medium, not extra high.
+- On Opus 5.5, thinking is always on and counts against `max_tokens`. The old 4096 cap can cut off the fit JSON once thinking grows at `xhigh`.
+- The edit stayed uncommitted until this push. GitHub was still running `claude-opus-5` at medium effort.
+
+**Decisions made:**
+- Effort stays on `output_config.effort`. Value is `xhigh`, not `max`.
+- No prompt change. Still one call per survivor, fail-closed on bad JSON.
+
+**Open questions carried forward:**
+- `xhigh` spend and latency are unmeasured on this pipeline. The August Opus 5 medium figure (~$0.025/job) is no longer the expected cost.

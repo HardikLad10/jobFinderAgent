@@ -42,7 +42,7 @@ Manually pasting a job posting into Claude and asking "does this fit me" works, 
 
 An agent means the fetching, filtering, and deduping are automated and unattended. Claude is invoked only for the one step that needs real judgment: does this specific posting fit this specific profile. The value isn't "smarter AI," it's removing the manual checking.
 
-**Cost posture:** always **filter first, then Claude**. Opus 5 on survivors only (deterministic filters already cut the firehose). At current filtered volume cost stays modest; do not optimize Claude spend until filters are wrong or volume explodes. Fireworks remains a documented future pre-filter, not v1 work.
+**Cost posture:** always **filter first, then Claude**. Opus 5.5 on survivors only (deterministic filters already cut the firehose). Extra-high effort spends more per survivor than the old medium Opus 5 pass; do not optimize Claude spend until filters are wrong or volume explodes. Fireworks remains a documented future pre-filter, not v1 work.
 
 **Note on "learning":** this project does not involve the model updating its own weights (that's fine-tuning/RL, a different and heavier thing, out of scope). "Learning" here, if built later, means storing feedback on past matches and feeding examples back into future prompts. Real, but it's adaptation through context, not model training. Don't conflate the two.
 
@@ -107,7 +107,7 @@ Deterministic pipeline with exactly one agentic step.
 
    Dependency: requires full job description body text, not just title/location. Greenhouse uses `?content=true`; Lever/Ashby include plain text on list endpoints.
 
-4. **Matching (the one agentic step).** For each new, filtered posting, one Claude Opus 5 call compares the resume/profile to that posting’s **full normalized record**: title, company, location, posted date, URL, and **complete job description** (About / Requirements / responsibilities / preferred quals as the ATS provided them). **Do not truncate the description** for matching — filters already bound daily Claude volume to tens of survivors; email-only trimming of *reasoning* display is separate (step 5).
+4. **Matching (the one agentic step).** For each new, filtered posting, one Claude Opus 5.5 call compares the resume/profile to that posting’s **full normalized record**: title, company, location, posted date, URL, and **complete job description** (About / Requirements / responsibilities / preferred quals as the ATS provided them). **Do not truncate the description** for matching — filters already bound daily Claude volume to tens of survivors; email-only trimming of *reasoning* display is separate (step 5).
 5. **Delivery (deterministic).** Strong/maybe matches emailed at end of run. Format: tiny header with counts, then separate **Strong** / **Maybe** sections, each with **one compact line per match** — `Title — Company — Posted date — one-line reasoning — link`. Reasoning is trimmed/capped (~120 chars) for email display; no multi-paragraph per-job summaries.
 6. **Scheduling (deterministic, infrastructure).** GitHub Actions cron triggers the pipeline for an early-morning America/Chicago delivery window (cron at 6:00 AM Central; see Tech Stack). Separate workflow for Illinois CSOD reminder (same window).
 
@@ -149,7 +149,7 @@ Why: for a UIUC user, callback odds rise with local/regional roles and Midwest e
 
 ## 6. Tech Stack — Locked Decisions
 
-- **Matching model:** Claude Opus 5 (`claude-opus-5`), via Anthropic Console API key. Deterministic filters already narrow the set; Opus 5 is the locked judgment model on survivors (stronger level/stack discrimination than Haiku 4.5). Pricing: **$5 input / $25 output** per million tokens. Matching uses medium effort (thinking on by default) with `max_tokens` 4096.
+- **Matching model:** Claude Opus 5.5 (`claude-opus-5-5`), via Anthropic Console API key. Deterministic filters already narrow the set; Opus 5.5 is the locked judgment model on survivors. Pricing: **$4 input / $20 output** per million tokens. Matching uses extra-high effort (`output_config.effort` = `xhigh`; thinking is always on) with `max_tokens` 32768 so thinking tokens still leave room for the fit JSON.
 
   **Haiku → Opus tradeoff (measured 2026-08-06, same 16 URLs):** Opus agreed with Haiku on 12/16 fits and flipped 4 toward more conservative labels (several `strong` → `maybe`, one `maybe` → `no`). Clear mismatches (recruiter, non-SWE auto roles, senior-specialist L4) stayed `no` on both. Product effect: fewer `strong` rows in email, more `maybe`. Cost for that 16-job pass was ~**$0.40** (~**$0.025/job** wall ~76s). Acceptable at tens of survivors per day; title filters should keep non-SWE junk from reaching Opus.
 - **Fireworks AI ($500 credit):** not used in v1. Reserved for later, specifically as a cheap pre-filter layer if posting volume grows large enough that filtering everything through Claude becomes wasteful. Documented reasoning, not dead credits.
@@ -167,14 +167,14 @@ Why: for a UIUC user, callback odds rise with local/regional roles and Midwest e
 
 ### Cost Reference (so this isn't re-derived later)
 
-Roughly 1,500 input tokens plus thinking/output tokens per job at medium effort. Measured Opus 5 spend on a 16-job head-to-head was about **$0.40** (~**$0.025 per job**). Filters keep daily Claude volume in the tens; expanding the company list mainly increases ATS fetch work, not a 1:1 Claude bill.
+Roughly 1,500 input tokens plus thinking/output tokens per job. The 2026-08-06 Opus 5 medium-effort head-to-head was about **$0.40** for 16 jobs (~**$0.025 per job**). Opus 5.5 at `xhigh` thinks more per job, so that figure is a floor, not the current bill. Filters still keep daily Claude volume in the tens; expanding the company list mainly increases ATS fetch work, not a 1:1 Claude bill.
 
 ## 7. V1 Scope
 
 - Company config list (Midwest geography above; Greenhouse/Lever/Ashby/Breezy only; prefer ~10–999 emp)
 - Ingestion from each resolved company's ATS API
 - Deterministic filtering (title, location, sponsorship, freshness N=3) + URL-based seen dedupe
-- One Claude Opus 5 call per new filtered posting for fit + reasoning (**full description**, no prompt truncation)
+- One Claude Opus 5.5 call per new filtered posting for fit + reasoning (**full description**, no prompt truncation)
 - Compact one-line-per-match email of strong/maybe results (the day’s product artifact; not stored in git)
 - GitHub Actions cron aimed at early-morning Central delivery (`0 11 * * *` UTC), fully unattended; commit-back of `seen_jobs.json` / `quarantine.json` only
 - Separate Illinois CSOD within-1-day reminder workflow

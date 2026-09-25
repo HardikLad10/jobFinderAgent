@@ -35,10 +35,10 @@ logger = logging.getLogger(__name__)
 
 DEFAULT_RESUME_PATH = Path(__file__).resolve().parent.parent / "config" / "resume_profile.md"
 ANTHROPIC_MESSAGES_URL = "https://api.anthropic.com/v1/messages"
-DEFAULT_MODEL = "claude-opus-5"
-DEFAULT_EFFORT = "medium"
-DEFAULT_MAX_TOKENS = 4096
-REQUEST_TIMEOUT_SECONDS = 120
+DEFAULT_MODEL = "claude-opus-5-5"
+DEFAULT_EFFORT = "xhigh"
+DEFAULT_MAX_TOKENS = 32768
+REQUEST_TIMEOUT_SECONDS = 300
 VALID_FITS = frozenset({"strong", "maybe", "no"})
 FAIL_CLOSED_FITS = frozenset({"invalid", "error"})
 RETRY_WAIT_SECONDS = 2.0

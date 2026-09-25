@@ -14,7 +14,7 @@ GitHub Actions runs around **6:00 AM Central** (`Daily job search` workflow):
 
 1. **Fetch** jobs from public ATS JSON feeds (Greenhouse, Lever, Ashby, Breezy, SmartRecruiters, Workable, Recruitee) — hundreds of Midwest-relevant boards, tens of thousands of postings.
 2. **Filter** (no AI): SWE / FDE / AI Engineer titles (interns included) → Illinois / neighboring Midwest / US-remote → drop “we don’t sponsor” language → posted in the last **3 days** → skip URLs already judged.
-3. **Match** (the only LLM step): Claude Opus 5 scores each survivor `strong` / `maybe` / `no` against `config/resume_profile.md`.
+3. **Match** (the only LLM step): Claude Opus 5.5 at extra-high effort scores each survivor `strong` / `maybe` / `no` against `config/resume_profile.md`.
 4. **Email** strong and maybe matches via Resend. Quiet days send **nothing** — that is normal.
 
 It does **not** scrape LinkedIn, Handshake, or Wellfound. It does **not** talk to Workday (those boards are not a simple public JSON feed).
