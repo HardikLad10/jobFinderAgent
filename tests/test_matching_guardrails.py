@@ -16,18 +16,38 @@ from matching.quarantine import (
 
 
 class ParseFitJsonTest(unittest.TestCase):
-    def test_valid_strong(self) -> None:
-        fit, _ = _parse_fit_json('{"fit":"strong","reasoning":"good overlap"}')
+    def test_valid_strong_and_full_stack_role(self) -> None:
+        result = _parse_fit_json(
+            '{"fit":"strong","role":"full_stack","reasoning":"Required Python is on the profile."}'
+        )
+        self.assertGreaterEqual(
+            len(result),
+            3,
+            "parser must return fit, role, and reasoning",
+        )
+        fit, role = result[0], result[1]
         self.assertEqual(fit, "strong")
+        self.assertEqual(role, "full_stack")
+
+    def test_missing_role_is_invalid(self) -> None:
+        result = _parse_fit_json('{"fit":"strong","reasoning":"good overlap"}')
+        self.assertEqual(result[0], "invalid")
+
+    def test_intern_role_is_invalid(self) -> None:
+        result = _parse_fit_json(
+            '{"fit":"maybe","role":"intern","reasoning":"stretch"}'
+        )
+        self.assertEqual(result[0], "invalid")
 
     def test_malformed_is_invalid_not_maybe(self) -> None:
-        fit, reasoning = _parse_fit_json("not json at all")
-        self.assertEqual(fit, "invalid")
-        self.assertIn("malformed", reasoning.lower())
+        result = _parse_fit_json("not json at all")
+        self.assertEqual(result[0], "invalid")
+        self.assertNotEqual(result[0], "maybe")
+        self.assertIn("malformed", str(result[-1]).lower())
 
     def test_unknown_fit_is_invalid(self) -> None:
-        fit, _ = _parse_fit_json('{"fit":"superb","reasoning":"x"}')
-        self.assertEqual(fit, "invalid")
+        result = _parse_fit_json('{"fit":"superb","reasoning":"x"}')
+        self.assertEqual(result[0], "invalid")
 
 
 class QuarantineAcceptanceTest(unittest.TestCase):

@@ -40,6 +40,7 @@ DEFAULT_EFFORT = "xhigh"
 DEFAULT_MAX_TOKENS = 32768
 REQUEST_TIMEOUT_SECONDS = 300
 VALID_FITS = frozenset({"strong", "maybe", "no"})
+VALID_ROLES = frozenset({"new_grad", "full_stack", "ai_fde"})
 FAIL_CLOSED_FITS = frozenset({"invalid", "error"})
 RETRY_WAIT_SECONDS = 2.0
 
@@ -53,6 +54,7 @@ class MatchResult:
     posted_date: str
     sponsorship_flag: str
     fit: str  # strong | maybe | no | invalid | error
+    role: str  # new_grad | full_stack | ai_fde; empty when unscored
     reasoning: str
     model: str = DEFAULT_MODEL
     effort: str = DEFAULT_EFFORT
@@ -133,7 +135,7 @@ def match_jobs(
             posting.company,
             posting.title,
         )
-        fit, reasoning, usage = _score_with_retry(
+        fit, role, reasoning, usage = _score_with_retry(
             api_key=key,
             model=model,
             effort=effort,
@@ -154,6 +156,7 @@ def match_jobs(
                 posted_date=posting.posted_date,
                 sponsorship_flag=item.sponsorship_flag,
                 fit=fit,
+                role=role,
                 reasoning=reasoning,
                 model=model,
                 effort=effort,
@@ -175,7 +178,7 @@ def _score_with_retry(
     effort: str,
     resume: str,
     posting: Any,
-) -> tuple[str, str, dict[str, int] | None]:
+) -> tuple[str, str, str, dict[str, int] | None]:
     """One retry with backoff on transport/API failures; parse is fail-closed."""
     last_exc: Exception | None = None
     for attempt in range(2):
@@ -198,7 +201,7 @@ def _score_with_retry(
             )
             if attempt == 0:
                 time.sleep(RETRY_WAIT_SECONDS)
-    return "error", f"match call failed: {last_exc}", None
+    return "error", "", f"match call failed: {last_exc}", None
 
 
 def _call_claude(
@@ -208,19 +211,32 @@ def _call_claude(
     effort: str,
     resume: str,
     posting: Any,
-) -> tuple[str, str, dict[str, int] | None]:
+) -> tuple[str, str, str, dict[str, int] | None]:
     description = posting.description or ""
-    user_prompt = f"""You are scoring fit between a candidate profile and one job posting.
+    user_prompt = f"""You are scoring fit between one candidate profile and one job posting.
 
 Return ONLY valid JSON with this exact shape:
-{{"fit":"strong"|"maybe"|"no","reasoning":"<2-4 sentences>"}}
+{{"fit":"strong"|"maybe"|"no","role":"new_grad"|"full_stack"|"ai_fde","reasoning":"<two or three short sentences>"}}
+
+Read the posting and the profile. Separate required skills from preferred skills. Do not treat an example stack as a special case.
 
 Rules:
-- strong: clear overlap on role level, stack, and domain; worth applying soon
-- maybe: partial overlap or stretch; still worth a look
-- no: clear mismatch on seniority, domain, or required skills
-- Be concrete. Cite specific overlaps or gaps from the texts below.
+- Read required skills and preferred skills from the posting's own wording.
+- An or-list is one requirement. Any one listed skill that the profile has is enough. A phrase such as "Java, Python, or C++" is only an example of an or-list. The same rule applies to every or-list in the posting, whatever skills it names.
+- If a required skill is missing after that rule, fit is no.
+- If the level does not fit the target roles, fit is no. That includes senior, staff, principal, lead, and an internship whose term is after May 2026.
+- If level and required skills fit, and one or more preferred skills are missing, fit is maybe, not no.
+- If level and required skills fit, and no preferred skill is missing, fit is strong. A posting with no preferred list can be strong.
+- Reject a job only when it does not fit the profile and the target roles.
 - Do not invent experience the profile does not claim.
+
+role is which resume to send:
+- new_grad when the title says new grad, new college grad, university grad, early career, associate, or graduate developer.
+- ai_fde when the title says FDE, forward deployed, or AI engineer, and it is not a new-grad title.
+- full_stack for other software engineer, backend, frontend, and full-stack titles.
+- A new-grad AI title stays new_grad.
+
+reasoning names the profile proof and the skill result in plain sentences. It says which required skill was met and, for a maybe, which preferred skill is missing. It does not use the words leverage, robust, seamless, cutting-edge, delve, or landscape.
 
 ## Candidate profile
 {resume}
@@ -262,9 +278,9 @@ Description:
         raise RuntimeError(f"Anthropic HTTP {exc.code}: {detail[:500]}") from exc
 
     text = _extract_text(body)
-    fit, reasoning = _parse_fit_json(text)
+    fit, role, reasoning = _parse_fit_json(text)
     usage = _extract_usage(body)
-    return fit, reasoning, usage
+    return fit, role, reasoning, usage
 
 
 def _extract_usage(body: dict[str, Any]) -> dict[str, int] | None:
@@ -293,21 +309,31 @@ def _extract_text(body: dict[str, Any]) -> str:
     return text
 
 
-def _parse_fit_json(text: str) -> tuple[str, str]:
-    """Fail-closed: bad JSON or unknown fit → invalid (never maybe)."""
+def _parse_fit_json(text: str) -> tuple[str, str, str]:
+    """Fail-closed: bad JSON, unknown fit, or unknown role → invalid (never maybe).
+
+    Returns fit, role, reasoning. role is empty when the result is not a scored fit.
+    """
     match = re.search(r"\{.*\}", text, flags=re.DOTALL)
     raw = match.group(0) if match else text
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
-        return "invalid", f"malformed model JSON: {text.strip()[:500]}"
+        return "invalid", "", f"malformed model JSON: {text.strip()[:500]}"
 
     if not isinstance(data, dict):
-        return "invalid", f"model JSON was not an object: {text.strip()[:500]}"
+        return "invalid", "", f"model JSON was not an object: {text.strip()[:500]}"
 
     fit = str(data.get("fit", "")).strip().lower()
     if fit not in VALID_FITS:
-        return "invalid", f"unknown fit {fit!r}: {text.strip()[:500]}"
+        return "invalid", "", f"unknown fit {fit!r}: {text.strip()[:500]}"
+
+    if "role" not in data or str(data.get("role", "")).strip() == "":
+        return "invalid", "", f"missing role: {text.strip()[:500]}"
+
+    role = str(data.get("role")).strip().lower()
+    if role not in VALID_ROLES:
+        return "invalid", "", f"unknown role {role!r}: {text.strip()[:500]}"
 
     reasoning = str(data.get("reasoning", "")).strip() or text.strip()[:500]
-    return fit, reasoning
+    return fit, role, reasoning
