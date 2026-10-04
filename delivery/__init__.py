@@ -26,7 +26,11 @@ DEFAULT_ILLINOIS_TO_EMAILS = (
     "hardik.lad773@gmail.com",
 )
 NOTIFY_FITS = frozenset({"strong", "maybe"})
-REASON_MAX_CHARS = 120
+RESUME_LINES = {
+    "new_grad": "Send the New Grad resume",
+    "full_stack": "Send the Full Stack resume",
+    "ai_fde": "Send the AI/FDE resume",
+}
 
 
 def load_env_var(name: str, *, default: str | None = None) -> str:
@@ -59,8 +63,9 @@ def selectable_matches(matches: Sequence[Any]) -> list[Any]:
 def build_email(matches: Sequence[Any]) -> tuple[str, str, str] | None:
     """Return (subject, text, html) or None when there is nothing worth sending.
 
-    Header counts, then separate Strong / Maybe sections. Each match is one
-    compact line: Title — Company — Posted date — one-line reasoning — link.
+    Header counts, then separate Strong / Maybe sections. Each match is a
+    short block: title, company, location, which resume to send, the full
+    reasoning, and the apply link.
     """
     chosen = selectable_matches(matches)
     if not chosen:
@@ -87,16 +92,13 @@ def build_email(matches: Sequence[Any]) -> tuple[str, str, str] | None:
         if not rows:
             return
         text_parts.append(label)
-        html_parts.append(f"<p><strong>{_escape(label)}</strong></p><ul>")
-        for m in rows:
-            text_parts.append(f"• {format_match_line(m)}")
-            html_parts.append(
-                f"<li>{_escape(m.title)} — {_escape(m.company)} — "
-                f"{_escape(_posted_display(m))} — {_escape(_short_reason(m))} — "
-                f'<a href="{m.url}">{_escape(m.url)}</a></li>'
-            )
+        html_parts.append(f"<p><strong>{_escape(label)}</strong></p>")
+        for index, m in enumerate(rows):
+            if index:
+                text_parts.append("")
+            text_parts.append(format_match_block(m))
+            html_parts.append(_html_match_block(m))
         text_parts.append("")
-        html_parts.append("</ul>")
 
     _append_section("Strong", strong)
     _append_section("Maybe", maybe)
@@ -104,25 +106,43 @@ def build_email(matches: Sequence[Any]) -> tuple[str, str, str] | None:
     return subject, "\n".join(text_parts).strip() + "\n", "\n".join(html_parts)
 
 
-def format_match_line(match: Any) -> str:
-    """One compact email line per match (reasons capped for display)."""
-    return (
-        f"{match.title} — {match.company} — {_posted_display(match)} — "
-        f"{_short_reason(match)} — {match.url}"
+def format_match_block(match: Any) -> str:
+    """One apply block: title line, resume to send, full reasoning, link."""
+    lines = [
+        f"{match.title} — {match.company} — {match.location}",
+    ]
+    instruction = _resume_instruction(match)
+    if instruction:
+        lines.append(instruction)
+    lines.append(_reasoning_text(match))
+    lines.append(str(match.url))
+    return "\n".join(lines)
+
+
+def _resume_instruction(match: Any) -> str:
+    role = str(getattr(match, "role", "") or "").strip()
+    line = RESUME_LINES.get(role, "")
+    return f"{line}." if line else ""
+
+
+def _reasoning_text(match: Any) -> str:
+    return " ".join(str(getattr(match, "reasoning", "") or "").split())
+
+
+def _html_match_block(match: Any) -> str:
+    instruction = _resume_instruction(match)
+    reason = _reasoning_text(match)
+    title_line = (
+        f"{_escape(str(match.title))} — {_escape(str(match.company))} — "
+        f"{_escape(str(match.location))}"
     )
-
-
-def _posted_display(match: Any) -> str:
-    posted = getattr(match, "posted_date", "") or ""
-    posted = str(posted).strip()
-    return posted if posted else "unknown"
-
-
-def _short_reason(match: Any) -> str:
-    reason = " ".join(str(getattr(match, "reasoning", "") or "").split())
-    if len(reason) <= REASON_MAX_CHARS:
-        return reason
-    return reason[: REASON_MAX_CHARS - 1].rstrip() + "…"
+    parts = [f"<p>{title_line}</p>"]
+    if instruction:
+        parts.append(f"<p>{_escape(instruction)}</p>")
+    parts.append(f"<p>{_escape(reason)}</p>")
+    url = str(match.url)
+    parts.append(f'<p><a href="{url}">{_escape(url)}</a></p>')
+    return "\n".join(parts)
 
 
 def send_email(
