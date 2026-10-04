@@ -152,6 +152,17 @@ class FilterHistoricalBugsTest(unittest.TestCase):
         kept = self._kept_urls(jobs)
         self.assertEqual(kept, {url for url, _location in keep})
 
+    def test_sr_and_fellowship_titles_dropped_engineer_ii_kept(self) -> None:
+        jobs = [
+            _job(url="u-sr-dot", title="Sr. Software Engineer"),
+            _job(url="u-sr-space", title="Sr Software Engineer"),
+            _job(url="u-hs", title="High School Fellowship, Software Engineering"),
+            _job(url="u-ii", title="Software Engineer II"),
+            _job(url="u-swe", title="Software Engineer"),
+        ]
+        kept = self._kept_urls(jobs)
+        self.assertEqual(kept, {"u-ii", "u-swe"})
+
 
 class SurvivorCeilingTest(unittest.TestCase):
     def test_keeps_newest_first(self) -> None:
