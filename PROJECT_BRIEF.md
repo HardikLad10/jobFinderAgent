@@ -107,8 +107,8 @@ Deterministic pipeline with exactly one agentic step.
 
    Dependency: requires full job description body text, not just title/location. Greenhouse uses `?content=true`; Lever/Ashby include plain text on list endpoints.
 
-4. **Matching (the one agentic step).** For each new, filtered posting, one Claude Opus 5.5 call compares the resume/profile to that posting’s **full normalized record**: title, company, location, posted date, URL, and **complete job description** (About / Requirements / responsibilities / preferred quals as the ATS provided them). **Do not truncate the description** for matching — filters already bound daily Claude volume to tens of survivors; email-only trimming of *reasoning* display is separate (step 5).
-5. **Delivery (deterministic).** Strong/maybe matches emailed at end of run. Format: tiny header with counts, then separate **Strong** / **Maybe** sections, each with **one compact line per match** — `Title — Company — Posted date — one-line reasoning — link`. Reasoning is trimmed/capped (~120 chars) for email display; no multi-paragraph per-job summaries.
+4. **Matching (the one agentic step).** For each new, filtered posting, one Claude Opus 5.5 call compares `config/resume_profile.md` to that posting’s **full normalized record**: title, company, location, posted date, URL, and **complete job description**. The model separates required skills from preferred skills. An or-list is one requirement. A missing required skill or a wrong level is `no`. A missing preferred skill can be `maybe` and cannot be `no`. The result names which resume to send: New Grad, Full Stack, or AI/FDE. **Do not truncate the description.**
+5. **Delivery (deterministic).** Strong/maybe matches emailed at end of run. Each job is a short block: title, company, location, which resume to send, the reasoning that cites the profile, and the link. Reasoning is not trimmed to 120 characters. No email when both counts are zero.
 6. **Scheduling (deterministic, infrastructure).** GitHub Actions cron triggers the pipeline for an early-morning America/Chicago delivery window (cron at 6:00 AM Central; see Tech Stack). Separate workflow for Illinois CSOD reminder (same window).
 
 ### Daily workflow artifacts (locked)
@@ -143,9 +143,11 @@ Discovery targets all of:
 - **All Illinois**, including UIUC / Champaign–Urbana ecosystem
 - **Neighboring states with a tech footprint** (WI, IN, MI, MO, IA)
 
-The location filter also keeps on-site and hybrid jobs in four hubs on boards already polled: San Francisco Bay Area, Seattle, New York City, and Boston. Tokens are full city names in `config/filters.json`. This is not a new company-discovery pass. Albany, the rest of New York State, Los Angeles, and other non-hub US cities stay dropped.
+The location filter also keeps on-site and hybrid jobs in four hubs: San Francisco Bay Area, Seattle, New York City, and Boston. Tokens are full city names in `config/filters.json`. Albany, the rest of New York State, Los Angeles, and other non-hub US cities stay dropped.
 
-Why: for a UIUC user, callback odds rise with local/regional roles and Midwest employers that recognize the school and host alumni — not with "Chicago startups only." Hub offices on those same boards were already in the daily fetch and were being deleted before matching.
+On 4 October 2026, hub company boards were added on the seven existing ATS systems: Greenhouse, Lever, Ashby, Breezy, SmartRecruiters, Workable, and Recruitee. They come from the Built In software-company directories for San Francisco, Seattle, New York City, and Boston. No new applicant-tracking system was added. Unresolved names from that pass are not on the daily list.
+
+Why: for a UIUC user, callback odds rise with local/regional roles and Midwest employers that recognize the school and host alumni — not with "Chicago startups only." Hub offices on Midwest boards were already in the daily fetch and were being deleted before matching. The October 2026 merge adds hub-headquartered companies on those same seven boards.
 
 ## 6. Tech Stack — Locked Decisions
 
@@ -174,8 +176,8 @@ Roughly 1,500 input tokens plus thinking/output tokens per job. The 2026-08-06 O
 - Company config list (Midwest geography above; Greenhouse/Lever/Ashby/Breezy only; prefer ~10–999 emp)
 - Ingestion from each resolved company's ATS API
 - Deterministic filtering (title, location, sponsorship, freshness N=3) + URL-based seen dedupe
-- One Claude Opus 5.5 call per new filtered posting for fit + reasoning (**full description**, no prompt truncation)
-- Compact one-line-per-match email of strong/maybe results (the day’s product artifact; not stored in git)
+- One Claude Opus 5.5 call per new filtered posting for fit, resume choice, and reasoning (**full description**, no prompt truncation)
+- Email of strong/maybe results that names the resume to send and cites the profile (the day’s product artifact; not stored in git)
 - GitHub Actions cron aimed at early-morning Central delivery (`0 11 * * *` UTC), fully unattended; commit-back of `seen_jobs.json` / `quarantine.json` only
 - Separate Illinois CSOD within-1-day reminder workflow
 - Backend only, no UI
@@ -233,7 +235,7 @@ Recorded here so they're not lost, and so the code doesn't accidentally make the
 
 ## 10. Open Decisions / Next
 
-- Discovery Phase 2 + v2 coverage: **652 resolved** / **637 unresolved** / **1,289** total. Unresolved = no public JSON ATS slug found (often Workday/custom).
+- Discovery Phase 2 + v2 coverage, plus the 4 October 2026 hub-city boards: **1,616 resolved** / **637 unresolved** / **2,253** total. Unresolved = no public JSON ATS slug found (often Workday/custom). Hub unresolved names were not added to the daily list.
 - **Next:** opportunistic slug fills when a real careers URL turns up; Workday still out of scope.
 - Email To locked to Gmail (`hardik.lad773@gmail.com`) for Resend; classmate Illinois copy is manual forward for now.
 

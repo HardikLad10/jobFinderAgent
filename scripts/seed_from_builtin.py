@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Build Midwest tech employer seed from Built In public directories.
+"""Build a tech employer seed from Built In public directories.
 
 Pulls company listings via the public SearchResults handler (HTML partials),
 then drops names already present in companies.json / prior seeds.
 
-Supports Chicago software, Chicago all-types (`--all-chicago`), and adjacent
-metros (Milwaukee, Indianapolis, Detroit). Not part of the daily pipeline.
+Supports Chicago software, Chicago all-types (`--all-chicago`), adjacent
+metros (Milwaukee, Indianapolis, Detroit), and hub cities (`--hub-cities`:
+San Francisco Bay Area, Seattle, New York City, Boston). Not part of the
+daily pipeline.
 """
 
 from __future__ import annotations
@@ -34,6 +36,16 @@ ADJACENT_METRO_SOFTWARE = (
     "https://www.builtin.com/companies/location/milwaukee/type/software-companies",
     "https://www.builtin.com/companies/location/indianapolis/type/software-companies",
     "https://www.builtin.com/companies/location/detroit/type/software-companies",
+)
+
+# Hub cities. Slugs are the location paths Built In publishes (the /new-york
+# path is the unfiltered national directory, not NYC). A URL that returns no
+# company names is skipped at runtime.
+HUB_METRO_SOFTWARE = (
+    "https://www.builtin.com/companies/location/san-francisco/type/software-companies",
+    "https://www.builtin.com/companies/location/seattle/type/software-companies",
+    "https://www.builtin.com/companies/location/new-york-city/type/software-companies",
+    "https://www.builtin.com/companies/location/boston/type/software-companies",
 )
 
 H2_RE = re.compile(r"<h2[^>]*>\s*([^<]+?)\s*</h2>", re.I)
@@ -84,6 +96,11 @@ def main() -> int:
         help="Use Milwaukee + Indianapolis + Detroit software directories",
     )
     parser.add_argument(
+        "--hub-cities",
+        action="store_true",
+        help="Use San Francisco, Seattle, New York City, and Boston software directories",
+    )
+    parser.add_argument(
         "--all-chicago",
         action="store_true",
         help="Full Built In Chicago companies directory (all types, ~6.5k)",
@@ -115,6 +132,8 @@ def main() -> int:
         bases = [CHICAGO_ALL_COMPANIES]
         if args.max_pages == 200:
             args.max_pages = 400
+    elif args.hub_cities:
+        bases = list(HUB_METRO_SOFTWARE)
     elif args.adjacent_metros:
         bases = list(ADJACENT_METRO_SOFTWARE)
     else:
@@ -124,37 +143,28 @@ def main() -> int:
 
     names: list[str] = []
     seen: set[str] = set()
+    skipped: list[str] = []
 
     for base in bases:
         label = _label_for(base)
         print(f"\n=== Scraping {label} ===", flush=True)
-        empty_streak = 0
-        referer = base.split("?")[0]
-        for page in range(1, args.max_pages + 1):
-            url = f"{base}?handler=SearchResults&page={page}"
-            body = _get(url, referer=referer)
-            page_names = [
-                html_lib.unescape(m.group(1)).strip() for m in H2_RE.finditer(body)
-            ]
-            page_names = [n for n in page_names if n]
-            if len(page_names) <= 1:
-                empty_streak += 1
-                if empty_streak >= 2:
-                    print(f"  stopping at page {page} (empty results)", flush=True)
-                    break
-            else:
-                empty_streak = 0
-
-            added = 0
-            for name in page_names:
-                key = name.lower()
-                if key in seen:
-                    continue
-                seen.add(key)
-                names.append(name)
-                added += 1
-            print(f"  page {page}: +{added} (total {len(names)})", flush=True)
-            time.sleep(args.sleep)
+        snap_names = list(names)
+        snap_seen = set(seen)
+        try:
+            city_raw = _scrape_base(base, args, names, seen)
+        except (SystemExit, urllib.error.URLError, TimeoutError, OSError) as exc:
+            names[:] = snap_names
+            seen.clear()
+            seen.update(snap_seen)
+            print(f"  SKIP {base}: {exc}", flush=True)
+            skipped.append(base)
+            continue
+        if city_raw == 0:
+            names[:] = snap_names
+            seen.clear()
+            seen.update(snap_seen)
+            print(f"  SKIP no company names: {base}", flush=True)
+            skipped.append(base)
 
     exclude = _load_exclude_names(args.companies, args.also_exclude)
     dropped_noise = 0
@@ -175,6 +185,9 @@ def main() -> int:
     print(f"  excluded_existing: {len(names) - len(fresh) - dropped_noise}")
     print(f"  dropped_consult_noise: {dropped_noise}")
     print(f"  new_for_discovery: {len(fresh)}")
+    print(f"  skipped_no_names: {len(skipped)}")
+    for url in skipped:
+        print(f"  skipped_url: {url}")
     print(f"Wrote {args.out}")
     print("Sample new:")
     for n in fresh[:15]:
@@ -184,10 +197,54 @@ def main() -> int:
 
 def _label_for(base: str) -> str:
     path = urlparse(base).path.strip("/").lower()
-    for metro in ("milwaukee", "indianapolis", "detroit", "chicago"):
+    for metro in (
+        "milwaukee",
+        "indianapolis",
+        "detroit",
+        "chicago",
+        "san-francisco",
+        "seattle",
+        "new-york-city",
+        "new-york",
+        "boston",
+    ):
         if metro in path:
             return metro
     return path or base
+
+
+def _scrape_base(base: str, args: argparse.Namespace, names: list[str], seen: set[str]) -> int:
+    """Append company names from one directory. Return how many raw names it had."""
+    empty_streak = 0
+    city_raw = 0
+    referer = base.split("?")[0]
+    for page in range(1, args.max_pages + 1):
+        url = f"{base}?handler=SearchResults&page={page}"
+        body = _get(url, referer=referer)
+        page_names = [
+            html_lib.unescape(m.group(1)).strip() for m in H2_RE.finditer(body)
+        ]
+        page_names = [n for n in page_names if n]
+        if len(page_names) <= 1:
+            empty_streak += 1
+            if empty_streak >= 2:
+                print(f"  stopping at page {page} (empty results)", flush=True)
+                break
+        else:
+            empty_streak = 0
+            city_raw += len(page_names)
+
+        added = 0
+        for name in page_names:
+            key = name.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            names.append(name)
+            added += 1
+        print(f"  page {page}: +{added} (total {len(names)})", flush=True)
+        time.sleep(args.sleep)
+    return city_raw
 
 
 def _get(url: str, *, referer: str) -> str:
@@ -200,11 +257,24 @@ def _get(url: str, *, referer: str) -> str:
         },
         method="GET",
     )
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            return resp.read().decode("utf-8", errors="replace")
-    except urllib.error.HTTPError as exc:
-        raise SystemExit(f"HTTP {exc.code} for {url}") from exc
+    last_error: Exception | None = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return resp.read().decode("utf-8", errors="replace")
+        except urllib.error.HTTPError as exc:
+            last_error = exc
+            if exc.code in {429, 500, 502, 503, 504} and attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
+                continue
+            raise SystemExit(f"HTTP {exc.code} for {url}") from exc
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
+                continue
+            raise
+    raise SystemExit(f"failed to fetch {url}: {last_error}")
 
 
 def _norm(name: str) -> str:

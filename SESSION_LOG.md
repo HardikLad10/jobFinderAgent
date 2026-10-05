@@ -930,3 +930,23 @@ Added root `README.md` so a GitHub visitor gets the product in plain language (w
 
 **Open questions carried forward:**
 - `xhigh` spend and latency are unmeasured on this pipeline. The August Opus 5 medium figure (~$0.025/job) is no longer the expected cost.
+
+## [2026-10-05] — Master profile, resume-named email, hub company boards
+
+**Changed:**
+- `config/resume_profile.md` rebuilt from the 18 September AI/FDE and New Grad PDFs and the 8 August Full Stack PDF. The Business Intelligence Group role is only the AI/FDE version (Next.js, Drizzle, Vercel Postgres, AWS S3, Docker). Phone, email, LinkedIn, and the GitHub profile URL are omitted. Java stays as a listed language with no project bullet. C++ is not listed.
+- `matching/__init__.py`: one call still loads that file through `load_resume()`. The model separates required skills from preferred skills. An or-list is one requirement. Missing required skill or wrong level is `no`. Missing preferred skill can be `maybe` and cannot be `no`. JSON adds `role`: `new_grad`, `full_stack`, or `ai_fde`. Unknown fit or role is `invalid`.
+- `delivery/__init__.py`: strong/maybe email names which resume to send and includes the full reasoning. It is not trimmed to 120 characters.
+- `config/filters.json`: drop titles containing `sr.`, `sr `, `high school`, or `fellowship`. `Software Engineer II` still passes.
+- Hub boards from Built In software directories for San Francisco, Seattle, New York City, and Boston. 964 resolved boards added on Greenhouse, Lever, Ashby, Breezy, SmartRecruiters, Workable, and Recruitee. Unresolved names were not added. Discovery is not in the daily cron.
+
+**Why:**
+- The hub location tokens raised emailed jobs to about 2.2 a day. More hub companies are the volume step. The email has to say which resume to send and which profile lines matched, so a job can be applied to without opening the description.
+
+**Decisions made:**
+- One profile, one model call.
+- “Java, Python, or C++” is an example of an or-list, not a special case.
+- Next five scheduled runs after this is on `main` are the measure. Record `kept`, strong, and maybe. This does not promise 5–8 emails a day.
+
+**Open questions carried forward:**
+- The 964 new boards were kept when the probe returned at least one job and the name was not already listed. Notes still say spot-check. A wrong slug can be removed after the first mornings.
