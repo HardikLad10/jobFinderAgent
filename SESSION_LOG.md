@@ -950,3 +950,21 @@ Added root `README.md` so a GitHub visitor gets the product in plain language (w
 
 **Open questions carried forward:**
 - The 964 new boards were kept when the probe returned at least one job and the name was not already listed. Notes still say spot-check. A wrong slug can be removed after the first mornings.
+
+## [2026-10-05] — Hub board filter counts and skip-match smoke
+
+**Changed:**
+- No extra boards after `0eae3bb`. This entry records which resolved probe rows were dropped and the local smoke.
+
+**Why:**
+- A wrong slug in the daily fetch is worse than a missed company. The merge kept a resolved row only when it had at least one job, the ATS was one of the seven already supported, the name was not already listed, the consulting/staffing name filter did not match, and the slug was clearly that company.
+
+**Decisions made:**
+- Resolved before filter: 1,120. Dropped, no jobs: 144. Dropped, already present: 2 (Enova, same Greenhouse board as Enova International; Invisible Technologies Inc, same SmartRecruiters board as Invisible Technologies). Dropped, consulting/staffing name filter: 0. Dropped, wrong slug, demo, or stale board: 10. Added: 964.
+- Wrong-slug drops: iManage (`Sample Job 1`), IntegriChain (`TEST JOB`), Personio (Recruitee placeholder at Musterstr), PureLogics (`Agular Test`), Order.co (token `order`), System Inc. (token `system`), Default (token `default`), Bright (sample names Gastgeben.de), Anyscale (Lever row says the careers page moved), AG Mednet (slug `mednet`).
+- SandboxAQ stayed. The token is the company name, not a sandbox board.
+- Local smoke: `python3 run_pipeline.py --skip-match`. No email, no `--mark-seen`, no Claude. Ingested 46,064. `filter stats: input=46064 title_drop=43963 location_drop=1176 sponsorship_drop=47 freshness_drop=869 dedupe_drop=3 kept=6`.
+
+**Open questions carried forward:**
+- The consulting/staffing regex matched nothing here. Symphony Talent, Worldwide TechServices, Acumen Solutions, Sigma Software Group, Scadea Software Solutions, and Zen3 Infosolutions are on the daily list.
+- Anyscale’s live Ashby board was not added.
