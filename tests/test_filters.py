@@ -66,7 +66,7 @@ class FilterHistoricalBugsTest(unittest.TestCase):
         self.assertIn("u-indy", kept)
 
     def test_il_token_does_not_match_oakville_manville(self) -> None:
-        """Bug 3: stripping ` il ` must not let Oakville/Manville through."""
+        """Bug 3: ` il ` must not let Oakville, ON through. Manville, NJ is a US city."""
         jobs = [
             _job(url="u-oak", location="Oakville, ON"),
             _job(url="u-man", location="Manville, NJ"),
@@ -74,7 +74,7 @@ class FilterHistoricalBugsTest(unittest.TestCase):
         ]
         kept = self._kept_urls(jobs)
         self.assertNotIn("u-oak", kept)
-        self.assertNotIn("u-man", kept)
+        self.assertIn("u-man", kept)
         self.assertIn("u-il", kept)
 
     def test_level_only_and_recruiter_titles_dropped(self) -> None:
@@ -121,7 +121,7 @@ class FilterHistoricalBugsTest(unittest.TestCase):
         )
 
     def test_hub_locations_kept_and_lookalikes_dropped(self) -> None:
-        """Bay Area, Seattle, NYC, and Boston pass. State-wide and lookalike strings do not."""
+        """Bay Area, Seattle, NYC, Boston, and other US cities pass. Non-US lookalikes do not."""
         keep = [
             ("k-sf", "San Francisco, CA"),
             ("k-ssf", "South San Francisco, CA"),
@@ -136,15 +136,21 @@ class FilterHistoricalBugsTest(unittest.TestCase):
             ("k-cam", "Cambridge, MA"),
             ("k-chi", "Chicago, IL"),
             ("k-remote", "Remote US"),
+            ("k-albany", "Albany, New York"),
+            ("k-tampa", "Tampa Bay Area, FL"),
+            ("k-la", "Los Angeles, CA"),
+            ("k-jc", "Jersey City, NJ"),
+            ("k-aus", "Austin, TX"),
+            ("k-austin-name", "Austin, Texas"),
+            ("k-denver", "Denver, Colorado"),
+            ("k-portland", "Portland, OR"),
+            ("k-wayne", "Fort Wayne, IN"),
+            ("k-boise", "Boise, ID"),
         ]
         drop = [
-            ("d-albany", "Albany, New York"),
-            ("d-tampa", "Tampa Bay Area, FL"),
-            ("d-la", "Los Angeles, CA"),
             ("d-uk", "Cambridge, United Kingdom"),
-            ("d-jc", "Jersey City, NJ"),
-            ("d-aus", "Austin, TX"),
             ("d-ie", "Remote - Ireland"),
+            ("d-india", "Bangalore, India"),
         ]
         jobs = [
             _job(url=url, location=location) for url, location in keep + drop

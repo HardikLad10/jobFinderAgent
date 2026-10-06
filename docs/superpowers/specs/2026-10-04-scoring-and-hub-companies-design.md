@@ -151,3 +151,21 @@ After the merge is on `main`, the next five scheduled runs are the measure. Reco
 ## 8. Docs
 
 Update `PROJECT_BRIEF.md` so the match step names the role and the email cites profile proof. Update `SESSION_LOG.md` with the profile rules, the skill rules, and the hub-company merge. Do not edit older log entries.
+
+## 9. Decided 2026-10-05
+
+The next company pass is US-wide, not only the four hubs. Use Built In’s United States directory. That directory is about 50,000 company names. Probe Greenhouse, Lever, Ashby, Breezy, SmartRecruiters, Workable, and Recruitee. Add a board only when it is new and returns at least one job. Public Greenhouse, Lever, and Ashby boards are about 10,000. This pass should add several thousand boards, not 20,000 or 48,000.
+
+After that list is on the daily cron, watch seven scheduled mornings. Record `kept`, strong, and maybe. Do not start Workday during that week.
+
+Workday is a later project, after that week. It stays out of this spec’s implementation.
+
+## 10. Decided 2026-10-06 — all US locations, not four hubs
+
+Immediate next filter change, after the US probe file is written and before that board list is pushed. Do not wait for a harvested list of city names from the probe. The probe returns company boards, not cities.
+
+Replace the four-hub location limit with the United States. Keep a job when its location is any US state or a clear US place, or when it already passes the US-remote rule. Keep title, sponsorship, 3-day freshness, and seen-URL dedupe as they are.
+
+Do not add two-letter state abbreviations. `in`, `or`, `me`, `hi`, `ok`, `id`, and `al` match the wrong text. Use full state names. Keep the existing Midwest tokens. A non-US location still drops. A remote job that names a non-US country still drops.
+
+This will send more jobs to Claude. Location is the gate being opened. Title and sponsorship do not run instead of location. They run in addition to it. Jobs that used to die as `location_drop` and are fresh enough will get a model call. Some of those calls will be `no`. The email still contains only strong and maybe.

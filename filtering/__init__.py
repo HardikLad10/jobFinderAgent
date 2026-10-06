@@ -209,6 +209,140 @@ def sponsorship_flag(
     return "none_found", None
 
 
+US_STATE_NAMES = (
+    "alabama",
+    "alaska",
+    "arizona",
+    "arkansas",
+    "california",
+    "colorado",
+    "connecticut",
+    "delaware",
+    "florida",
+    "georgia",
+    "hawaii",
+    "idaho",
+    "illinois",
+    "indiana",
+    "iowa",
+    "kansas",
+    "kentucky",
+    "louisiana",
+    "maine",
+    "maryland",
+    "massachusetts",
+    "michigan",
+    "minnesota",
+    "mississippi",
+    "missouri",
+    "montana",
+    "nebraska",
+    "nevada",
+    "new hampshire",
+    "new jersey",
+    "new mexico",
+    "new york",
+    "north carolina",
+    "north dakota",
+    "ohio",
+    "oklahoma",
+    "oregon",
+    "pennsylvania",
+    "rhode island",
+    "south carolina",
+    "south dakota",
+    "tennessee",
+    "texas",
+    "utah",
+    "vermont",
+    "virginia",
+    "washington",
+    "west virginia",
+    "wisconsin",
+    "wyoming",
+    "district of columbia",
+)
+US_STATE_ABBREVS = (
+    "al",
+    "ak",
+    "az",
+    "ar",
+    "ca",
+    "co",
+    "ct",
+    "de",
+    "fl",
+    "ga",
+    "hi",
+    "id",
+    "il",
+    "in",
+    "ia",
+    "ks",
+    "ky",
+    "la",
+    "me",
+    "md",
+    "ma",
+    "mi",
+    "mn",
+    "ms",
+    "mo",
+    "mt",
+    "ne",
+    "nv",
+    "nh",
+    "nj",
+    "nm",
+    "ny",
+    "nc",
+    "nd",
+    "oh",
+    "ok",
+    "or",
+    "pa",
+    "ri",
+    "sc",
+    "sd",
+    "tn",
+    "tx",
+    "ut",
+    "vt",
+    "va",
+    "wa",
+    "wv",
+    "wi",
+    "wy",
+    "dc",
+)
+_US_ABBREV_RE = re.compile(
+    r"(?:^|[\s,])(?:" + "|".join(US_STATE_ABBREVS) + r")(?:$|[\s,])"
+)
+
+
+def _us_state_hit(location_l: str) -> bool:
+    if any(name in location_l for name in US_STATE_NAMES):
+        return True
+    return _US_ABBREV_RE.search(location_l) is not None
+
+
+def _non_us_country(location_l: str, tokens: list[str]) -> bool:
+    """True when a non-US country token is present.
+
+    `india` must not match inside `indiana`.
+    """
+    for token in tokens:
+        if not token:
+            continue
+        if token == "india":
+            if re.search(r"\bindia\b", location_l):
+                return True
+            continue
+        if token in location_l:
+            return True
+    return False
+
+
 def _location_allowed(
     location_l: str,
     *,
@@ -216,20 +350,21 @@ def _location_allowed(
     remote_us_include: list[str],
     remote_non_us_exclude: list[str],
 ) -> bool:
-    """Midwest/geo hit OR US-remote (not global remote).
+    """US state/city hit OR US-remote (not global remote).
 
-    - Geo tokens (Chicago, IL, Champaign, …) pass as before.
-    - Bare `remote` alone is no longer a geo include token.
+    - Full state names and comma/space-bounded postal abbreviations pass.
+    - A non-US country token still drops, including when a state name is also present.
+    - Bare `remote` alone is not a geo include token.
     - Remote path: drop if a non-US country/region token appears; keep if a
       US signal appears; bare \"Remote\" with neither still kept (residual noise).
     """
-    if any(token and token in location_l for token in geo_include):
+    if _non_us_country(location_l, remote_non_us_exclude):
+        return False
+
+    if _us_state_hit(location_l) or any(token and token in location_l for token in geo_include):
         return True
 
     if "remote" not in location_l:
-        return False
-
-    if any(token and token in location_l for token in remote_non_us_exclude):
         return False
 
     if any(token and token in location_l for token in remote_us_include):

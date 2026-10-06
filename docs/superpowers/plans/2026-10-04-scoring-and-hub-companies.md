@@ -289,3 +289,11 @@ After that list is on the daily cron, watch seven scheduled mornings. Record `ke
 Workday is a later project, after that week. It is not part of this plan’s implementation.
 
 The 964 hub-city boards and the scoring changes stay. They are the version under test until the US-wide list replaces the “only four hubs” discovery limit.
+
+## Decided 2026-10-06 — all US locations are the immediate next filter change
+
+After `config/companies.discovered.builtin_us.json` is written, and before that board list is pushed, change the location filter from the four hubs to the United States.
+
+Keep full state names and clear US place names. Do not add two-letter state abbreviations. Keep US-remote, title, sponsorship, 3-day freshness, and seen-URL dedupe. Do not build the city list by scraping city names out of the probe. The probe has companies and board slugs, not job cities.
+
+This sends more fresh US jobs to Claude, including more `no` scores. The email stays strong and maybe only.
