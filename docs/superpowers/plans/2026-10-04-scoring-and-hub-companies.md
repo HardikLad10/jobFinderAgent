@@ -279,3 +279,13 @@ EOF
 Update `PROJECT_BRIEF.md` and `SESSION_LOG.md` in this commit. Do not edit older session-log entries.
 
 Do not push unless asked.
+
+## Decided 2026-10-05 — US-wide boards, then a week, then Workday
+
+Approved next step: one US-wide Built In pass on Greenhouse, Lever, Ashby, Breezy, SmartRecruiters, Workable, and Recruitee. Add every resolved board that is not already in `config/companies.json`. Built In’s US directory is about 50,000 company names. Public Greenhouse, Lever, and Ashby boards are about 10,000, not 48,000. This pass should add several thousand boards, not 20,000.
+
+After that list is on the daily cron, watch seven scheduled mornings. Record `kept`, strong, and maybe. Do not start Workday during that week.
+
+Workday is a later project, after that week. It is not part of this plan’s implementation.
+
+The 964 hub-city boards and the scoring changes stay. They are the version under test until the US-wide list replaces the “only four hubs” discovery limit.
