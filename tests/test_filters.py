@@ -151,6 +151,10 @@ class FilterHistoricalBugsTest(unittest.TestCase):
             ("d-uk", "Cambridge, United Kingdom"),
             ("d-ie", "Remote - Ireland"),
             ("d-india", "Bangalore, India"),
+            ("d-ro", "Remote, Bucharest, Bucharest, Romania"),
+            ("d-gr", "Greece (Remote)"),
+            ("d-ng", "Lagos, LA, Nigeria"),
+            ("d-ph", "Remote, Davao (Region XI), Philippines"),
         ]
         jobs = [
             _job(url=url, location=location) for url, location in keep + drop

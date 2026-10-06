@@ -4,6 +4,11 @@
 
 `PROJECT_BRIEF.md` is the stable spec and rarely changes. This file is the living record of what happened, in order. When in doubt about what's real, trust this file over memory of a past conversation.
 
+The same two rules are in `PROJECT_BRIEF.md` section 1, which is the other file read before code changes:
+
+- Do not push an unfinished change to GitHub main. Finish the agreed version locally. Push once, and only when asked. Before that push, say what will land on main and that the daily run will use it.
+- When asking for approval or denial during implementation, the first line is one sentence: what is running right now.
+
 ---
 
 ## How to add an entry
@@ -968,3 +973,49 @@ Added root `README.md` so a GitHub visitor gets the product in plain language (w
 **Open questions carried forward:**
 - The consulting/staffing regex matched nothing here. Symphony Talent, Worldwide TechServices, Acumen Solutions, Sigma Software Group, Scadea Software Solutions, and Zen3 Infosolutions are on the daily list.
 - Anyscale’s live Ashby board was not added.
+
+## [2026-10-06] — Working rules for GitHub and approval asks
+
+**Changed:**
+- `PROJECT_BRIEF.md` section 1 and the top of this log now state two standing rules.
+
+**Decisions made:**
+- Do not push an unfinished change to GitHub main. Finish the agreed version locally. Push once, and only when asked. Before that push, say what will land on main and that the daily run will use it.
+- When asking for approval or denial during implementation, the first line is one sentence: what is running right now.
+
+**Open questions carried forward:**
+- The US Built In name scrape is still running. It does not update `config/companies.json` until the ATS probe and merge.
+
+## [2026-10-05] — US-wide boards next, then a week, then Workday
+
+**Changed:**
+- No code in this entry. The decision is recorded in `docs/superpowers/plans/2026-10-04-scoring-and-hub-companies.md` and in section 9 of `docs/superpowers/specs/2026-10-04-scoring-and-hub-companies-design.md`.
+
+**Why:**
+- The four hub software lists named 4,808 companies. Built In’s United States directory is about 50,000 names. A public crawl of Greenhouse, Lever, and Ashby found about 9,935 reachable boards, not 48,000.
+
+**Decisions made:**
+- Next company pass: Built In United States, same seven ATS systems. Add a board only when it is new and has at least one job.
+- After that list is on the daily cron, watch seven mornings. Record `kept`, strong, and maybe.
+- Workday starts only after that week. It is not part of the current implementation.
+
+**Open questions carried forward:**
+- The US name list and ATS probe are not finished. The daily run does not have those boards yet.
+
+## [2026-10-06] — US boards merged locally and dry run timed
+
+**Changed:**
+- `config/companies.json`: 5,765 new resolved boards from the US Built In probe. Resolved boards are now 7,381. Empty boards, sample jobs, consulting names, and boards already listed were not added.
+- Location rule keeps any US state, full name or postal abbreviation with a comma or space. `Austin, TX` passes. `Bangalore, India` still drops.
+- Dry-run country leaks dropped by adding Romania, Greece, Philippines, Nigeria, Bucharest, Davao, and Lagos to the non-US list. Re-filter of the saved fetch: 38 kept became 34. The four removed were Bucharest, Greece, Lagos, and Davao.
+- Daily job `timeout-minutes` 90 → 180. The skip-match fetch took 115 minutes.
+
+**Why:**
+- 90 minutes is shorter than the measured fetch. GitHub would kill the morning run before matching.
+
+**Decisions made:**
+- No Claude call, no email, and no seen-job update on this dry run.
+- Not pushed. The seven-morning watch starts only after a later push.
+
+**Open questions carried forward:**
+- GitHub `main` still has the earlier 1,616-board list until this branch is pushed.
