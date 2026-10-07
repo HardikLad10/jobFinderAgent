@@ -1019,3 +1019,15 @@ Added root `README.md` so a GitHub visitor gets the product in plain language (w
 
 **Open questions carried forward:**
 - GitHub `main` still has the earlier 1,616-board list until this branch is pushed.
+
+## [2026-10-07] — Morning job limit raised to six hours
+
+**Changed:**
+- Daily job `timeout-minutes` 180 → 360.
+
+**Why:**
+- The 2026-10-07 scheduled run used the new board list and was cancelled at 3 hours while still fetching. It had fetched 7,136 boards, 21 boards failed, and about 224 boards were still waiting. No scoring, no email, and no seen-job update. Six hours is the longest a GitHub-hosted job can run.
+
+**Decisions made:**
+- A manual run follows this change so today's matches can still be emailed and marked seen.
+- Parallel fetching stays a later change, after this run finishes.
