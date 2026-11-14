@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Career fair cheatsheet</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --paper: #faf7f2;
+      --card: #ffffff;
+      --accent: #9a3412;
+      --accent-soft: #fff7ed;
+      --good: #14532d;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 17px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 4rem;
+    }
+    h1 {
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.35rem;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1.25rem;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem 1.05rem 1.1rem;
+      margin: 0 0 0.9rem;
+    }
+    h2 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin: 0 0 0.65rem;
+    }
+    p { margin: 0 0 0.7rem; }
+    p:last-child { margin-bottom: 0; }
+    .say {
+      font-size: 1.06rem;
+      line-height: 1.5;
+    }
+    .label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+    ul { margin: 0; padding-left: 1.15rem; }
+    li { margin: 0 0 0.45rem; }
+    .note {
+      background: var(--accent-soft);
+      border-radius: 10px;
+      padding: 0.7rem 0.8rem;
+      color: #7c2d12;
+      font-size: 0.95rem;
+    }
+    .grid {
+      display: grid;
+      gap: 0.7rem;
+    }
+    .story h3 {
+      font-size: 1rem;
+      margin: 0 0 0.3rem;
+    }
+    .story .when {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 0.35rem;
+    }
+    footer {
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding: 0.4rem 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Booth cheatsheet</h1>
+    <p class="sub">Say this like a person, not like a resume. Numbers stay in your pocket until they ask how you know it worked.</p>
+
+    <section>
+      <h2>The 20-second pitch</h2>
+      <p class="label">Say this</p>
+      <p class="say">Hi, I’m Hardik. I’m a master’s student at Illinois, graduating in May, and I’m looking for new-grad software engineering roles — also forward deployed or applied AI if that’s how your team is built.</p>
+      <p class="say">I’ve been an engineer in production, not only in class. What I like is sitting with how people actually work, then owning the software that lives in that workflow — store teams, course staff, students who need materials they can actually use.</p>
+      <p class="say">I’m less interested in a brand name than in a team where I can grow as someone who ships <em>with</em> other people. What does that first year look like here?</p>
+    </section>
+
+    <section>
+      <h2>If they stay with you</h2>
+      <p class="label">Add this, not more metrics</p>
+      <p class="say">A lot of my work has been translating a messy real process into something a team can trust. At Piramal I sat with e-commerce and modern-trade folks who were buried in claims and artwork approvals. The job wasn’t “build a form.” It was stay with the process until the tool became how they worked.</p>
+      <p class="say">At Illinois I’ve been doing the same kind of thing from two sides: helping business students ship real systems, and making course files usable for people on screen readers. That’s the engineer I want to keep being.</p>
+    </section>
+
+    <section>
+      <h2>Why this is the pitch</h2>
+      <div class="note">
+        Do not open with 70%, $50K, 100 events/sec, or “2 years experience.” Those are proof, not a reason to talk to you. Lead with judgment, who you help, and the kind of teammate you are. If they lean in, then give one number.
+      </div>
+    </section>
+
+    <section>
+      <h2>The one-line “why you”</h2>
+      <p>Finish with something true about <em>them</em>, not a compliment about the logo. Steal one of these and swap in what you just read on the booth:</p>
+      <ul>
+        <li>“I’m interested because you’re building software that sits next to a real operation, not only a dashboard.”</li>
+        <li>“I’m interested because new grads here seem to own a slice, not only shadow.”</li>
+        <li>“I’m interested because your team has to care about the person on the other side of the tool.”</li>
+        <li>“I’m interested because this is Midwest / Illinois work I can actually picture myself in.”</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>If they push on the degree</h2>
+      <p class="say">My degree is Information Management. My work has been software engineering. I was a production engineer before I came here, and I’ve kept building systems since — I came to this fair because I want to keep doing that on a team, not because I’m shopping majors.</p>
+    </section>
+
+    <section class="grid">
+      <h2 style="margin:0">Stories — pick one that matches them</h2>
+      <div class="story">
+        <h3>People and process</h3>
+        <p class="when">Use for FDE, product, internal tools, ops-heavy companies</p>
+        <p>I get energy from the unglamorous part: watching someone do the job, noticing where the software fights them, and staying until it doesn’t. That’s the Piramal claims / approval work, and it’s also the accessibility work — the user is not hypothetical.</p>
+      </div>
+      <div class="story">
+        <h3>Teaching and taste</h3>
+        <p class="when">Use for teams that talk about mentorship, culture, or AI-in-the-workflow</p>
+        <p>I TA’d business students through Git, CI, and using AI tools without turning their project into slop. I like making other people more dangerous with the stack. That’s also how I want to be managed: high trust, real feedback.</p>
+      </div>
+      <div class="story">
+        <h3>Systems, if they go technical</h3>
+        <p class="when">Use for platform, infra, or “tell me about a hard problem”</p>
+        <p>RainStorm was me caring about correctness under failure — partitioning, recovery, not losing work when a node dies. I can go deep there if they want. Don’t volunteer the throughput number unless they ask what “worked” meant.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pocket numbers — only if they ask</h2>
+      <ul>
+        <li>Legal-doc RAG / ETL at BIG: people stopped waiting on searches that used to crawl.</li>
+        <li>Piramal: claims and artwork tools the business actually adopted; shelf-audit work that replaced a grind.</li>
+        <li>Accessibility: a couple hundred course files, twenty-plus courses, a small team, real students on assistive tech.</li>
+      </ul>
+      <p>Say the outcome in English first. The percentage is optional punctuation.</p>
+    </section>
+
+    <section>
+      <h2>Questions that sound like you</h2>
+      <ul>
+        <li>What does a new grad own in the first six months — a feature, a customer, a system?</li>
+        <li>When a new hire is thriving here, what are they doing that isn’t on the job description?</li>
+        <li>Where does an engineer here sit relative to the user — tickets, shadowing, on-site?</li>
+        <li>How do you decide someone is ready for more scope?</li>
+        <li>What’s the interview timeline after today?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sponsorship, if it comes up</h2>
+      <p class="say">I will need sponsorship. I’d rather be straightforward now than waste your process. Are you able to hire new grads who need it?</p>
+      <p>Then stop talking. Let them answer. If no, thank them and leave a resume anyway only if they offer.</p>
+    </section>
+
+    <section>
+      <h2>Close</h2>
+      <p class="say">This was useful — thank you. What’s the best way to follow up, and is there someone on the team you’d want me to apply to by name?</p>
+      <p>Write the name down before you leave the booth.</p>
+    </section>
+
+    <footer>
+      Target: new-grad / intern SWE, FDE, AI Engineer. Not Solutions Engineer.
+    </footer>
+  </main>
+</body>
+</html>
