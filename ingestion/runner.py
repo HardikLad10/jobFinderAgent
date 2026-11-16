@@ -17,6 +17,7 @@ from .errors import IngestionError
 from .greenhouse import fetch_greenhouse_jobs
 from .lever import fetch_lever_jobs
 from .recruitee import fetch_recruitee_jobs
+from .rippling import fetch_rippling_jobs
 from .schema import JobPosting
 from .smartrecruiters import fetch_smartrecruiters_jobs
 from .workable import fetch_workable_jobs
@@ -35,6 +36,7 @@ FETCHERS: dict[str, FetchFn] = {
     "smartrecruiters": fetch_smartrecruiters_jobs,
     "workable": fetch_workable_jobs,
     "recruitee": fetch_recruitee_jobs,
+    "rippling": fetch_rippling_jobs,
 }
 
 
