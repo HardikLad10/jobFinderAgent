@@ -2,7 +2,7 @@
 """ATS board discovery for Midwest seed list.
 
 Probes Greenhouse / Lever / Ashby / BreezyHR / SmartRecruiters / Workable /
-Recruitee public endpoints with slug candidates. Prefers longer/specific
+Recruitee / Rippling public endpoints with slug candidates. Prefers longer/specific
 tokens; short first-word guesses are only used when listed in ALIASES
 (avoids capital/village/echo false positives).
 
@@ -270,6 +270,31 @@ def try_recruitee(token: str) -> tuple[bool, int, str | None]:
     return True, len(offers), sample or None
 
 
+def try_rippling(token: str) -> tuple[bool, int, str | None]:
+    # Unknown slugs return HTTP 404. Empty boards are misses.
+    # 429 and transport failures are retried; they are not recorded as misses
+    # until the retries are exhausted (1s, then 2s, then 4s).
+    url = (
+        "https://api.rippling.com/platform/api/ats/v2/board/"
+        f"{token}/jobs?page=0&pageSize=10"
+    )
+    status, data = http_get(url)
+    for delay in (1, 2, 4):
+        if status not in (429, -1):
+            break
+        time.sleep(delay)
+        status, data = http_get(url)
+    if status != 200 or not isinstance(data, dict):
+        return False, 0, None
+    items = data.get("items")
+    total = data.get("totalItems")
+    if not isinstance(items, list) or not items:
+        return False, 0, None
+    count = int(total) if isinstance(total, int) and total > 0 else len(items)
+    sample = str(items[0].get("name") or "")[:80]
+    return True, count, sample or None
+
+
 PROBES: tuple[tuple[str, Callable[[str], tuple[bool, int, str | None]]], ...] = (
     ("greenhouse", try_greenhouse),
     ("lever", try_lever),
@@ -278,7 +303,27 @@ PROBES: tuple[tuple[str, Callable[[str], tuple[bool, int, str | None]]], ...] = 
     ("smartrecruiters", try_smartrecruiters),
     ("workable", try_workable),
     ("recruitee", try_recruitee),
+    ("rippling", try_rippling),
 )
+
+# Display names for the unresolved notes line. Order follows PROBES.
+_ATS_NOTE_NAMES = {
+    "greenhouse": "Greenhouse",
+    "lever": "Lever",
+    "ashby": "Ashby",
+    "breezy": "Breezy",
+    "smartrecruiters": "SmartRecruiters",
+    "workable": "Workable",
+    "recruitee": "Recruitee",
+    "rippling": "Rippling",
+}
+
+
+def _unresolved_notes(
+    probes: tuple[tuple[str, Callable[[str], tuple[bool, int, str | None]]], ...],
+) -> str:
+    labels = "/".join(_ATS_NOTE_NAMES.get(ats, ats) for ats, _ in probes)
+    return f"No {labels} board matched slug candidates."
 
 # Known false-positive (ats, token) pairs from prior discovery.
 KNOWN_FALSE_POSITIVES: set[tuple[str, str]] = {
@@ -307,9 +352,14 @@ KNOWN_FALSE_POSITIVES: set[tuple[str, str]] = {
 }
 
 
-def discover_one(name: str) -> dict[str, Any]:
+def discover_one(
+    name: str,
+    probes: tuple[tuple[str, Callable[[str], tuple[bool, int, str | None]]], ...]
+    | None = None,
+) -> dict[str, Any]:
+    active = PROBES if probes is None else probes
     for token in candidates_for(name):
-        for ats, probe in PROBES:
+        for ats, probe in active:
             if (ats, token) in KNOWN_FALSE_POSITIVES:
                 continue
             ok, count, sample = probe(token)
@@ -329,7 +379,7 @@ def discover_one(name: str) -> dict[str, Any]:
         "ats": None,
         "board_token": None,
         "status": "unresolved",
-        "notes": "No Greenhouse/Lever/Ashby/Breezy/SmartRecruiters/Workable/Recruitee board matched slug candidates.",
+        "notes": _unresolved_notes(active),
     }
 
 
@@ -355,7 +405,19 @@ def main() -> None:
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--workers", type=int, default=12)
     parser.add_argument("--limit", type=int, default=0, help="Optional cap for smoke tests")
+    parser.add_argument(
+        "--ats",
+        default=None,
+        help="Probe only this ATS (example: rippling). Default probes every ATS in PROBES.",
+    )
     args = parser.parse_args()
+
+    probes = PROBES
+    if args.ats:
+        probes = tuple(pair for pair in PROBES if pair[0] == args.ats)
+        if not probes:
+            known = ", ".join(name for name, _ in PROBES)
+            raise SystemExit(f"unknown --ats {args.ats!r}; choose from: {known}")
 
     companies = load_seed(args.seed)
     if args.limit > 0:
@@ -367,7 +429,9 @@ def main() -> None:
     results: list[dict[str, Any]] = []
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(discover_one, name): name for name in companies}
+        futures = {
+            pool.submit(discover_one, name, probes): name for name in companies
+        }
         done = 0
         for fut in as_completed(futures):
             row = fut.result()
@@ -390,7 +454,8 @@ def main() -> None:
     args.out.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
 
     resolved = sum(1 for r in results if r["status"] == "resolved")
-    by_ats: dict[str, int] = {}
+    # A single-ATS run still names that ATS when nothing resolved.
+    by_ats: dict[str, int] = {ats: 0 for ats, _ in probes} if args.ats else {}
     for r in results:
         if r["status"] == "resolved":
             by_ats[r["ats"]] = by_ats.get(r["ats"], 0) + 1
