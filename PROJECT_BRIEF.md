@@ -18,6 +18,8 @@ Non-negotiables for anyone (human or AI) working on this codebase:
 - **Deterministic by default, agentic only where judgment is genuinely needed.** Most of this pipeline is plumbing (fetch, filter, dedupe). Exactly one step needs an LLM: deciding if a job fits. Do not let "AI-powered" creep into steps that are really just logic.
 - **State tradeoffs, don't hide them.** Every meaningful design choice in this project should have a one-line "why this, not that" attached, either in code comments or in `SESSION_LOG.md`.
 - **Future scope is designed for, not built.** Code should be structured so features listed in Section 9 could be added without a rewrite. That does not mean building them now.
+- **GitHub main gets a finished version.** Do not push a slice you already know needs another push to complete the same change. Finish it locally. Push once, and only when asked. Before that push, say what will land on main and that the daily run will use it.
+- **Approval asks name the current step.** When asking for approval or denial during implementation, the first line is one sentence: what is running right now.
 
 ---
 
